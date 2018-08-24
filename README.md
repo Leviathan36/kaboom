@@ -4,7 +4,7 @@
 ![LastUpdate](https://img.shields.io/badge/last%20update-2018%2F08%2F23-yellow.svg)
 
 
-<p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/Leviathan36-patch-1/kaboom_images/kaboom_logo.png" width="80%" height="auto"></p>
+<p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/Leviathan36/kaboom_images/kaboom_logo.png" width="80%" height="auto"></p>
 
 ## About:
 kaboom is a sript that automates the penetration test. It performs several tasks for each phases of pentest:
@@ -38,7 +38,7 @@ kaboom supports two mode:
 	
 * Interactive mode:  
 kaboom [ENTER]  ...and the script does the rest
-<p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/Leviathan36-patch-1/kaboom_images/screenshot_interactive_mode.PNG" height="400" width="auto"></p>
+<p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/Leviathan36/kaboom_images/screenshot_interactive_mode.PNG" height="400" width="auto"></p>
 		
 * NON-interactive mode:  
 kaboom <results_path> \<nic> <target_ip> [-s or --shutdown]
@@ -47,11 +47,11 @@ If you use the shutdown option, kaboom will shutdown the machine at the end of t
 	
 If you want see this help:  
 kaboom -h (or --help)
-<p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/Leviathan36-patch-1/kaboom_images/screenshot_help.PNG" height="90" width="auto"></p>
+<p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/Leviathan36/kaboom_images/screenshot_help.PNG" height="90" width="auto"></p>
 
 ## Directory Hierarchy
 kaboom saves the results of commands in this way:
-<p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/Leviathan36-patch-1/kaboom_images/kaboom_dir_hierarchy.png" height="500" width="auto"></p>
+<p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/Leviathan36/kaboom_images/kaboom_dir_hierarchy.png" height="500" width="auto"></p>
 
 ## Disclaimer:
 **Author assume no liability and are not responsible for any misuse or damage caused by this program.**
