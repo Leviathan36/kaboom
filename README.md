@@ -11,43 +11,45 @@ kaboom is a sript that automates the penetration test. It performs several tasks
 
 1. Information gathering [nmap-unicornscan]
 
-	*TCP scan 
-	*UDP scan
+* TCP scan 
+* UDP scan
+
 2. Vulnerability assessment [nmap-nikto-dirb]
 
-	*smb
-	*ssh
-	*snmp
-	*smtp
-	*ftp
-	*tftp
-	*ms-sql
-	*mysql
-	*rdp
-	*http  
-	*https
-	*and more...
+* smb
+* ssh
+* snmp
+* smtp
+* ftp
+* tftp
+* ms-sql
+* mysql
+* rdp
+* http  
+* https
+* and more...
+
 3. Exploitation [hydra]
 
-*brute force ssh
+	* brute force ssh
 
-##Usage
+## Usage
 kaboom supports two mode:
 	
-*Interactive mode:
-	kaboom [ENTER]  ...and the script does the rest
+* Interactive mode:
+kaboom [ENTER]  ...and the script does the rest
 <p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/Leviathan36-patch-1/kaboom_images/screenshot_interactive_mode.PNG" height="300" width="auto"></p>
 		
-*NON-interactive mode:
-	kaboom <results_path> <nic> <target_ip> [-s or --shutdown]
+* NON-interactive mode:
+kaboom <results_path> <nic> <target_ip> [-s or --shutdown]
 
 If you use the shutdown option, kaboom will shutdown the machine at the end of tasks.
 	
 If you want see this help:
-	kaboom -h (or --help)
+kaboom -h (or --help)
 <p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/Leviathan36-patch-1/kaboom_images/screenshot_help.PNG" height="300" width="auto"></p>
 
-##Directory Hierarchy
+## Directory Hierarchy
 kaboom saves the results of commands in this way:
 <p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/Leviathan36-patch-1/kaboom_images/kaboom_dir_hierarchy.png" height="300" width="auto"></p>
 
