@@ -41,8 +41,7 @@ kaboom [ENTER]  ...and the script does the rest
 <p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/Leviathan36-patch-1/kaboom_images/screenshot_interactive_mode.PNG" height="300" width="auto"></p>
 		
 * NON-interactive mode:  
-
-	kaboom <results_path> <nic> <target_ip> [-s or --shutdown]
+kaboom <results_path> \<nic> <target_ip> [-s or --shutdown]
 
 If you use the shutdown option, kaboom will shutdown the machine at the end of tasks.
 	
