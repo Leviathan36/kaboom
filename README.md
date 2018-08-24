@@ -51,7 +51,7 @@ kaboom -h (or --help)
 
 ## Directory Hierarchy
 kaboom saves the results of commands in this way:
-<p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/Leviathan36-patch-1/kaboom_images/kaboom_dir_hierarchy.png" height="400" width="auto"></p>
+<p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/Leviathan36-patch-1/kaboom_images/kaboom_dir_hierarchy.png" height="500" width="auto"></p>
 
 ## Disclaimer:
 **Author assume no liability and are not responsible for any misuse or damage caused by this program.**
