@@ -1,2 +1,0 @@
-# kaboom
-automatic pentest
