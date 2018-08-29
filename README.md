@@ -1,7 +1,7 @@
 ![Release](https://img.shields.io/badge/release-under%20development-red.svg)
 ![Language](https://img.shields.io/badge/made%20with-bash-brightgreen.svg)
 ![License](https://img.shields.io/badge/license-GPLv3-blue.svg)
-![LastUpdate](https://img.shields.io/badge/last%20update-2018%2F08%2F24-yellow.svg)
+![LastUpdate](https://img.shields.io/badge/last%20update-2018%2F08%2F29-yellow.svg)
 
 
 <p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/master/kaboom_images/kaboom_logo.png" width="80%" height="auto"></p>
