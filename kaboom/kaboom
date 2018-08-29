@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 #kaboom    -    automatic pentest
 #Copyright © 2018 Leviathan36 
 
@@ -15,6 +16,7 @@
 
 #You should have received a copy of the GNU General Public License
 #along with kaboom.  If not, see <http://www.gnu.org/licenses/>.
+
 
 
 ######################################
@@ -142,13 +144,15 @@ echo '-----------------'
 mkdir -p "$file_path/IG/NMAP"
 
 echo 'START SYN-SCAN WITH SYN-PROBE...'
-nmap -PS -sS -p 1-65535 -sV -O --fuzzy -vvv -oA "$file_path/IG/NMAP/script" --script "(default or auth or vuln or exploit) and not http-enum" $host > /dev/null || { echo '!!!NMAP ERROR (SYN-SCAN)!!!'; exit 1; }
+nmap -PS -sS -p 1-65535 -sV -O --fuzzy -vvv -oA "$file_path/IG/NMAP/script" --script "(default or auth or vuln or exploit) and not http-enum" $host > tmp_out_nmap.txt || { echo '!!!NMAP ERROR (SYN-SCAN)!!!'; exit 1; }
 
-grep 'Host seems down' "$file_path/IG/NMAP/script.nmap" && {
+grep 'Host seems down' "tmp_out_nmap.txt" && {
 	echo 'SYN-SCAN WITH SYN-PROBE FAIL!';
 	echo 'START ACK-SCAN WITH ACK-PROBE...';
 	nmap -PA -sA -p 1-65535 -sV -O --fuzzy -vvv -oA "$file_path/IG/NMAP/script" --script "(default or auth or vuln or exploit) and not http-enum" $host > /dev/null || { echo '!!!NMAP ERROR (ACK-SCAN)!!!'; exit 1; } ;
 }
+
+rm "tmp_out_nmap.txt"
 
 sleep 3		#create syn report
 grep -v '|' "$file_path/IG/NMAP/script.nmap" > "$file_path/IG/NMAP/syn.nmap"
@@ -183,11 +187,52 @@ sleep 2
 
 echo
 echo '++++++++++++++++++++++++++'
-echo 'START VULN ASSESSMENT ON WEB SERVER'
+echo 'START VULN ASSESSMENT'
 echo '++++++++++++++++++++++++++'
 sleep 2
 
 mkdir -p "$file_path/VA"
+
+################################
+xmllint --xpath "//table[elem[text()='VULNERABLE' and @key='state']]/@key" "$file_path/IG/NMAP/script.xml" | tr " " "\n" | cut -f2 -s -d'"' | awk -F "CVE-" '{print $2}' > "$file_path/IG/NMAP/CVE.txt"
+
+echo '--------------------------------'	
+echo 'START SEARCH IN METASPLOIT...'
+echo '--------------------------------'
+
+mkdir -p "$file_path/VA/KNOWN_EXPLOITS"
+
+while read line; do
+	msfconsole -q -o "$file_path/VA/KNOWN_EXPLOITS/CVE-$line.txt" -x "search cve:$line ; exit -y"
+done < 	"$file_path/IG/NMAP/CVE.txt"
+
+for i in `ls "$file_path/VA/KNOWN_EXPLOITS"` ; do
+	echo '##########' 
+	echo "$i" 
+	echo '##########' 
+	echo 
+	tail -n +15 "$file_path/VA/KNOWN_EXPLOITS/$i" | nl  
+	printf "\n-----------------------\n\n"
+done >> "$file_path/VA/KNOWN_EXPLOITS/meta_module.txt"
+
+rm "$file_path/VA/KNOWN_EXPLOITS/CVE*"
+
+echo '--------------------------------'	
+echo 'END SEARCH IN METASPLOIT'
+echo '--------------------------------'
+
+echo '--------------------------------'	
+echo 'START SEARCH IN EXPLOIT-DB...'
+echo '--------------------------------'
+searchsploit --nmap "$file_path/IG/NMAP/script.xml" > "$file_path/VA/KNOWN_EXPLOITS/exploit-db.txt"
+echo '--------------------------------'	
+echo 'END SEARCH IN EXPLOIT-DB'
+echo '--------------------------------'
+
+# TO WIFIBANG
+# tail -n +15 "$file_path/VA/META_MODULE/$i" | awk -F"   " '{print $2}' | nl
+
+##################################
 
 #http
 tcp_service_on "open" "80" > /dev/null && { 
@@ -230,7 +275,7 @@ tcp_service_on "open" "443" > /dev/null && {
 }
 
 echo '++++++++++++++++++++++++++'
-echo 'END VULN ASSESSMENT ON WEB SERVER'
+echo 'END VULN ASSESSMENT'
 echo '++++++++++++++++++++++++++'
 sleep 2
 
