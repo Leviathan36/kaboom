@@ -27,7 +27,8 @@ kaboom is a sript that automates the penetration test. It performs several tasks
 	* rdp
 	* http  
 	* https
-	* and more...  
+	* and more... 
+	
 	It finds the CVEs and then searchs them on exploit-db or Metasploit db.
 3. Exploitation [hydra]
 
