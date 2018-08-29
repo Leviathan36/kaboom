@@ -14,8 +14,8 @@ kaboom is a sript that automates the penetration test. It performs several tasks
 	* TCP scan 
 	* UDP scan
 
-2. Vulnerability assessment [nmap-nikto-dirb-searchsploit-msfconsole]
-It tests several services:
+2. Vulnerability assessment [nmap-nikto-dirb-searchsploit-msfconsole]  
+	It tests several services:
 	* smb
 	* ssh
 	* snmp
@@ -27,8 +27,9 @@ It tests several services:
 	* rdp
 	* http  
 	* https
-	* and more...
-It finds the CVEs and then searchs them on exploit-db or Metasploit db.
+	* and more... 
+	
+	It finds the CVEs and then searchs them on exploit-db or Metasploit db.
 3. Exploitation [hydra]
 
 	* brute force ssh
