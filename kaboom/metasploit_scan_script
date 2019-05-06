@@ -1,0 +1,29 @@
+### METASPLOIT SCAN SCRIPT ###
+
+
+### VERSIONS ###
+
+use auxiliary/scanner/smb/smb_version
+run
+use auxiliary/scanner/ssh/ssh_version
+run
+use auxiliary/scanner/mysql/mysql_version
+run
+use auxiliary/scanner/postgres/postgres_version
+run
+use auxiliary/scanner/pop3/pop3_version
+run
+use auxiliary/scanner/imap/imap_version
+run
+use auxiliary/scanner/smtp/smtp_version
+run
+use auxiliary/scanner/printer/printer_version_info
+run
+
+
+### MAIN VULN ###
+
+use auxiliary/scanner/smb/smb_ms17_010
+run
+use auxiliary/scanner/rdp/ms12_020_check
+run
