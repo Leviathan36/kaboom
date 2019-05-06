@@ -116,7 +116,7 @@ This tool performs the same tasks of Kaboom, but with a different philosophy; in
 his work.
 Generally Kaboom isn't better than Trigmap and vice versa, but simply it's a good thing to use both the scripts to gather more evidences.
 
-For more informations about this tool take a look [to this link]().
+For more informations about this tool take a look [to this link](https://github.com/Leviathan36/trigmap).
 
 <br>
 <br>
