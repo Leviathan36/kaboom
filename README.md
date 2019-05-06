@@ -38,7 +38,7 @@ Kaboom can be used in two ways:
 
    `kaboom [ENTER], and the script does the rest`
 
-<p align="center"><img src="https://github.com/Leviathan36/kaboom/tree/master/kaboom_images/screenshots/interactive_mode.png" width="80%" height="auto"></p>
+<p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/master/kaboom_images/screenshots/interactive_mode.png" width="80%" height="auto"></p>
 
    * NON-interactive mode:
 
@@ -56,7 +56,7 @@ Kaboom can be used in two ways:
 _**For more screenshots see the relative [directory](https://github.com/Leviathan36/kaboom/tree/master/kaboom_images/screenshots/) of the repository.**_
 
 ## Dir Hierarchy
-<p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/master/kaboom_images/dir_hierarchy.png" width="80%" height="auto"></p>
+<p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/master/kaboom_images/dir_hierarchy.PNG" width="80%" height="auto"></p>
 
 ## Customization
 It's possible to customize the script by changing the value of variables at the beginning of the file.
