@@ -64,7 +64,7 @@ In particularly you can choose the wordlists used by Hydra and Dirb, specify ano
 change the output file names.
 
 ```bash
-#KABOOM_PATH=''		# THE KABOOM DIRECOTRY PATH COULD BE SET HERE INSTEAD OF IN THE BASHRC FILE
+#KABOOM_PATH=''		# THE PATH COULD BE SET HERE INSTEAD OF IN BASHRC FILE
 
 if [[ "$KABOOM_PATH" == '' ]]; then
 	KABOOM_PATH='.'
