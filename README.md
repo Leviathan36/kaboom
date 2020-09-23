@@ -7,7 +7,7 @@
 <p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/master/kaboom_images/logo.png" width="80%" height="auto"></p>
 
 ## About
-Kaboom is a bash script that automates the first two phases of a penetration test.
+Kaboom is an automatism for penetration tests. It performs several tasks for the first two phases of the test: information gathering and vulnerability assessment.
 All informations collected are saved into a directory hierarchy very
 simple to browse (also in case of multiple targets).
 
