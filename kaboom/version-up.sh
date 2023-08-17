@@ -129,7 +129,6 @@ SYN='syn'
 ########################################################
 ############            FUNCTIONS          #############
 ########################################################
-
 print_help () {
     echo 'Usage:'
     echo '  Interactive mode:'
@@ -144,13 +143,11 @@ print_help () {
     echo '          - d == dictionary attack against open services'
     echo
     echo '      example: iv == information gathering + vulnerability assessment'
-    echo '      dafult: ALL (ivb)'
+    echo '      default: ALL (ivb)'
     echo
 }
 
-##                   ## 
-### PRINT FUNCTIONS ###
-##                   ##
+## PRINT FUNCTIONS ##
 
 print_start_end () {
     printf "\n\033[37;41;1m[*******************************************************]\033[0m\n"
@@ -158,16 +155,11 @@ print_start_end () {
     printf "\033[37;41;1m[*******************************************************]\033[0m\n"
 }
 
-#
-#  name: print_status
-#  @param: iteration ; actual target ; progress
-#  @return
-#  
 print_status () {
     echo
     echo '----------------------------------'
     echo '----------------------------------'
-    echo "ITAREATION:   $1"
+    echo "ITERATION:   $1"
     echo "TARGET:   $2"
     printf 'PROGRESS: ['
     for i in {1..20}; do
@@ -183,7 +175,6 @@ print_status () {
     echo '----------------------------------'
     echo
 }
-    
 print_std () {
     printf "\t\033[34;1m[*]$1\033[0m\n"
 }
@@ -205,12 +196,10 @@ failure () {
     exit 1
 }
 
-###                 ###
+##   ##
 
 sanitize_input () {
-    
-    if [[ ! "$#" == 0 ]]; then      # NO-interactive
-    
+    if [[ ! "$#" == 0 ]]; then      # NON-interactive
         while [[ ! "$#" == 0 ]]; do
             case "$1" in
                 -h | --help ) print_help; exit 0;;
@@ -220,7 +209,6 @@ sanitize_input () {
                 * ) print_failure 'INVALID PARAMETER!'; exit 10;;
             esac
         done
-    
     else                            # interactive
         
         # HOST
@@ -278,38 +266,23 @@ tcp_service_on () {
     elif [[ "$3" == '1' ]]; then 
         xmllint --xpath "//port[state[@state='$1'] and service[@name='$2' and @tunnel='ssl']]" "$FILE_PATH/IG/NMAP/$SCRIPT_SYN.xml" &> /dev/null
     else 
-        return 1    #ERROR
+        return 1    # ERROR
     fi
 }
 
-#  
-#  name: udp_service_on 
-#  @param: port name={rpcbind, mdns, ...}
-#  @return: 0 = {port found} ; 10 {port not found}
-# 
 udp_service_on () {
     xmllint --xpath "//port[state[@state='open|filtered'] and service[@name='$1']]" "$FILE_PATH/IG/NMAP/$UDP.xml" &> /dev/null
 }
 
-#  
-#  name: print_portid
-#  @param: state of port={open, filtered} ; port name={http, ssh, ...} ; ssl={1 == YES, 0 == NO}
-#  @return: portid
-#
 print_portid () {
     if [[ "$3" == '0' ]]; then
         xmllint --xpath "//port[state[@state='$1'] and service[@name='$2']]/@portid" "$FILE_PATH/IG/NMAP/$SCRIPT_SYN.xml" | cut -c 2- | tr " " "\n" | cut -f2 -d'"'
     elif [[ "$3" == '1' ]]; then
         xmllint --xpath "//port[state[@state='$1'] and service[@name='$2' and @tunnel='ssl']]/@portid" "$FILE_PATH/IG/NMAP/$SCRIPT_SYN.xml" | cut -c 2- | tr " " "\n" | cut -f2 -d'"'
     else 
-        return 1    #ERROR
+        return 1    # ERROR
     fi
 }
-
-###                 ###
-
-######################################
-######################################
 
 
 ######################################
