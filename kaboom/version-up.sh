@@ -1,3 +1,4 @@
+#/bin/bash
 # Kaboom - Automatic Pentest
 # Copyright © 2019 Leviathan36
 
