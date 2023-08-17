@@ -1,0 +1,9 @@
+# Update Nmap script
+# NMAP FILES
+# SCRIPT_SYN="/path/to/script-syn.nse"
+# UDP="/path/to/udp.nse"
+# SYN="/path/to/syn.nse"
+
+SCRIPT_SYN="/usr/share/nmap/scripts/script-syn.nse"
+UDP="/usr/share/nmap/scripts/udp.nse"
+SYN="/usr/share/nmap/scripts/syn.nse"
