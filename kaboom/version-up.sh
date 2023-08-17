@@ -96,6 +96,9 @@
 # Set KABOOM_PATH if it's empty
 KABOOM_PATH="${KABOOM_PATH:-/home/user1/kaboom/kaboom}"
 
+# Set KABOOM_PATH if it's empty
+KABOOM_PATH="${KABOOM_PATH:-/home/user1/kaboom/kaboom}"
+
 # Define paths using the KABOOM_PATH variable
 USERLIST_HYDRA_SSH="$KABOOM_PATH/user_wordlist_short.txt"
 USERLIST_HYDRA_POP3="$KABOOM_PATH/user_wordlist_short.txt"
