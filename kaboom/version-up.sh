@@ -284,7 +284,7 @@ for i in $(seq $LOWER_HOST 1 $UPPER_HOST); do
         
         # Syn-scan
         print_std 'start syn-scan with syn-probe...'
-        nmap -p 80 -sS -sU -T4 -Pn -A -v --version-all --script=default,auth,vuln "$HOST" | grep 'Host seems down' > /dev/null && { print_failure 'Host down' ; rm -fR "$FILE_PATH"; continue; }
+        nmap -p- -sS -sU -T4 -Pn -A -v --version-all --script=default,auth,vuln "$HOST" -oA output | grep 'Host seems down' > /dev/null && { print_failure 'Host down' ; rm -fR "$FILE_PATH"; continue; }
         
         # Create syn report
         if [[ -f "$FILE_PATH/IG/NMAP/$SCRIPT_SYN.nmap" ]]; then 
