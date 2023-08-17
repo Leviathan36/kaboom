@@ -1,22 +1,31 @@
-#!/bin/bash
+# Kaboom - Automatic Pentest
+# Copyright © 2019 Leviathan36
 
-# kaboom    -    automatic pentest
-# Copyright © 2019 Leviathan36 
+# Kaboom is free software released under the GNU General Public License.
+# You can redistribute it and/or modify it under the terms of the GPL,
+# version 3 or any later version, as published by the Free Software Foundation.
 
-# kaboom is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-
-# kaboom is distributed in the hope that it will be useful,
+# Kaboom is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 # GNU General Public License for more details.
 
 # You should have received a copy of the GNU General Public License
-# along with kaboom.  If not, see <http://www.gnu.org/licenses/>.
+# along with Kaboom. If not, visit <http://www.gnu.org/licenses/>.
 
 
+
+
+
+
+       \ 
+      / \__
+     (    @\___
+     /    )    )
+    / \ (_____/
+   /____ | /  
+  /_/ (_  /|
+  
 ##############################################
 ###             VARIABLES BRUTEFORCE       ###  
 ##############################################
