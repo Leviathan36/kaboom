@@ -31,7 +31,7 @@ Kaboom efficiently conducts comprehensive information gathering through the foll
 
 - Web Resources Enumeration: Through Dirb, Kaboom identifies and catalogs web resources, providing a thorough understanding of the target's online presence.
 
-## 𝙽𝚎𝚝𝚠𝚘𝚛𝚔 𝙳𝚎𝚏𝚎𝚗𝚜𝚎  
+## 𝙴𝚡𝚙𝚕𝚘𝚒𝚝𝚊𝚝𝚒𝚘𝚗  
 Kaboom empowers testers to perform thorough vulnerability assessments, enabling them to uncover potential weaknesses:
 
 - Web Vulnerability Assessment: By utilizing tools such as Nikto and Dirb, Kaboom-APT identifies vulnerabilities in web applications, ensuring they meet the highest security standards.
