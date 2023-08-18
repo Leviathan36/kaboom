@@ -1,12 +1,12 @@
 
 
-![Build and Deploy](https://github.com/kratostaine/spring-authorization-server/actions/workflows/continuous-integration-workflow.yml/badge.svg)
+
 ![Release](https://img.shields.io/badge/release-stable%201.0.0-green.svg)
 ![Language](https://img.shields.io/badge/made%20with-bash-brightgreen.svg)
 ![License](https://img.shields.io/badge/license-GPLv3-blue.svg)
 ![TestedOn](https://img.shields.io/badge/tested%20on-Kali%20Linux-red.svg)
-
-
+		
+		 + -- --=[kaboom v1.0.0 by @leviathan36]
 
 
 
@@ -230,3 +230,5 @@ Kaboom-APT is a tool designed to empower cybersecurity professionals. However, i
 
 
 <p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/master/kaboom_images/logo.png" width="100%" height="auto">
+
+![Build and Deploy](https://github.com/kratostaine/spring-authorization-server/actions/workflows/continuous-integration-workflow.yml/badge.svg)
