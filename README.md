@@ -56,6 +56,8 @@ Just type `kaboom` and hit [ENTER], and the script handles the rest
 
 	Example;
 
+
+
 			┌──(root㉿test-station)-[/home/user1/kaboom/kaboom]
 					└─# kaboom
 					Insert hosts (example 192.168.1.1-5):
@@ -67,18 +69,19 @@ Just type `kaboom` and hit [ENTER], and the script handles the rest
 					Shutdown pc at the end of script [YES/NO] (default NO):
 					>> NO
 
+
+
+
 - ## <b>Non-interactive mode:</b>
 
 Use the command `kaboom -t <target_ip> -f <report_path> [-p one_or_more_phases]` for specific targeting and reporting.
 
 
 	Example;
- 
 
-		┌──(root㉿test-station)-[/home/user1/kaboom]
-		└─# kaboom -t 10.10.11.579 -f scan-results.txt /home/user1/Documents
-		
-		
+			┌──(root㉿test-station)-[/home/user1/kaboom]
+			└─# kaboom -t 10.10.11.579 -f scan-results.txt /home/user1/Documents
+			
 
 ## 𝙵𝚘𝚛 𝙷𝚎𝚕𝚙
 
@@ -111,80 +114,80 @@ If you need assistance, run `kaboom -h` (or `kaboom --help`) to access the help 
 # 𝐄𝐧𝐡𝐚𝐧𝐜𝐢𝐧𝐠 𝐖𝐨𝐫𝐤𝐟𝐥𝐨𝐰 𝐰𝐢𝐭𝐡 𝐊𝐚𝐛𝐨𝐨𝐦-𝐀𝐏𝐓
 
 	
-			    _.-^^---....,,--       
-			
-			 _--                  --_  
-			
-			<                        >)
-			
-			|                         | 
-			
-			 \._                   _./  
-			
-			    ```--. . , ; .--'''       
-			
-			          | |   |             
-			
-			       .-=||  | |=-.   
-			
-			       `-=#$%&%$#=-'   
-			
-			          | ;  :|     
-			
-			 _____.,-#%&$@%#&#~,._____
-
-
-		┌──(root㉿test-station)-[/home/user1/kaboom/kaboom]
-		└─# kaboom
-		Insert hosts (example 192.168.1.1-5):
-		>> 10.10.10.222
-		Insert path where to save results (without final /):
-		>> /home/user1/Documents
-		choice the phases to perform [i=IG, v=VA, d=dictionary]:
-		>> iv
-		Shutdown pc at the end of script [YES/NO] (default NO):
-		>> NO
-		
-		[*******************************************************]
-		[***]START SCRIPT AT Thu Aug 17 06:55:51 PM MDT 2023[***]
-		[*******************************************************]
-		
-		----------------------------------
-		----------------------------------
-		ITAREATION:   1
-		TARGET:   10.10.10.222
-		PROGRESS: [===================>]
-		----------------------------------
-
-		[PHASE:]starting IG...
+				    _.-^^---....,,--       
+				
+				 _--                  --_  
+				
+				<                        >)
+				
+				|                         | 
+				
+				 \._                   _./  
+				
+				    ```--. . , ; .--'''       
+				
+				          | |   |             
+				
+				       .-=||  | |=-.   
+				
+				       `-=#$%&%$#=-'   
+				
+				          | ;  :|     
+				
+				 _____.,-#%&$@%#&#~,._____
 	
-	        [+] Network Mapper activated. Connection establishing...
-	        [*] Scanning the network...
-
-		Starting Nmap 7.94 ( https://nmap.org ) at 2023-08-17 18:54 MDT
-		Illegal character(s) in hostname -- replacing with '*'
-		Illegal character(s) in hostname -- replacing with '*'
-		Nmap scan report for http:**delivery.htb (10.10.10.222)
-		Host is up (0.13s latency).
+	
+			┌──(root㉿test-station)-[/home/user1/kaboom/kaboom]
+			└─# kaboom
+			Insert hosts (example 192.168.1.1-5):
+			>> 10.10.10.222
+			Insert path where to save results (without final /):
+			>> /home/user1/Documents
+			choice the phases to perform [i=IG, v=VA, d=dictionary]:
+			>> iv
+			Shutdown pc at the end of script [YES/NO] (default NO):
+			>> NO
+			
+			[*******************************************************]
+			[***]START SCRIPT AT Thu Aug 17 06:55:51 PM MDT 2023[***]
+			[*******************************************************]
+			
+			----------------------------------
+			----------------------------------
+			ITAREATION:   1
+			TARGET:   10.10.10.222
+			PROGRESS: [===================>]
+			----------------------------------
+	
+			[PHASE:]starting IG...
 		
-		PORT   STATE SERVICE
-		22/tcp open  ssh
-		| ssh-hostkey: 
-		|   2048 9c:40:fa:85:9b:01:ac:ac:0e:bc:0c:19:51:8a:ee:27 (RSA)
-		|   256 5a:0c:c0:3b:9b:76:55:2e:6e:c4:f4:b9:5d:76:17:09 (ECDSA)
-		|_  256 b7:9d:f7:48:9d:a2:f2:76:30:fd:42:d3:35:3a:80:8c (ED25519)
-		80/tcp open  http
-		|_http-title: Welcome
-		
-		Nmap done: 1 IP address (1 host up) scanned in 5.06 seconds
-		
-		[PHASE:]starting VA...
-		
-		        [-]no exploits found!
-		
-		[*******************************************************]
-		[***] END SCRIPT AT Thu Aug 17 06:54:39 PM MDT 2023 [***]
-		[*******************************************************]
+		        [+] Network Mapper activated. Connection establishing...
+		        [*] Scanning the network...
+	
+			Starting Nmap 7.94 ( https://nmap.org ) at 2023-08-17 18:54 MDT
+			Illegal character(s) in hostname -- replacing with '*'
+			Illegal character(s) in hostname -- replacing with '*'
+			Nmap scan report for http:**delivery.htb (10.10.10.222)
+			Host is up (0.13s latency).
+			
+			PORT   STATE SERVICE
+			22/tcp open  ssh
+			| ssh-hostkey: 
+			|   2048 9c:40:fa:85:9b:01:ac:ac:0e:bc:0c:19:51:8a:ee:27 (RSA)
+			|   256 5a:0c:c0:3b:9b:76:55:2e:6e:c4:f4:b9:5d:76:17:09 (ECDSA)
+			|_  256 b7:9d:f7:48:9d:a2:f2:76:30:fd:42:d3:35:3a:80:8c (ED25519)
+			80/tcp open  http
+			|_http-title: Welcome
+			
+			Nmap done: 1 IP address (1 host up) scanned in 5.06 seconds
+			
+			[PHASE:]starting VA...
+			
+			        [-]no exploits found!
+			
+			[*******************************************************]
+			[***] END SCRIPT AT Thu Aug 17 06:54:39 PM MDT 2023 [***]
+			[*******************************************************]
 
 
 
@@ -205,9 +208,9 @@ Kaboom recognizes that each engagement requires a unique approach. Customize the
 
 ## 𝐄𝐱𝐚𝐦𝐩𝐥𝐞 𝐜𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧𝐬
 
-	HYDRA_WORDLIST="custom_hydra_wordlist.txt"
-	DIRB_WORDLIST="custom_dirb_wordlist.txt"
-  	OUTPUT_FILENAME="custom_report.txt"
+		HYDRA_WORDLIST="custom_hydra_wordlist.txt"
+		DIRB_WORDLIST="custom_dirb_wordlist.txt"
+	  	OUTPUT_FILENAME="custom_report.txt"
 
    --------
                                                               
