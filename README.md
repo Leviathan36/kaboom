@@ -1,28 +1,6 @@
 
  𝚔𝚊𝚋𝚘𝚘𝚖 𝚟𝟷.0.0 𝚋𝚢 @𝚕𝚎𝚟𝚒𝚊𝚝𝚑𝚊𝚗𝟹𝟼
 
-				
-				    _.-^^---....,,--       
-				
-				 _--                  --_  
-				
-				<                        >)
-				
-				|                         | 
-				
-				 \._                   _./  
-				
-				    ```--. . , ; .--'''       
-				
-				          | |   |             
-				
-				       .-=||  | |=-.   
-				
-				       `-=#$%&%$#=-'   
-				
-				          | ;  :|     
-				
-				 _____.,-#%&$@%#&#~,._____
 
       
 ![Release](https://img.shields.io/badge/release-stable%201.0.0-green.svg)
@@ -335,7 +313,36 @@ Modern networks harbor services on non-canonical ports:
 
 #### Kaboom'S feature detects and assesses services on non-standard ports.
 
-	kaboom -t <target_ip> -f <report_path> -p non_canonical_ports
+
+		
+					                       
+	
+			                     __,-~~/~    `---.
+			
+			                   _/_,---(      ,    )
+			
+			               __ /        <    /   )  \___
+			
+			- ------===;;;'====------------------===;;;===----- -  -----
+			
+			                  \/  ~"~"~"~"~"~\~"~)~"/
+			
+			                  (_ (   \  (     >    \)
+			
+			                   \_( _ <         >_>'
+			
+			                      ~ `-i' ::>|--"
+			
+			                          I;|.|.|
+			
+			                         <|i::|i|`.
+			
+			                        (` ^'"`-' ")
+					 _____.,-#%&$@%#&#~,._____
+		
+			kaboom -t <target_ip> -f <report_path> -p non_canonical_ports
+
+
 
 ### 𝐓𝐰𝐢𝐧 𝐁𝐫𝐨𝐭𝐡𝐞𝐫 - 𝐓𝐫𝐢𝐠𝐦𝐚𝐩: 𝐀 𝐏𝐚𝐫𝐚𝐥𝐥𝐞𝐥 𝐄𝐧𝐝𝐞𝐚𝐯𝐨𝐫
 As Kaboom evolved, a parallel project named Trigmap (Trigger Nmap) emerged. Trigmap shares similar objectives with Kaboom but adopts a distinct approach. This sibling tool relies exclusively on Nmap to execute its tasks. The synergy between Kaboom and Trigmap enriches penetration testing endeavors, offering a comprehensive toolkit for varying scenarios.
