@@ -25,7 +25,7 @@
 
 #KABOOM_PATH=''     # THE KABOOM DIRECOTRY PATH COULD BE SET HERE INSTEAD OF IN THE BASHRC FILE
 
-if [[ "$KABOOM_PATH" == '' ]]; then 
+if [[ "$KABOOM_PATH" == '/home/user1/kaboom/kaboom' ]]; then 
     KABOOM_PATH='.'
 fi
 
