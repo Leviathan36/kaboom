@@ -177,7 +177,7 @@ Kaboom is more than just a tool; it's a comprehensive suite of capabilities desi
 
 
 
-# 𝐄𝐦𝐩𝐨𝐰𝐞𝐫𝐢𝐧𝐠 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧
+## 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧 & Configuration
 
 To further tailor Kaboom to your needs, you can provide additional arguments and customize its behavior:
 
@@ -186,15 +186,13 @@ To further tailor Kaboom to your needs, you can provide additional arguments and
 - Wordlists: Customize wordlists for dictionary attacks using Hydra and Dirb, enhancing attack efficiency.
 
 - Output Customization: Personalize output file names and locations to match your preferences.
-- 
-
- ## 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧: 𝐓𝐚𝐢𝐥𝐨𝐫𝐢𝐧𝐠 𝐭𝐨 𝐏𝐫𝐞𝐜𝐢𝐬𝐢𝐨𝐧
+  
 
 Kaboom recognizes that each engagement requires a unique approach. Customize the tool to your specific needs:
 
 - Adjust variables for tailored wordlists and output filenames.
 
-# 𝐄𝐱𝐚𝐦𝐩𝐥𝐞 𝐜𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧𝐬
+## 𝐄𝐱𝐚𝐦𝐩𝐥𝐞 𝐜𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧𝐬
 
 	HYDRA_WORDLIST="custom_hydra_wordlist.txt"
 	DIRB_WORDLIST="custom_dirb_wordlist.txt"
