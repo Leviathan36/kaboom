@@ -1,5 +1,5 @@
+𝚔𝚊𝚋𝚘𝚘𝚖 𝚟𝟷.0.0 𝚋𝚢 @𝚕𝚎𝚟𝚒𝚊𝚝𝚑𝚊𝚗𝟹𝟼
 
- 𝚔𝚊𝚋𝚘𝚘𝚖 𝚟𝟷.0.0 𝚋𝚢 @𝚕𝚎𝚟𝚒𝚊𝚝𝚑𝚊𝚗𝟹𝟼
 ![version](https://img.shields.io/badge/Version-1.0.1-brightgreen)
 ![Language](https://img.shields.io/badge/Built%20with-bash-brightgreen.svg)
 ![License](https://img.shields.io/badge/License-GPLv3-blue.svg)
