@@ -1,8 +1,6 @@
 Kaboom Pentest Tool - Enum Folder Documentation
 Enum Folder Overview
 
-The "enum" folder within the Kaboom pentest tool contains various resources and scripts that are used for enumerating information during the penetration testing process. Enumerating information is a crucial step in understanding the target system's configuration and potential vulnerabilities.
-Files and Resources
 nmap-scripts
 
 This subfolder contains custom Nmap scripts that extend the tool's capabilities for service identification and vulnerability assessment. The scripts are organized based on their functionalities.
