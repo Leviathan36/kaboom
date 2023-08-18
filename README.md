@@ -4,7 +4,8 @@
 ![LastUpdate](https://img.shields.io/badge/last%20update-2019%2F05-orange.svg)
 ![TestedOn](https://img.shields.io/badge/tested%20on-Kali%20Linux-red.svg)
 
-<p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/master/kaboom_images/logo.png" width="80%" height="auto"></p>
+<p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/master/kaboom_images/logo.png" width="80%" height="auto">
+<img src="https://static.dribbble.com/users/948184/screenshots/5611449/431_bob_omb_db.gif" width="80%"</p>
 
 # Kaboom-APT: Advanced Penetration Test
 
