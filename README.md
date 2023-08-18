@@ -1,8 +1,13 @@
+
+[![Build and Deploy](https://github.com/kratostaine/spring-authorization-server/actions/workflows/continuous-integration-workflow.yml/badge.svg)](https://github.com/kratostaine/spring-authorization-server/actions/workflows/continuous-integration-workflow.yml)
 ![Release](https://img.shields.io/badge/release-stable%201.0.0-green.svg)
 ![Language](https://img.shields.io/badge/made%20with-bash-brightgreen.svg)
 ![License](https://img.shields.io/badge/license-GPLv3-blue.svg)
-![LastUpdate](https://img.shields.io/badge/last%20update-2019%2F05-orange.svg)
 ![TestedOn](https://img.shields.io/badge/tested%20on-Kali%20Linux-red.svg)
+
+
+
+
 
 <p align="center"><img src="https://static.dribbble.com/users/948184/screenshots/5611449/431_bob_omb_db.gif" width="100%"</p>
 
