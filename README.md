@@ -208,9 +208,9 @@ Kaboom recognizes that each engagement requires a unique approach. Customize the
 
 ## 𝐄𝐱𝐚𝐦𝐩𝐥𝐞 𝐜𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧𝐬
 
-		HYDRA_WORDLIST="custom_hydra_wordlist.txt"
-		DIRB_WORDLIST="custom_dirb_wordlist.txt"
-	  	OUTPUT_FILENAME="custom_report.txt"
+			HYDRA_WORDLIST="custom_hydra_wordlist.txt"
+			DIRB_WORDLIST="custom_dirb_wordlist.txt"
+		  	OUTPUT_FILENAME="custom_report.txt"
 
    --------
                                                               
@@ -218,41 +218,41 @@ Kaboom recognizes that each engagement requires a unique approach. Customize the
 
 Kaboom empowers you to customize its behavior by adjusting variables at the script's outset. This allows you to tailor the tool to your specific requirements, whether it's selecting wordlists for Hydra and Dirb, specifying a Metasploit scan script, or refining output file names. Kaboom ushers in a new era of penetration testing, where automation, efficiency, and precision converge to yield unparalleled results. With its advanced features and user-friendly interface, Kaboomis your ally in fortifying digital landscapes against potential threats. Experience the power of Kaboom and elevate your penetration testing game today.
 
-
-		```bash
-		#KABOOM_PATH=''		# THE PATH COULD BE SET HERE INSTEAD OF IN BASHRC FILE
-		
-		if [[ "$KABOOM_PATH" == '' ]]; then
-			KABOOM_PATH='.'
-		fi
-		
-		# USER WORDLISTS
-		USERLIST_HYDRA_SSH="$KABOOM_PATH/user_wordlist_short.txt"
-		USERLIST_HYDRA_POP3="$KABOOM_PATH/user_wordlist_short.txt"
-		USERLIST_HYDRA_IMAP="$KABOOM_PATH/user_wordlist_short.txt"
-		USERLIST_HYDRA_RDP="$KABOOM_PATH/user_wordlist_short.txt"
-		USERLIST_HYDRA_SMB="$KABOOM_PATH/user_wordlist_short.txt"
-		
-		# PASSWORD WORDLISTS
-		PASSLIST_HYDRA="$KABOOM_PATH/fasttrack.txt"
-		PASSLIST_HYDRA_SSH="$PASSLIST_HYDRA"
-		PASSLIST_HYDRA_POP3="$PASSLIST_HYDRA"
-		PASSLIST_HYDRA_IMAP="$PASSLIST_HYDRA"
-		PASSLIST_HYDRA_RDP="$PASSLIST_HYDRA"
-		PASSLIST_HYDRA_SMB="$PASSLIST_HYDRA"
-		
-		# DIRB WORDLISTS
-		HTTP_WORDLIST="$KABOOM_PATH/custom_url_wordlist.txt"
-		HTTP_EXTENSIONS_FILE="$KABOOM_PATH/custom_extensions_common.txt"
-		
-		# METASPLOIT SCAN SCRIPT
-		METASPLOIT_SCAN_SCRIPT='./metasploit_scan_script'
-		
-		# NMAP FILES
-		SCRIPT_SYN='script-syn'
-		UDP='udp'
-		SYN='syn'
-		```
+	
+			```bash
+			#KABOOM_PATH=''		# THE PATH COULD BE SET HERE INSTEAD OF IN BASHRC FILE
+			
+			if [[ "$KABOOM_PATH" == '' ]]; then
+				KABOOM_PATH='.'
+			fi
+			
+			# USER WORDLISTS
+			USERLIST_HYDRA_SSH="$KABOOM_PATH/user_wordlist_short.txt"
+			USERLIST_HYDRA_POP3="$KABOOM_PATH/user_wordlist_short.txt"
+			USERLIST_HYDRA_IMAP="$KABOOM_PATH/user_wordlist_short.txt"
+			USERLIST_HYDRA_RDP="$KABOOM_PATH/user_wordlist_short.txt"
+			USERLIST_HYDRA_SMB="$KABOOM_PATH/user_wordlist_short.txt"
+			
+			# PASSWORD WORDLISTS
+			PASSLIST_HYDRA="$KABOOM_PATH/fasttrack.txt"
+			PASSLIST_HYDRA_SSH="$PASSLIST_HYDRA"
+			PASSLIST_HYDRA_POP3="$PASSLIST_HYDRA"
+			PASSLIST_HYDRA_IMAP="$PASSLIST_HYDRA"
+			PASSLIST_HYDRA_RDP="$PASSLIST_HYDRA"
+			PASSLIST_HYDRA_SMB="$PASSLIST_HYDRA"
+			
+			# DIRB WORDLISTS
+			HTTP_WORDLIST="$KABOOM_PATH/custom_url_wordlist.txt"
+			HTTP_EXTENSIONS_FILE="$KABOOM_PATH/custom_extensions_common.txt"
+			
+			# METASPLOIT SCAN SCRIPT
+			METASPLOIT_SCAN_SCRIPT='./metasploit_scan_script'
+			
+			# NMAP FILES
+			SCRIPT_SYN='script-syn'
+			UDP='udp'
+			SYN='syn'
+			```
 ------		
 Here's a brief breakdown of what the script does:
 
