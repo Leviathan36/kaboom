@@ -4,8 +4,7 @@
 ![LastUpdate](https://img.shields.io/badge/last%20update-2019%2F05-orange.svg)
 ![TestedOn](https://img.shields.io/badge/tested%20on-Kali%20Linux-red.svg)
 
-<p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/master/kaboom_images/logo.png" width="80%" height="auto">
-<img src="https://static.dribbble.com/users/948184/screenshots/5611449/431_bob_omb_db.gif" width="80%"</p>
+<p align="center"><img src="https://static.dribbble.com/users/948184/screenshots/5611449/431_bob_omb_db.gif" width="100%"</p>
 
 # kaboom-APT: Advanced Pentration Technology (pentech)
 
@@ -186,3 +185,6 @@ To delve deeper into Trigmap's capabilities, visit the Trigmap repository.
 ### Ethical Responsibility: The Kaboom-APT Disclaimer
 
 Kaboom-APT is a tool designed to empower cybersecurity professionals. However, its potency must be wielded responsibly. The author underscores that Kaboom
+
+
+<p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/master/kaboom_images/logo.png" width="100%" height="auto">
