@@ -24,14 +24,14 @@ Short for <b><big>"𝙰𝚍𝚟𝚊𝚗𝚌𝚎𝚍 𝙿𝚎𝚗𝚎𝚝𝚛𝚊
 Kaboom emerges as a game-changing solution in the world of penetration testing. By intelligently automating routine tasks and integrating powerful tools like Nmap, Metasploit, and Nessus, it empowers security professionals to work smarter and focus on high-value tasks that demand human expertise. As the cybersecurity landscape evolves, Kaboom stands as a beacon of innovation, empowering defenders to proactively safeguard digital assets against the relentless tide of cyber threats.
 
 
-## <b>𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚝𝚒𝚘𝚗 𝙶𝚊𝚝𝚑𝚎𝚛𝚒𝚗𝚐</b>
+## <b>𝚁𝚎𝚌𝚘𝚗𝚗𝚊𝚒𝚜𝚜𝚊𝚗𝚌𝚎</b>
 Kaboom efficiently conducts comprehensive information gathering through the following methods:
 
 - Port Scanning: Leveraging the power of Nmap, Kaboom scans ports to identify potential entry points, offering insights into the network's structure.
 
 - Web Resources Enumeration: Through Dirb, Kaboom identifies and catalogs web resources, providing a thorough understanding of the target's online presence.
 
-## 𝚅𝚞𝚕𝚗𝚎𝚛𝚊𝚋𝚒𝚕𝚒𝚝𝚢 𝙰𝚜𝚜𝚎𝚜𝚜𝚖𝚎𝚗𝚝
+## 𝙽𝚎𝚝𝚠𝚘𝚛𝚔 𝙳𝚎𝚏𝚎𝚗𝚜𝚎  
 Kaboom empowers testers to perform thorough vulnerability assessments, enabling them to uncover potential weaknesses:
 
 - Web Vulnerability Assessment: By utilizing tools such as Nikto and Dirb, Kaboom-APT identifies vulnerabilities in web applications, ensuring they meet the highest security standards.
