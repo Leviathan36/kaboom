@@ -148,9 +148,9 @@ SYN='syn'
 
  ... (rest of the customization variables)
 
-The Evolving Landscape of Cybersecurity and the Need for Robust Tools
+# The Evolving Landscape of Cybersecurity
 
-# Kaboom-APT - Advanced Penetration Testing
+## Kaboom-APT - Advanced Penetration Testing
 
 ## Introduction
 
