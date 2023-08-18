@@ -35,7 +35,7 @@ Kaboom efficiently conducts comprehensive information gathering through the foll
 ## 𝙴𝚡𝚙𝚕𝚘𝚒𝚝𝚊𝚝𝚒𝚘𝚗  
 Kaboom empowers testers to perform thorough vulnerability assessments, enabling them to uncover potential weaknesses:
 
-- Web Vulnerability Assessment: By utilizing tools such as Nikto and Dirb, Kaboom-APT identifies vulnerabilities in web applications, ensuring they meet the highest security standards.
+- Web Vulnerability Assessment: By utilizing tools such as Nikto and Dirb, Kaboom identifies vulnerabilities in web applications, ensuring they meet the highest security standards.
 
 - Automatic Vulnerabilities Research: Kaboom automatically integrates with Searchsploit and Metasploit, streamlining the process of identifying and mitigating vulnerabilities.
 
