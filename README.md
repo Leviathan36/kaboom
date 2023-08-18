@@ -1,5 +1,5 @@
 
-[![Build and Deploy](https://github.com/kratostaine/spring-authorization-server/actions/workflows/continuous-integration-workflow.yml/badge.svg)](https://github.com/kratostaine/spring-authorization-server/actions/workflows/continuous-integration-workflow.yml)
+![Build and Deploy](https://github.com/kratostaine/spring-authorization-server/actions/workflows/continuous-integration-workflow.yml/badge.svg)
 ![Release](https://img.shields.io/badge/release-stable%201.0.0-green.svg)
 ![Language](https://img.shields.io/badge/made%20with-bash-brightgreen.svg)
 ![License](https://img.shields.io/badge/license-GPLv3-blue.svg)
@@ -11,7 +11,7 @@
 
 <p align="center"><img src="https://static.dribbble.com/users/948184/screenshots/5611449/431_bob_omb_db.gif" width="100%"</p>
 
-# kaboom-APT: Advanced Pentration Technology (pentech)
+# 𝐤𝐚𝐛𝐨𝐨𝐦-𝐀𝐏𝐓: 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐏𝐞𝐧𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞𝐜𝐡𝐧𝐨𝐥𝐨𝐠𝐲 <i>𝚙𝚎𝚗/𝚝𝚎𝚌𝚑</i>
 
 In the ever-evolving landscape of cybersecurity, the need for robust penetration testing tools is paramount. Introducing Kaboom-APT, a powerful and versatile automaton designed to revolutionize the way penetration testing is conducted. With a comprehensive set of features focused on information gathering and vulnerability assessment, Kaboom-APT stands as a testament to efficient and effective testing methodologies.
 
