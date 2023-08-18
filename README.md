@@ -57,28 +57,28 @@ For Help
 
 If you need assistance, run `kaboom -h` (or `kaboom --help`) to access the help menu and explore available options.
 
-		
-		./kaboom.sh --help
-
-----
-
-		┌──(root㉿test-station)-[/home/user1/kaboom/kaboom]
-		└─# ./kaboom.sh --help
-		Usage:
-		  Interactive mode:
-		      kaboom [ENTER]  ...and the script does the rest
-		
-		  NON-interactive mode:
-		      kaboom -t <target_ip> -f <report_path> [-p one_or_more_phases]
-		
-		      phases:
-		          - i == information gathering
-		          - v == vulnerability assessment
-		          - d == dictionary attack against open services
-		
-		      example: iv == information gathering + vulnerability assessment
-		      dafult: ALL (ivb)
-		
+			
+			./kaboom.sh --help
+	
+	----
+	
+			┌──(root㉿test-station)-[/home/user1/kaboom/kaboom]
+			└─# ./kaboom.sh --help
+			Usage:
+			  Interactive mode:
+			      kaboom [ENTER]  ...and the script does the rest
+			
+			  NON-interactive mode:
+			      kaboom -t <target_ip> -f <report_path> [-p one_or_more_phases]
+			
+			      phases:
+			          - i == information gathering
+			          - v == vulnerability assessment
+			          - d == dictionary attack against open services
+			
+			      example: iv == information gathering + vulnerability assessment
+			      dafult: ALL (ivb)
+			
 
 
 ### 𝐄𝐧𝐡𝐚𝐧𝐜𝐢𝐧𝐠 𝐖𝐨𝐫𝐤𝐟𝐥𝐨𝐰 𝐰𝐢𝐭𝐡 𝐊𝐚𝐛𝐨𝐨𝐦-𝐀𝐏𝐓
