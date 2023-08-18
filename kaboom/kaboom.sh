@@ -294,16 +294,12 @@ for i in $(seq $LOWER_HOST 1 $UPPER_HOST); do
         
         # syn-scan
         print_std 'start syn-scan with syn-probe...'
-        nmap -vvv -oA "$FILE_PATH/IG/NMAP/$SCRIPT_SYN" -PE -PS80,443,22,25,110,445 -PU -PP -PA80,443,22,25,110,445 -sS -p- -sV --allports -O --fuzzy --script "(default or auth or vuln or exploit) and not http-enum" "$HOST"   | grep 'Host seems down' > /dev/null && { print_failure 'Host down' ; rm -fR "$FILE_PATH"; continue; }     #|| failure "NMAP ERROR (SYN-SCAN); exit with code $?"
+        nmap -p 80 "$HOST"   | grep 'Host seems down' > /dev/null && { print_failure 'Host down' ; rm -fR "$FILE_PATH"; continue; }     #|| failure "NMAP ERROR (SYN-SCAN); exit with code $?"
         
         # create syn report
         if [[ -f "$FILE_PATH/IG/NMAP/$SCRIPT_SYN.nmap" ]]; then 
             grep -v '|' "$FILE_PATH/IG/NMAP/$SCRIPT_SYN.nmap" > "$FILE_PATH/IG/NMAP/$SYN.nmap"
         fi
-        
-        # udp scan
-        print_std 'start udp-scan with udp-probe...'
-        nmap -vvv -oA "$FILE_PATH/IG/NMAP/$UDP" -PE -PS80,443,22,25,110,445 -PU -PP -PA80,443,22,25,110,445 -sU --top-ports 200 -sV --allports "$HOST" > /dev/null || failure "NMAP ERROR (UDP-SCAN); exit with code $?"
         
         # golismero report
         #golismero report -i "$file_path/IG/NMAP/script.xml" -o "$file_path/IG/NMAP/nmap_report.html"
