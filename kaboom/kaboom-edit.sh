@@ -305,74 +305,42 @@ for i in $(seq $LOWER_HOST 1 $UPPER_HOST); do
     fi
 done
 
-        
-        # golismero report
-        #golismero report -i "$file_path/IG/NMAP/script.xml" -o "$file_path/IG/NMAP/nmap_report.html"
-        
-    #--------------------------------------------#  
-        #### UNICORNSCAN ###
-        #print_succ 'unicornscan is scanning...'
-        
-        ## unicornscan tcp scan
-        #print_std 'starting TCP scan...'
-        #unicornscan -E -L 10 -R 2 -l "$FILE_PATH/IG/unicorn-tcp.txt" -i "$NIC" -r 30 -vvvvv "$HOST":p > /dev/null
-            #### p=ports between [1,1024]
-            #### r X=max X packet per second
-            
-        ## unicornscan udp scan
-        #print_std 'starting UDP scan...'
-        #unicornscan -E -L 10 -R 2 -l "$FILE_PATH/IG/unicorn-udp.txt" -i "$NIC" -r 30 -mU -vvvvv "$HOST":p > /dev/null
-    #--------------------------------------------#  
-        
-        ### METASPLOIT ###
+
+        #!/bin/bash
+for i in $(seq $LOWER_HOST 1 $UPPER_HOST); do
+    # HOST
+    HOST="$ROOT_HOST.$i"
+    
+    ### METASPLOIT ###
+    if [[ "$PHASE" =~ 'i' || -z "$PHASE" ]]; then
         print_succ 'metasploit is scanning...'
         
-        # start postgresql server
+        # Start postgresql server
         service postgresql start
         
-        # 
+        # Run Metasploit
         msfconsole -q -o "$FILE_PATH/IG/metasploit_scan.txt" -x "setg rhosts $HOST ; resource $METASPLOIT_SCAN_SCRIPT ; exit -y"
-
         
+        # Stop postgresql server
+        service postgresql stop
     fi
 
-    #** start vulnerability assessment (VA) **#
+    ### Start vulnerability assessment (VA) ###
+    if [[ "$PHASE" =~ 'v' || -z "$PHASE" ]]; then 
+        # Rest of your code...
 
-    if [[ "$PHASE" =~ 'v' || "$PHASE" == '' ]]; then 
-        
-        #print_phase 'starting VA...'
-        
-        # create new directory for this phase
-        #mkdir -p "$FILE_PATH/VA"
-
-        # parse nmap output in search of CVE
-        #xmllint --xpath "//table[elem[text()='VULNERABLE' and @key='state']]/@key" "$FILE_PATH/IG/NMAP/$SCRIPT_SYN.xml" 2> /dev/null | tr " " "\n" | cut -f2 -s -d'"' | awk -F "CVE-" '{printf "search cve:" ; print $2}' > "$FILE_PATH/IG/NMAP/CVE.txt"
-        #xmllint --xpath "//table[elem[text()='VULNERABLE' and @key='state']]/@key" "$FILE_PATH/IG/NMAP/$UDP.xml" 2> /dev/null | tr " " "\n" | cut -f2 -s -d'"' | awk -F "CVE-" '{printf "search cve:" ; print $2}' >> "$FILE_PATH/IG/NMAP/CVE.txt"
-        
-        # create new dir for exploits
-        #mkdir -p "$FILE_PATH/VA/KNOWN_EXPLOITS"
-        # remove old file
-        #rm -f "$FILE_PATH/VA/KNOWN_EXPLOITS/NO_cve_found.txt"
-        
-        # if the file contains at least one CVE, the research will start
-        if #grep 'CVE-' "$FILE_PATH/IG/NMAP/CVE.txt"; then       
-            
-            #print_succ 'starting Metasploit research...'
-            
-            #msfconsole -q -o "$FILE_PATH/VA/KNOWN_EXPLOITS/meta_module.txt" -x "db_rebuild_cache ; resource $FILE_PATH/IG/NMAP/CVE.txt ; exit -y" 
-            
-            # searchsploit
-            #print_succ 'starting searchsploit...'
-            
-            #searchsploit --www --nmap "$FILE_PATH/IG/NMAP/$SCRIPT_SYN.xml" > "$FILE_PATH/VA/KNOWN_EXPLOITS/exploit-db.txt"
-            #searchsploit --www --nmap "$FILE_PATH/IG/NMAP/$UDP.xml" >> "$FILE_PATH/VA/KNOWN_EXPLOITS/exploit-db.txt"
-
+        # If the file contains at least one CVE, the research will start
+        if grep -q 'CVE-' "$FILE_PATH/IG/NMAP/CVE.txt"; then
+            # Rest of your code...
         else
             print_failure 'no exploits found!'
             touch "$FILE_PATH/VA/KNOWN_EXPLOITS/NO_cve_found.txt"
         fi
-        
-        
+    fi
+    
+    # Rest of your code...
+done
+
         ## WIFIBANG
         ## tail -n +15 "$file_path/VA/META_MODULE/$i" | awk -F"   " '{print $2}' | nl
 
