@@ -23,11 +23,11 @@ Kaboom-APT, short for "Advanced Penetration Testing," is an intelligent and auto
 ### 𝐄𝐥𝐞𝐯𝐚𝐭𝐢𝐧𝐠 𝐘𝐨𝐮𝐫 𝐓𝐞𝐬𝐭𝐢𝐧𝐠 𝐏𝐡𝐚𝐬𝐞𝐬
 ------------------------------
 
-At its core, Kaboom-APT is a multi-faceted tool that excels in two fundamental phases of penetration testing: information gathering and vulnerability assessment. This automated powerhouse streamlines the process, allowing testers to focus on analyzing results rather than grappling with manual tasks.
+At its core, Kaboom is a multi-faceted tool that excels in two fundamental phases of penetration testing: information gathering and vulnerability assessment. This automated powerhouse streamlines the process, allowing testers to focus on analyzing results rather than grappling with manual tasks.
 
 ### 𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚝𝚒𝚘𝚗 𝙶𝚊𝚝𝚑𝚎𝚛𝚒𝚗𝚐
 
-Kaboom-APT efficiently conducts comprehensive information gathering through the following methods:
+Kaboom efficiently conducts comprehensive information gathering through the following methods:
 
 - Port Scanning: Leveraging the power of Nmap, Kaboom-APT scans ports to identify potential entry points, offering insights into the network's structure.
 
@@ -36,7 +36,7 @@ Kaboom-APT efficiently conducts comprehensive information gathering through the 
 ### 𝐕𝐮𝐥𝐧𝐞𝐫𝐚𝐛𝐢𝐥𝐢𝐭𝐲 𝐀𝐬𝐬𝐞𝐬𝐬𝐦𝐞𝐧𝐭
 
 
-Kaboom-APT empowers testers to perform thorough vulnerability assessments, enabling them to uncover potential weaknesses:
+Kaboom empowers testers to perform thorough vulnerability assessments, enabling them to uncover potential weaknesses:
 
 - Web Vulnerability Assessment: By utilizing tools such as Nikto and Dirb, Kaboom-APT identifies vulnerabilities in web applications, ensuring they meet the highest security standards.
 
@@ -60,7 +60,7 @@ If you need assistance, run `kaboom -h` (or `kaboom --help`) to access the help 
 ## 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐢𝐧𝐠 𝐊𝐚𝐛𝐨𝐨𝐦-𝐀𝐏𝐓
 
 
-To further tailor Kaboom-APT to your needs, you can provide additional arguments and customize its behavior:
+To further tailor Kaboom to your needs, you can provide additional arguments and customize its behavior:
 
 - Configuration Files: Kaboom-APT supports configuration files for fine-tuning its operation.
 
@@ -70,7 +70,7 @@ To further tailor Kaboom-APT to your needs, you can provide additional arguments
 
 ### 𝐄𝐧𝐡𝐚𝐧𝐜𝐢𝐧𝐠 𝐖𝐨𝐫𝐤𝐟𝐥𝐨𝐰 𝐰𝐢𝐭𝐡 𝐊𝐚𝐛𝐨𝐨𝐦-𝐀𝐏𝐓
 
-Kaboom-APT is more than just a tool; it's a comprehensive suite of capabilities designed to empower security professionals in their pursuit of robust cybersecurity. With its intelligent automation, streamlined workflows, and powerful features, Kaboom-APT marks a new era in penetration testing. Embrace the power of Kaboom-APT and elevate your cybersecurity defenses.
+Kaboom is more than just a tool; it's a comprehensive suite of capabilities designed to empower security professionals in their pursuit of robust cybersecurity. With its intelligent automation, streamlined workflows, and powerful features, Kaboom-APT marks a new era in penetration testing. Embrace the power of Kaboom and elevate your cybersecurity defenses.
 
 - **Non-Interactive Mode**: For tailored testing, use the command `kaboom -t <target_ip> -f <report_path> [-p phases]` to customize the process according to your needs.
 
@@ -129,11 +129,11 @@ Kaboom-APT is more than just a tool; it's a comprehensive suite of capabilities 
 		[*******************************************************]
 		                                                              
 ## 𝐄𝐦𝐩𝐨𝐰𝐞𝐫𝐢𝐧𝐠 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧
-Kaboom-APT empowers you to customize its behavior by adjusting variables at the script's outset. This allows you to tailor the tool to your specific requirements, whether it's selecting wordlists for Hydra and Dirb, specifying a Metasploit scan script, or refining output file names.
+Kaboom empowers you to customize its behavior by adjusting variables at the script's outset. This allows you to tailor the tool to your specific requirements, whether it's selecting wordlists for Hydra and Dirb, specifying a Metasploit scan script, or refining output file names.
 
 ## 𝐄𝐦𝐛𝐫𝐚𝐜𝐞 𝐭𝐡𝐞 𝐅𝐮𝐭𝐮𝐫𝐞 𝐨𝐟 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞𝐬𝐭𝐢𝐧𝐠
 
-Kaboom-APT ushers in a new era of penetration testing, where automation, efficiency, and precision converge to yield unparalleled results. With its advanced features and user-friendly interface, Kaboom-APT is your ally in fortifying digital landscapes against potential threats. Experience the power of Kaboom-APT and elevate your penetration testing game today.
+Kaboom ushers in a new era of penetration testing, where automation, efficiency, and precision converge to yield unparalleled results. With its advanced features and user-friendly interface, Kaboom-APT is your ally in fortifying digital landscapes against potential threats. Experience the power of Kaboom and elevate your penetration testing game today.
 
 ```bash
 #KABOOM_PATH=''		# THE PATH COULD BE SET HERE INSTEAD OF IN BASHRC FILE
@@ -174,7 +174,7 @@ SYN='syn'
 
 # 𝐓𝐡𝐞 𝐄𝐯𝐨𝐥𝐯𝐢𝐧𝐠 𝐋𝐚𝐧𝐝𝐬𝐜𝐚𝐩𝐞 𝐨𝐟 𝐂𝐲𝐛𝐞𝐫𝐬𝐞𝐜𝐮𝐫𝐢𝐭𝐲  
 
-## 𝐊𝐚𝐛𝐨𝐨𝐦-𝐀𝐏𝐓 - 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞𝐬𝐭𝐢𝐧𝐠 
+## 𝐊𝐚𝐛𝐨𝐨𝐦-𝐀𝐏𝐓 - 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 <i>𝚃𝚎𝚌𝚑𝚗𝚘𝚕𝚘𝚐𝚢</i>
 
 ## 𝐈𝐧𝐭𝐫𝐨𝐝𝐮𝐜𝐭𝐢𝐨𝐧
 
