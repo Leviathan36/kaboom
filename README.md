@@ -16,10 +16,6 @@
 </div>
 
 
-In the ever-evolving landscape of cybersecurity, the need for robust penetration testing tools is paramount. Introducing Kaboom-APT, a powerful and versatile automaton designed to revolutionize the way penetration testing is conducted. With a comprehensive set of features focused on information gathering and vulnerability assessment, Kaboom-APT stands as a testament to efficient and effective testing methodologies. Embrace Kaboom-APT's features to enhance your penetration testing journey. Whether you're customizing, exploring, or automating, Kaboom-APT is your partner in fortifying cybersecurity.
-
-
-    kaboom --help
 
 ### 𝐔𝐧𝐥𝐞𝐚𝐬𝐡𝐢𝐧𝐠 𝐭𝐡𝐞 𝐏𝐨𝐰𝐞𝐫 𝐨𝐟 𝐊𝐚𝐛𝐨𝐨𝐦-𝐀𝐏𝐓
 -----------------------------------
@@ -61,7 +57,6 @@ For Help
 If you need assistance, run `kaboom -h` (or `kaboom --help`) to access the help menu and explore available options.
 
 ## 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐢𝐧𝐠 𝐊𝐚𝐛𝐨𝐨𝐦-𝐀𝐏𝐓
-
 
 To further tailor Kaboom to your needs, you can provide additional arguments and customize its behavior:
 
@@ -134,6 +129,54 @@ Kaboom is more than just a tool; it's a comprehensive suite of capabilities desi
 ## 𝐄𝐦𝐩𝐨𝐰𝐞𝐫𝐢𝐧𝐠 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧
 ### 𝐄𝐦𝐛𝐫𝐚𝐜𝐞 𝐭𝐡𝐞 𝐅𝐮𝐭𝐮𝐫𝐞 𝐨𝐟 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞𝐬𝐭𝐢𝐧𝐠
 Kaboom empowers you to customize its behavior by adjusting variables at the script's outset. This allows you to tailor the tool to your specific requirements, whether it's selecting wordlists for Hydra and Dirb, specifying a Metasploit scan script, or refining output file names. Kaboom ushers in a new era of penetration testing, where automation, efficiency, and precision converge to yield unparalleled results. With its advanced features and user-friendly interface, Kaboomis your ally in fortifying digital landscapes against potential threats. Experience the power of Kaboom and elevate your penetration testing game today.
+
+    kaboom --help
+
+----
+
+		┌──(root㉿test-station)-[/home/user1/kaboom/kaboom]
+		└─# ./kaboom.sh --help
+		Usage:
+		  Interactive mode:
+		      kaboom [ENTER]  ...and the script does the rest
+		
+		  NON-interactive mode:
+		      kaboom -t <target_ip> -f <report_path> [-p one_or_more_phases]
+		
+		      phases:
+		          - i == information gathering
+		          - v == vulnerability assessment
+		          - d == dictionary attack against open services
+		
+		      example: iv == information gathering + vulnerability assessment
+		      dafult: ALL (ivb)
+		
+		
+		
+Here's a brief breakdown of what the script does:
+
+Setting Kaboom Path:
+    The script starts by checking whether the KABOOM_PATH variable is already set. If it's not set, the script assigns the current directory (.) to the KABOOM_PATH variable.
+
+ Defining User Wordlists:
+    The script defines various USERLIST_HYDRA_* variables that point to user wordlists for different protocols like SSH, POP3, IMAP, RDP, and SMB. These wordlists likely contain usernames or accounts for dictionary attacks.
+
+ Defining Password Wordlists:
+    Similar to user wordlists, the script defines PASSLIST_HYDRA_* variables for different protocols, pointing to password wordlists. These wordlists are used for dictionary attacks to try different passwords for each account.
+
+Defining Dirb Wordlists:
+    The script sets the HTTP_WORDLIST variable for custom URL wordlists and HTTP_EXTENSIONS_FILE for common file extensions. These are likely used in the Dirb tool to perform web resource enumeration.
+
+Setting Metasploit Scan Script:
+    The METASPLOIT_SCAN_SCRIPT variable is set to the path of a Metasploit scan script. This script might be used by Kaboom-APT to automate Metasploit scans.
+
+Defining Nmap Files:
+    The SCRIPT_SYN, UDP, and SYN variables are set to specific Nmap file names. These could be used to customize the Nmap scan behavior within Kaboom-APT.
+
+In summary, this script aims to enhance the customization and flexibility of Kaboom-APT by allowing users to specify different paths, wordlists, and scripts to be used during penetration testing. This level of customization helps security professionals adapt the tool to their specific testing scenarios and requirements.
+
+
+
 
 ```bash
 #KABOOM_PATH=''		# THE PATH COULD BE SET HERE INSTEAD OF IN BASHRC FILE
