@@ -165,7 +165,7 @@ sanitize_input () {
         
         
         # HOST
-        printf "Insert hosts (example 192.168.1.1-5):\n>> "
+        printf "Insert host(s) (example 192.168.1.1-5):\n>> "
         read HOSTS
         
         # PATH
@@ -173,16 +173,16 @@ sanitize_input () {
         read ROOT_PATH
         
         # PHASE 
-        printf "choice the phases to perform [i=IG, v=VA, d=dictionary]:\n>> " 
+        printf "Choice of Phases to Perform [i=IG, v=VA, d=dictionary]:\n>> " 
         read PHASE
         while [[ ! "$PHASE" =~ ['ivd'] ]]; do
             echo 'INVALID PARAMETER'
-            printf "choice the phases to perform [i=IG, v=VA, d=dictionary]:\n>> "
+            printf "Choice of Phases to Perform [i=IG, v=VA, d=dictionary]:\n>> "
             read PHASE
         done
         
         # SHUTDOWN
-        printf "Shutdown pc at the end of script [YES/NO] (default NO):\n>> "
+        printf "Shutdown machine at the end of script [YES/NO] (default NO):\n>> "
         read SHUTDOWN
     fi
         
@@ -285,7 +285,7 @@ for i in $(seq $LOWER_HOST 1 $UPPER_HOST); do
 
     # Start information gathering (IG)
     if [[ "$PHASE" =~ 'i' || "$PHASE" == '' ]]; then 
-        print_phase 'starting IG...'
+        print_phase 'Digital Reconnaissance Initiated. . .'
         sleep 2
         
         # Create new directories for IG results
