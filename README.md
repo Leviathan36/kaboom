@@ -16,7 +16,7 @@ In the ever-evolving landscape of cybersecurity, the need for robust penetration
 
 .. code-block:: bash
 
-    kaboom-APT --help
+    kaboom --help
 
 Unleashing the Power of Kaboom-APT
 -----------------------------------
@@ -29,7 +29,6 @@ Elevating Your Testing Phases
 At its core, Kaboom-APT is a multi-faceted tool that excels in two fundamental phases of penetration testing: information gathering and vulnerability assessment. This automated powerhouse streamlines the process, allowing testers to focus on analyzing results rather than grappling with manual tasks.
 
 Information Gathering
-~~~~~~~~~~~~~~~~~~~~~
 
 Kaboom-APT efficiently conducts comprehensive information gathering through the following methods:
 
@@ -38,7 +37,7 @@ Kaboom-APT efficiently conducts comprehensive information gathering through the 
 - Web Resources Enumeration: Through Dirb, Kaboom-APT identifies and catalogs web resources, providing a thorough understanding of the target's online presence.
 
 Vulnerability Assessment
-~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 Kaboom-APT empowers testers to perform thorough vulnerability assessments, enabling them to uncover potential weaknesses:
 
@@ -57,12 +56,12 @@ Kaboom-APT simplifies usage with both interactive and non-interactive modes:
 - Non-interactive mode: Use the command `kaboom -t <target_ip> -f <report_path> [-p one_or_more_phases]` for specific targeting and reporting.
 
 For Help
-~~~~~~~~~
+
 
 If you need assistance, run `kaboom -h` (or `kaboom --help`) to access the help menu and explore available options.
 
 Customizing Kaboom-APT
------------------------
+
 
 To further tailor Kaboom-APT to your needs, you can provide additional arguments and customize its behavior:
 
@@ -73,7 +72,7 @@ To further tailor Kaboom-APT to your needs, you can provide additional arguments
 - Output Customization: Personalize output file names and locations to match your preferences.
 
 Enhancing Workflow with Kaboom-APT
------------------------------------
+
 
 Kaboom-APT is more than just a tool; it's a comprehensive suite of capabilities designed to empower security professionals in their pursuit of robust cybersecurity. With its intelligent automation, streamlined workflows, and powerful features, Kaboom-APT marks a new era in penetration testing. Embrace the power of Kaboom-APT and elevate your cybersecurity defenses.
 
