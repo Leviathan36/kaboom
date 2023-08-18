@@ -6,47 +6,60 @@
 
 <p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/master/kaboom_images/logo.png" width="80%" height="auto"></p>
 
-# Kaboom - Automated Penetration Testing
+# Kaboom-APT: Advanced Penetration Test
 
-## About
-Kaboom is an automatism for penetration tests. It performs several tasks for the first two phases of the test: information gathering and vulnerability assessment.
-All information collected is saved into a simple-to-browse directory hierarchy, even in the case of multiple targets.
+In the ever-evolving landscape of cybersecurity, the need for robust penetration testing tools is paramount. Introducing Kaboom-APT, a powerful and versatile automaton designed to revolutionize the way penetration testing is conducted. With a comprehensive set of features focused on information gathering and vulnerability assessment, Kaboom-APT stands as a testament to efficient and effective testing methodologies.
 
-## Details
-Kaboom performs several tasks:
+## Unleashing the Power of Kaboom-APT
 
-1. **Information Gathering**
-   - Port scan (**Nmap**)
-   - Web resources enumeration (**Dirb**)
+Kaboom-APT, short for "Advance Penetration Testing," is an intelligent and automated solution meticulously crafted to simplify the complexities of penetration testing. Its purpose is clear: to equip security professionals with an advanced tool that seamlessly integrates into their workflow, enhancing their capabilities and efficiency.
 
-2. **Vulnerability Assessment**
-   - Web vulnerability assessment (**Nikto** - **Dirb**)
-   - Vulnerability assessment (**Nmap** - **Metasploit**)
-   - Automatic Vulnerabilities research (**Searchsploit** - **Metasploit**)
-   - Dictionary Attacks (**Hydra**)
-       - SSH
-       - POP3
-       - IMAP
-       - RDP
+## Elevating Your Testing Phases
 
-## Usage
-Kaboom can be used in two ways:
+At its core, Kaboom-APT is a multi-faceted tool that excels in two fundamental phases of penetration testing: information gathering and vulnerability assessment. This automated powerhouse streamlines the process, allowing testers to focus on analyzing results rather than grappling with manual tasks.
 
-- Interactive mode:
-  `kaboom [ENTER]`, and the script does the rest
+### Information Gathering
+
+Kaboom-APT efficiently conducts comprehensive information gathering through the following methods:
+
+- **Port Scanning**: Leveraging the power of Nmap, Kaboom-APT scans ports to identify potential entry points, offering insights into the network's structure.
+
+- **Web Resources Enumeration**: Through Dirb, Kaboom-APT identifies and catalogs web resources, providing a thorough understanding of the target's online presence.
+
+### Vulnerability Assessment
+
+Kaboom-APT empowers testers to perform thorough vulnerability assessments, enabling them to uncover potential weaknesses:
+
+- **Web Vulnerability Assessment**: By utilizing tools such as Nikto and Dirb, Kaboom-APT identifies vulnerabilities in web applications, ensuring they meet the highest security standards.
+
+- **Automatic Vulnerabilities Research**: Kaboom-APT automatically integrates with Searchsploit and Metasploit, streamlining the process of identifying and mitigating vulnerabilities.
+
+- **Dictionary Attacks**: Employing Hydra, Kaboom-APT conducts dictionary attacks against open services, targeting common protocols such as SSH, POP3, IMAP, and RDP.
+
+## Seamless Usage for Diverse Scenarios
+
+Kaboom-APT is designed to accommodate various scenarios, offering two distinct modes of operation:
+
+- **Interactive Mode**: In this mode, executing `kaboom` with no parameters triggers an automated sequence of tasks, allowing the script to handle the complexities, while you focus on results.
+
+- **Non-Interactive Mode**: For tailored testing, use the command `kaboom -t <target_ip> -f <report_path> [-p phases]` to customize the process according to your needs.
 
 ![Interactive Mode](https://github.com/Leviathan36/kaboom/blob/master/kaboom_images/screenshots/interactive_mode.png)
 
-- NON-interactive mode:
-  `kaboom -t <target_ip> -f <report_path> [-p one_or_more_phases]`
+## Empowering Customization
 
-**For more screenshots, see the [screenshots directory](https://github.com/Leviathan36/kaboom/tree/master/kaboom_images/screenshots/) of the repository.**
+Kaboom-APT empowers you to customize its behavior by adjusting variables at the script's outset. This allows you to tailor the tool to your specific requirements, whether it's selecting wordlists for Hydra and Dirb, specifying a Metasploit scan script, or refining output file names.
 
-## Directory Hierarchy
-<p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/master/kaboom_images/dir_hierarchy.PNG" width="80%" height="auto"></p>
+## Embrace the Future of Penetration Testing
 
-## Customization
-It's possible to customize the script by changing the value of variables at the beginning of the file. In particular, you can choose the wordlists used by Hydra and Dirb, specify another Metasploit scan script, and change the output file names.
+Kaboom-APT ushers in a new era of penetration testing, where automation, efficiency, and precision converge to yield unparalleled results. With its advanced features and user-friendly interface, Kaboom-APT is your ally in fortifying digital landscapes against potential threats. Experience the power of Kaboom-APT and elevate your penetration testing game today.
+
+
+
+
+
+
+
 
 ```bash
 #KABOOM_PATH=''		# THE PATH COULD BE SET HERE INSTEAD OF IN BASHRC FILE
