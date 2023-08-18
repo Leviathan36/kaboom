@@ -198,7 +198,7 @@ Kaboom recognizes that each engagement requires a unique approach. Customize the
 
    --------
                                                               
-## 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐢𝐧𝐠 𝚔𝚊𝚋𝚘𝚘𝚖
+## 𝐀𝐝𝐣𝐮𝐬𝐭𝐢𝐧𝐠 𝚔𝚊𝚋𝚘𝚘𝚖'𝐬 𝐕𝐚𝐫𝐢𝐚𝐛𝐥𝐞𝐬
 
 Kaboom empowers you to customize its behavior by adjusting variables at the script's outset. This allows you to tailor the tool to your specific requirements, whether it's selecting wordlists for Hydra and Dirb, specifying a Metasploit scan script, or refining output file names. Kaboom ushers in a new era of penetration testing, where automation, efficiency, and precision converge to yield unparalleled results. With its advanced features and user-friendly interface, Kaboomis your ally in fortifying digital landscapes against potential threats. Experience the power of Kaboom and elevate your penetration testing game today.
 
@@ -240,23 +240,18 @@ Kaboom empowers you to customize its behavior by adjusting variables at the scri
 ------		
 Here's a brief breakdown of what the script does:
 
-- Setting Kaboom Path:
-    The script starts by checking whether the KABOOM_PATH variable is already set. If it's not set, the script assigns the current directory (.) to the KABOOM_PATH variable.
+- **Setting Kaboom Path:** The script starts by checking whether the `KABOOM_PATH` variable is already set. If it's not set, the script assigns the current directory (`.`) to the `KABOOM_PATH` variable.
 
- - Defining User Wordlists:
-    The script defines various USERLIST_HYDRA_* variables that point to user wordlists for different protocols like SSH, POP3, IMAP, RDP, and SMB. These wordlists likely contain usernames or accounts for dictionary attacks.
+- **Defining User Wordlists:** The script defines various `USERLIST_HYDRA_*` variables that point to user wordlists for different protocols like SSH, POP3, IMAP, RDP, and SMB. These wordlists likely contain usernames or accounts for dictionary attacks.
 
- - Defining Password Wordlists:
-    Similar to user wordlists, the script defines PASSLIST_HYDRA_* variables for different protocols, pointing to password wordlists. These wordlists are used for dictionary attacks to try different passwords for each account.
+- **Defining Password Wordlists:** Similar to user wordlists, the script defines `PASSLIST_HYDRA_*` variables for different protocols, pointing to password wordlists. These wordlists are used for dictionary attacks to try different passwords for each account.
 
-- Defining Dirb Wordlists:
-    The script sets the HTTP_WORDLIST variable for custom URL wordlists and HTTP_EXTENSIONS_FILE for common file extensions. These are likely used in the Dirb tool to perform web resource enumeration.
+- **Defining Dirb Wordlists:** The script sets the `HTTP_WORDLIST` variable for custom URL wordlists and `HTTP_EXTENSIONS_FILE` for common file extensions. These are likely used in the Dirb tool to perform web resource enumeration.
 
-- Setting Metasploit Scan Script:
-    The METASPLOIT_SCAN_SCRIPT variable is set to the path of a Metasploit scan script. This script might be used by Kaboom-APT to automate Metasploit scans.
+- **Setting Metasploit Scan Script:** The `METASPLOIT_SCAN_SCRIPT` variable is set to the path of a Metasploit scan script. This script might be used by Kaboom-APT to automate Metasploit scans.
 
- - Defining Nmap Files:
-    The SCRIPT_SYN, UDP, and SYN variables are set to specific Nmap file names. These could be used to customize the Nmap scan behavior within Kaboom-APT.
+- **Defining Nmap Files:** The `SCRIPT_SYN`, `UDP`, and `SYN` variables are set to specific Nmap file names. These could be used to customize the Nmap scan behavior within Kaboom-APT.
+
 
 In summary, this script aims to enhance the customization and flexibility of Kaboom-APT by allowing users to specify different paths, wordlists, and scripts to be used during penetration testing. This level of customization helps security professionals adapt the tool to their specific testing scenarios and requirements.
 
