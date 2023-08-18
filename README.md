@@ -55,15 +55,15 @@ Just type `kaboom` and hit [ENTER], and the script handles the rest
 
 
 			┌──(root㉿test-station)-[/home/user1/kaboom/kaboom]
-					└─# kaboom
-					Insert hosts (example 192.168.1.1-5):
-					>> 10.10.10.222
-					Insert path where to save results (without final /):
-					>> /home/user1/Documents
-					choice the phases to perform [i=IG, v=VA, d=dictionary]:
-					>> iv
-					Shutdown pc at the end of script [YES/NO] (default NO):
-					>> NO
+			└─# kaboom
+			Insert hosts (example 192.168.1.1-5):
+			>> 10.10.10.222
+			Insert path where to save results (without final /):
+			>> /home/user1/Documents
+			choice the phases to perform [i=IG, v=VA, d=dictionary]:
+			>> iv
+			Shutdown pc at the end of script [YES/NO] (default NO):
+			>> NO
 
 - ## 𝐍𝐨𝐧-𝐢𝐧𝐭𝐞𝐫𝐚𝐜𝐭𝐢𝐯𝐞 𝐦𝐨𝐝𝐞:
 Use the command `kaboom -t <target_ip> -f <report_path> [-p one_or_more_phases]` for specific targeting and reporting.
