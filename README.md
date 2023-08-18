@@ -102,6 +102,8 @@ If you need assistance, run `kaboom -h` (or `kaboom --help`) to access the help 
 
 
 ## 𝐄𝐧𝐡𝐚𝐧𝐜𝐢𝐧𝐠 𝐖𝐨𝐫𝐤𝐟𝐥𝐨𝐰 𝐮𝐬𝐢𝐧𝐠 𝐊𝐚𝐛𝐨𝐨𝐦-𝐀𝐏𝐓!
+Harnessing the power of Kaboom-APT streamlines the intricate process of penetration testing by seamlessly integrating renowned tools like Nmap, Metasploit, and Hydra. This synergy enhances tester efficiency, enabling a focused analysis of results rather than being bogged down by manual tool coordination.
+
 
 	
 				    _.-^^---....,,--       
