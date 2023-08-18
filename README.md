@@ -181,7 +181,7 @@ If you need assistance, run `kaboom -h` (or `kaboom --help`) to access the help 
 
 
 
-## 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧 & Configuration
+## 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧 & 𝙲𝚘𝚗𝚏𝚒𝚐𝚞𝚛𝚊𝚝𝚒𝚘𝚗
 
 To further tailor Kaboom to your needs, you can provide additional arguments and customize its behavior:
 
