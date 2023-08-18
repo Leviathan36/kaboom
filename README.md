@@ -77,7 +77,7 @@ If you need assistance, run `kaboom -h` (or `kaboom --help`) to access the help 
 			          - d == dictionary attack against open services
 			
 			      example: iv == information gathering + vulnerability assessment
-			      dafult: ALL (ivb)
+			      dafault: ALL (ivb)
 			
 
 
@@ -172,7 +172,7 @@ Kaboom is more than just a tool; it's a comprehensive suite of capabilities desi
 
 
 
-## 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐢𝐧𝐠 𝚔𝚊𝚋𝚘𝚘𝚖
+# 𝐄𝐦𝐩𝐨𝐰𝐞𝐫𝐢𝐧𝐠 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧
 
 To further tailor Kaboom to your needs, you can provide additional arguments and customize its behavior:
 
@@ -181,10 +181,9 @@ To further tailor Kaboom to your needs, you can provide additional arguments and
 - Wordlists: Customize wordlists for dictionary attacks using Hydra and Dirb, enhancing attack efficiency.
 
 - Output Customization: Personalize output file names and locations to match your preferences.
+                                                              
+## 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐢𝐧𝐠 𝚔𝚊𝚋𝚘𝚘𝚖
 
-		                                                              
-## 𝐄𝐦𝐩𝐨𝐰𝐞𝐫𝐢𝐧𝐠 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧
-### 𝐄𝐦𝐛𝐫𝐚𝐜𝐞 𝐭𝐡𝐞 𝐅𝐮𝐭𝐮𝐫𝐞 𝐨𝐟 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞𝐬𝐭𝐢𝐧𝐠
 Kaboom empowers you to customize its behavior by adjusting variables at the script's outset. This allows you to tailor the tool to your specific requirements, whether it's selecting wordlists for Hydra and Dirb, specifying a Metasploit scan script, or refining output file names. Kaboom ushers in a new era of penetration testing, where automation, efficiency, and precision converge to yield unparalleled results. With its advanced features and user-friendly interface, Kaboomis your ally in fortifying digital landscapes against potential threats. Experience the power of Kaboom and elevate your penetration testing game today.
 
 
