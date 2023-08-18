@@ -10,8 +10,8 @@ PROGRESS: [===================>]
 
 [PHASE:]starting IG...
 
-        [+]nmap is scanning...
-        [*]start syn-scan with syn-probe...
+        [+]Network Mapping & Scanning for Vulnerabilities. . .
+        [*]Network Scanner: Active. Connection is establishing. . .
 Starting Nmap 7.94 ( https://nmap.org ) at 2023-08-17 18:55 MDT
 Pre-scan script results:
 | broadcast-avahi-dos: 
