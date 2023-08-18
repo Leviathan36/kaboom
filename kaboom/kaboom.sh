@@ -30,7 +30,7 @@ if [[ "$KABOOM_PATH" == '/home/user1/kaboom/kaboom' ]]; then
 fi
 
 # USER WORDLISTS
-USERLIST_HYDRA_SSH="$KABOOM_PATH/user_wordlist_short.txt"
+USERLIST_HYDRA_SSH="$'/home/user1/kaboom/kaboom'/user_wordlist_short.txt"
 USERLIST_HYDRA_POP3="$KABOOM_PATH/user_wordlist_short.txt"
 USERLIST_HYDRA_IMAP="$KABOOM_PATH/user_wordlist_short.txt"
 USERLIST_HYDRA_RDP="$KABOOM_PATH/user_wordlist_short.txt"
@@ -53,7 +53,6 @@ METASPLOIT_SCAN_SCRIPT='./metasploit_scan_script'
 
 # NMAP FILES
 SCRIPT_SYN='script-syn'
-UDP='udp'
 SYN='syn'
 
 ##############################################
