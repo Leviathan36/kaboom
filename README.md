@@ -68,7 +68,12 @@ Just type `kaboom` and hit [ENTER], and the script handles the rest
 - ## <b>Non-interactive mode:</b>
 
 Use the command `kaboom -t <target_ip> -f <report_path> [-p one_or_more_phases]` for specific targeting and reporting.
-  
+
+
+		┌──(root㉿test-station)-[/home/user1/kaboom]
+		└─# kaboom -t 10.10.11.579 -f scan-results.txt /home/user1/Documents
+		
+		
 
 ## 𝙵𝚘𝚛 𝙷𝚎𝚕𝚙
 
