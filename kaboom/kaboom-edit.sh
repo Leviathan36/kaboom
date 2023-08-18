@@ -1,29 +1,29 @@
 #!/bin/bash
+#!/bin/bash
 
+# Kaboom-APT - Advanced Penetration Technology
+# Copyright © 2019 Leviathan36
 
-
-# kaboom    -    automatic pentest
-# Copyright © 2019 Leviathan36 
-
-# kaboom is free software: you can redistribute it and/or modify
+# Kaboom is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
 
-# kaboom is distributed in the hope that it will be useful,
+# Kaboom is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 # GNU General Public License for more details.
 
 # You should have received a copy of the GNU General Public License
-# along with kaboom.  If not, see <http://www.gnu.org/licenses/>.
-
+# along with kaboom. If not, see <http://www.gnu.org/licenses/>.
 
 ##############################################
 ###             VARIABLES BRUTEFORCE       ###  
 ##############################################
 
-#KABOOM_PATH=''     # THE KABOOM DIRECOTRY PATH COULD BE SET HERE INSTEAD OF IN THE BASHRC FILE
+# KABOOM_PATH=''     
+
+# THE KABOOM DIRECOTRY PATH COULD BE SET HERE INSTEAD OF IN THE BASHRC FILE
 
 if [[ "$KABOOM_PATH" == '/home/user1/kaboom/kaboom' ]]; then 
     KABOOM_PATH='.'
@@ -56,14 +56,10 @@ SCRIPT_SYN='script-syn'
 SYN='syn'
 
 ##############################################
-##############################################
-
-
 
 ########################################################
 ############            FUNCTIONS          #############
 ########################################################
-
 
 print_help () {
     echo 'Usage:'
@@ -246,10 +242,6 @@ print_portid () {
 ###                 ###
 
 ######################################
-######################################
-
-
-######################################
 ###             CODE               ###  
 ######################################
 
@@ -359,10 +351,10 @@ done
             done;
         }
             
-            #Dirb takes approximaly one hour to finish the wordlist with the following setting.
-            #It doesn't search recursively.
+            # Dirb takes approximaly one hour to finish the wordlist with the following setting.
+            # It doesn't search recursively.
 
-        #https
+        # HTTPS
         tcp_service_on 'open' 'https' '0' && {
             # execute nikto and dirb for https protocol
             print_succ 'starting nikto (https)...';
@@ -378,7 +370,7 @@ done
             done;
         }
         
-        #ssl/http
+        # SSL/HTTP
         tcp_service_on 'open' 'http' '1' && {
             # execute nikto and dirb for ssl/http protocol
             print_succ 'starting nikto (ssl/http)...';
@@ -492,6 +484,7 @@ done
     fi
     
 done
+
 ######## END EXPLOITATION ######
 
 print_start_end " END SCRIPT AT `date` "
