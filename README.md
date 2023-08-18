@@ -31,7 +31,7 @@ Kaboom-APT efficiently conducts comprehensive information gathering through the 
 
 - **Web Resources Enumeration**: Through Dirb, Kaboom-APT identifies and catalogs web resources, providing a thorough understanding of the target's online presence.
 
-### Vulnerability Assessment
+### 𝐕𝐮𝐥𝐧𝐞𝐫𝐚𝐛𝐢𝐥𝐢𝐭𝐲 𝐀𝐬𝐬𝐞𝐬𝐬𝐦𝐞𝐧𝐭
 
 Kaboom-APT empowers testers to perform thorough vulnerability assessments, enabling them to uncover potential weaknesses:
 
@@ -41,7 +41,7 @@ Kaboom-APT empowers testers to perform thorough vulnerability assessments, enabl
 
 - **Dictionary Attacks**: Employing Hydra, Kaboom-APT conducts dictionary attacks against open services, targeting common protocols such as SSH, POP3, IMAP, and RDP.
 
-## Seamless Usage for Diverse Scenarios
+## 𝐒𝐞𝐚𝐦𝐥𝐞𝐬𝐬 𝐔𝐬𝐚𝐠𝐞 𝐟𝐨𝐫 𝐃𝐢𝐯𝐞𝐫𝐬𝐞 𝐒𝐜𝐞𝐧𝐚𝐫𝐢𝐨𝐬
 
 Kaboom-APT is designed to accommodate various scenarios, offering two distinct modes of operation:
 
