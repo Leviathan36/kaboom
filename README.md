@@ -96,9 +96,6 @@ If you need assistance, run `kaboom -h` (or `kaboom --help`) to access the help 
 
 # 𝐄𝐧𝐡𝐚𝐧𝐜𝐢𝐧𝐠 𝐖𝐨𝐫𝐤𝐟𝐥𝐨𝐰 𝐰𝐢𝐭𝐡 𝐊𝐚𝐛𝐨𝐨𝐦-𝐀𝐏𝐓
 
-Kaboom is more than just a tool; it's a comprehensive suite of capabilities designed to empower security professionals in their pursuit of robust cybersecurity. With its intelligent automation, streamlined workflows, and powerful features, Kaboom-APT marks a new era in penetration testing. Embrace the power of Kaboom and elevate your cybersecurity defenses.
-
-
 	
 			    _.-^^---....,,--       
 			
