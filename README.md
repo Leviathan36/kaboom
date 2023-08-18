@@ -263,7 +263,7 @@ In summary, this script aims to enhance the customization and flexibility of Kab
     
 ## 𝐌𝐮𝐥𝐭𝐢-𝐓𝐚𝐫𝐠𝐞𝐭 𝐒𝐩𝐞𝐜𝐢𝐟𝐢𝐜𝐚𝐭𝐢𝐨𝐧
 
-Efficiency matters in penetration testing. Kaboom-APT answers this need with multi-target specification:
+Efficiency matters in penetration testing. Kaboom answers this need with multi-target specification:
 
 #### Efficiently assess multiple targets by defining up to 254 hosts within a C-class network.
 
