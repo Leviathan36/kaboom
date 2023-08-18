@@ -57,8 +57,8 @@ For Help
 
 If you need assistance, run `kaboom -h` (or `kaboom --help`) to access the help menu and explore available options.
 
-
-    ./kaboom.sh --help
+		
+		./kaboom.sh --help
 
 ----
 
