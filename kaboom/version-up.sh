@@ -246,14 +246,7 @@ for i in $(seq $LOWER_HOST 1 $UPPER_HOST); do
 
     # Start information gathering (IG)
     if [[ "$PHASE" =~ 'i' || "$PHASE" == '' ]]; then 
-        print_phase 'Starting Information Gathering..Researching in Progress. . .
-       \ 
-      / \__
-     (    @\___
-     /    )    )
-    / \ (_____/
-   /____ | /  
-  /_/ (_  /|'
+        print_phase 'Starting Information Gathering..Researching in Progress. . .'
         sleep 2
         
         # Create new directories for IG results
