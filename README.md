@@ -148,10 +148,6 @@ SYN='syn'
 
  ... (rest of the customization variables)
 
-Kaboom-APT - 'Advancing Penetration Testing' in the Cybersecurity Realm
-Introduction
-
-
 The Evolving Landscape of Cybersecurity and the Need for Robust Tools
 
 # Kaboom-APT - Advanced Penetration Testing
