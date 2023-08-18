@@ -235,10 +235,6 @@ Modern networks harbor services on non-canonical ports:
 
 	kaboom -t <target_ip> -f <report_path> -p non_canonical_ports
 
-### 𝐇𝐚𝐫𝐧𝐞𝐬𝐬𝐢𝐧𝐠 𝐂𝐫𝐞𝐝𝐞𝐧𝐭𝐢𝐚𝐥𝐬: 𝐄𝐟𝐟𝐢𝐜𝐢𝐞𝐧𝐭 𝐂𝐫𝐞𝐝𝐞𝐧𝐭𝐢𝐚𝐥𝐬 𝐌𝐚𝐧𝐚𝐠𝐞𝐦𝐞𝐧𝐭
-
-Credentials uncovered during dictionary attacks are a goldmine of information. Kaboom recognizes the significance of this data and introduces a feature that allows testers to retrieve, print, and save credentials. This management feature ensures critical information is easily accessible for in-depth analysis and comprehensive reporting.
-
 ### 𝐓𝐰𝐢𝐧 𝐁𝐫𝐨𝐭𝐡𝐞𝐫 - 𝐓𝐫𝐢𝐠𝐦𝐚𝐩: 𝐀 𝐏𝐚𝐫𝐚𝐥𝐥𝐞𝐥 𝐄𝐧𝐝𝐞𝐚𝐯𝐨𝐫
 As Kaboom evolved, a parallel project named Trigmap (Trigger Nmap) emerged. Trigmap shares similar objectives with Kaboom-APT but adopts a distinct approach. This sibling tool relies exclusively on Nmap to execute its tasks. The synergy between Kaboom-APT and Trigmap enriches penetration testing endeavors, offering a comprehensive toolkit for varying scenarios.
 
@@ -246,7 +242,8 @@ To delve deeper into Trigmap's capabilities, visit the Trigmap repository.
 
 ### 𝑬𝒕𝒉𝒊𝒄𝒂𝒍 𝑹𝒆𝒔𝒑𝒐𝒏𝒔𝒊𝒃𝒊𝒍𝒊𝒕𝒚: 𝑻𝒉𝒆 𝑲𝒂𝒃𝒐𝒐𝒎-𝑨𝑷𝑻 𝑫𝒊𝒔𝒄𝒍𝒂𝒊𝒎𝒆𝒓
 
-Kaboom-APT is a tool of empowerment, carefully crafted for cybersecurity professionals striving to enhance their capabilities. While the potential it holds is awe-inspiring, it comes hand in hand with a profound responsibility. As you embark on your journey with Kaboom-APT, we emphasize the need for ethical conduct, responsible use, and a steadfast commitment to upholding the principles of cybersecurity.
+  <i>Kaboom-APT is a tool of empowerment, carefully crafted for cybersecurity professionals striving to enhance their capabilities. While the potential it holds is awe-inspiring, it comes hand in hand with a profound responsibility. As you embark on your journey with Kaboom-APT, we emphasize the need for ethical conduct, responsible use, and a steadfast commitment to upholding the principles of cybersecurity.Kaboom is a tool designed to empower cybersecurity professionals, but its power comes with an inherent responsibility. We stress the importance of ethical conduct and responsible use. The authors and contributors behind Kaboom underline several crucial principles:Responsible Usage: Kaboom is intended solely for legitimate and ethical penetration testing. It should never be employed for malicious or unlawful activities, aligning with the highest standards of professional conduct. Authorized Testing: Prior authorization is essential before using Kaboom for penetration testing. Unauthorized use can lead to unintended consequences and legal actions.Informed Consent: Always ensure that you have obtained informed consent from system or network owners before conducting tests. Transparent communication is key.Respect for Privacy: Uphold privacy and confidentiality during testing, refraining from accessing or sharing sensitive information without proper authorization. Limited Scope: Use Kaboom with discretion to avoid disruptions or harm to systems. Excessive scanning should be avoided.</i>
+
 
 <p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/master/kaboom_images/logo.png" width="100%" height="auto">
 
