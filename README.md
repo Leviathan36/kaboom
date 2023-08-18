@@ -33,8 +33,10 @@ Kaboom efficiently conducts comprehensive information gathering through the foll
 - Web Resources Enumeration: Through Dirb, Kaboom identifies and catalogs web resources, providing a thorough understanding of the target's online presence.
 - 
 
-### 𝚅𝚞𝚕𝚗𝚎𝚛𝚊𝚋𝚒𝚕𝚒𝚝𝚢 𝙰𝚜𝚜𝚎𝚜𝚜𝚖𝚎𝚗𝚝
+## 𝐒𝐭𝐫𝐞𝐚𝐦𝐥𝐢𝐧𝐢𝐧𝐠 𝐭𝐡𝐞 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞𝐬𝐭𝐢𝐧𝐠 𝐏𝐫𝐨𝐜𝐞𝐬𝐬
+Kaboom's significance extends beyond its individual capabilities; it offers a holistic approach that streamlines the entire penetration testing process. Its integration of various tools and techniques into a cohesive framework minimizes the complexities often associated with cybersecurity assessments. This streamlined workflow empowers security professionals to focus on analysis and action, rather than grappling with disparate tools and fragmented processes. In an era where cybersecurity is paramount, Kaboom emerges as a pivotal player in the ongoing battle to secure digital assets. Its comprehensive suite of capabilities, meticulous engineering, and holistic approach set it apart as a tool that empowers security professionals to proactively safeguard against cyber threats. As the digital landscape continues to evolve, Kaboom-APT stands as a beacon of innovation, helping to fortify the digital world against the ever-persistent forces of cybercrime.
 
+### 𝚅𝚞𝚕𝚗𝚎𝚛𝚊𝚋𝚒𝚕𝚒𝚝𝚢 𝙰𝚜𝚜𝚎𝚜𝚜𝚖𝚎𝚗𝚝
 
 Kaboom empowers testers to perform thorough vulnerability assessments, enabling them to uncover potential weaknesses:
 
@@ -51,9 +53,20 @@ Kaboom simplifies usage with both interactive and non-interactive modes:
 - Interactive mode: Just type `kaboom` and hit [ENTER], and the script handles the rest.
 
 - Non-interactive mode: Use the command `kaboom -t <target_ip> -f <report_path> [-p one_or_more_phases]` for specific targeting and reporting.
+- 
 
-For Help
+			┌──(root㉿test-station)-[/home/user1/kaboom/kaboom]
+					└─# ./kaboom.sh
+					Insert hosts (example 192.168.1.1-5):
+					>> 10.10.10.222
+					Insert path where to save results (without final /):
+					>> /home/user1/Documents
+					choice the phases to perform [i=IG, v=VA, d=dictionary]:
+					>> iv
+					Shutdown pc at the end of script [YES/NO] (default NO):
+					>> NO
 
+## 𝙵𝚘𝚛 𝙷𝚎𝚕𝚙
 
 If you need assistance, run `kaboom -h` (or `kaboom --help`) to access the help menu and explore available options.
 
@@ -84,14 +97,6 @@ If you need assistance, run `kaboom -h` (or `kaboom --help`) to access the help 
 ### 𝐄𝐧𝐡𝐚𝐧𝐜𝐢𝐧𝐠 𝐖𝐨𝐫𝐤𝐟𝐥𝐨𝐰 𝐰𝐢𝐭𝐡 𝐊𝐚𝐛𝐨𝐨𝐦-𝐀𝐏𝐓
 
 Kaboom is more than just a tool; it's a comprehensive suite of capabilities designed to empower security professionals in their pursuit of robust cybersecurity. With its intelligent automation, streamlined workflows, and powerful features, Kaboom-APT marks a new era in penetration testing. Embrace the power of Kaboom and elevate your cybersecurity defenses.
-
-- **Non-Interactive Mode**: For tailored testing, use the command `kaboom -t <target_ip> -f <report_path> [-p phases]` to customize the process according to your needs.
-
-
-
-
-
-
 
 
 	
@@ -181,6 +186,21 @@ To further tailor Kaboom to your needs, you can provide additional arguments and
 - Wordlists: Customize wordlists for dictionary attacks using Hydra and Dirb, enhancing attack efficiency.
 
 - Output Customization: Personalize output file names and locations to match your preferences.
+- 
+
+ ## 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧: 𝐓𝐚𝐢𝐥𝐨𝐫𝐢𝐧𝐠 𝐭𝐨 𝐏𝐫𝐞𝐜𝐢𝐬𝐢𝐨𝐧
+
+Kaboom recognizes that each engagement requires a unique approach. Customize the tool to your specific needs:
+
+- Adjust variables for tailored wordlists and output filenames.
+
+# 𝐄𝐱𝐚𝐦𝐩𝐥𝐞 𝐜𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧𝐬
+
+	HYDRA_WORDLIST="custom_hydra_wordlist.txt"
+	DIRB_WORDLIST="custom_dirb_wordlist.txt"
+  	OUTPUT_FILENAME="custom_report.txt"
+
+   --------
                                                               
 ## 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐢𝐧𝐠 𝚔𝚊𝚋𝚘𝚘𝚖
 
@@ -221,7 +241,7 @@ Kaboom empowers you to customize its behavior by adjusting variables at the scri
 		UDP='udp'
 		SYN='syn'
 		```
-		
+------		
 Here's a brief breakdown of what the script does:
 
 Setting Kaboom Path:
@@ -243,27 +263,6 @@ Defining Nmap Files:
     The SCRIPT_SYN, UDP, and SYN variables are set to specific Nmap file names. These could be used to customize the Nmap scan behavior within Kaboom-APT.
 
 In summary, this script aims to enhance the customization and flexibility of Kaboom-APT by allowing users to specify different paths, wordlists, and scripts to be used during penetration testing. This level of customization helps security professionals adapt the tool to their specific testing scenarios and requirements.
-
-
-
-
-
-# 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝚃𝚎𝚌𝚑𝚗𝚘𝚕𝚘𝚐𝚢
-
-## 𝐒𝐭𝐫𝐞𝐚𝐦𝐥𝐢𝐧𝐢𝐧𝐠 𝐭𝐡𝐞 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞𝐬𝐭𝐢𝐧𝐠 𝐏𝐫𝐨𝐜𝐞𝐬𝐬
-Kaboom's significance extends beyond its individual capabilities; it offers a holistic approach that streamlines the entire penetration testing process. Its integration of various tools and techniques into a cohesive framework minimizes the complexities often associated with cybersecurity assessments. This streamlined workflow empowers security professionals to focus on analysis and action, rather than grappling with disparate tools and fragmented processes. In an era where cybersecurity is paramount, Kaboom emerges as a pivotal player in the ongoing battle to secure digital assets. Its comprehensive suite of capabilities, meticulous engineering, and holistic approach set it apart as a tool that empowers security professionals to proactively safeguard against cyber threats. As the digital landscape continues to evolve, Kaboom-APT stands as a beacon of innovation, helping to fortify the digital world against the ever-persistent forces of cybercrime.
-
- ## 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧: 𝐓𝐚𝐢𝐥𝐨𝐫𝐢𝐧𝐠 𝐭𝐨 𝐏𝐫𝐞𝐜𝐢𝐬𝐢𝐨𝐧
-
-Kaboom recognizes that each engagement requires a unique approach. Customize the tool to your specific needs:
-
-- Adjust variables for tailored wordlists and output filenames.
-
-# 𝐄𝐱𝐚𝐦𝐩𝐥𝐞 𝐜𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧𝐬
-
-	HYDRA_WORDLIST="custom_hydra_wordlist.txt"
-	DIRB_WORDLIST="custom_dirb_wordlist.txt"
-  	OUTPUT_FILENAME="custom_report.txt"
 
     
 Multifaceted Exploration: Multi-Target Specification
@@ -315,7 +314,7 @@ Widening the Scope: Non-Canonical Port Recognition
 
 Modern networks harbor services on non-canonical ports:
 
-#### Kaboom'S feature detects and assesses services on non-standard ports.
+#### Kaboom's features detects and assesses services on non-standard ports.
 
 
 		
