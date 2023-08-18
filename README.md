@@ -50,8 +50,60 @@ Kaboom-APT is designed to accommodate various scenarios, offering two distinct m
 
 - **Non-Interactive Mode**: For tailored testing, use the command `kaboom -t <target_ip> -f <report_path> [-p phases]` to customize the process according to your needs.
 
-![Interactive Mode](https://github.com/Leviathan36/kaboom/blob/master/kaboom_images/screenshots/interactive_mode.png)
+- 
+		
+		┌──(root㉿test-station)-[/home/user1/kaboom/kaboom]
+		└─# ./kaboom.sh
+		Insert hosts (example 192.168.1.1-5):
+		>> 10.10.10.222
+		Insert path where to save results (without final /):
+		>> /home/user1/Documents
+		choice the phases to perform [i=IG, v=VA, d=dictionary]:
+		>> iv
+		Shutdown pc at the end of script [YES/NO] (default NO):
+		>> NO
+		
+		[*******************************************************]
+		[***]START SCRIPT AT Thu Aug 17 06:55:51 PM MDT 2023[***]
+		[*******************************************************]
+		
+		----------------------------------
+		----------------------------------
+		ITAREATION:   1
+		TARGET:   10.10.10.222
+		PROGRESS: [===================>]
+		----------------------------------
 
+		[PHASE:]starting IG...
+	
+	        [+] Network Mapper activated. Connection establishing...
+	        [*]start Scanning the network...
+
+		Starting Nmap 7.94 ( https://nmap.org ) at 2023-08-17 18:54 MDT
+		Illegal character(s) in hostname -- replacing with '*'
+		Illegal character(s) in hostname -- replacing with '*'
+		Nmap scan report for http:**delivery.htb (10.10.10.222)
+		Host is up (0.13s latency).
+		
+		PORT   STATE SERVICE
+		22/tcp open  ssh
+		| ssh-hostkey: 
+		|   2048 9c:40:fa:85:9b:01:ac:ac:0e:bc:0c:19:51:8a:ee:27 (RSA)
+		|   256 5a:0c:c0:3b:9b:76:55:2e:6e:c4:f4:b9:5d:76:17:09 (ECDSA)
+		|_  256 b7:9d:f7:48:9d:a2:f2:76:30:fd:42:d3:35:3a:80:8c (ED25519)
+		80/tcp open  http
+		|_http-title: Welcome
+		
+		Nmap done: 1 IP address (1 host up) scanned in 5.06 seconds
+		
+		[PHASE:]starting VA...
+		
+		        [-]no exploits found!
+		
+		[*******************************************************]
+		[***] END SCRIPT AT Thu Aug 17 06:54:39 PM MDT 2023 [***]
+		[*******************************************************]
+		                                                              
 ## 𝐄𝐦𝐩𝐨𝐰𝐞𝐫𝐢𝐧𝐠 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧
 Kaboom-APT empowers you to customize its behavior by adjusting variables at the script's outset. This allows you to tailor the tool to your specific requirements, whether it's selecting wordlists for Hydra and Dirb, specifying a Metasploit scan script, or refining output file names.
 
