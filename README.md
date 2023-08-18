@@ -58,17 +58,6 @@ Kaboom-APT empowers you to customize its behavior by adjusting variables at the 
 
 Kaboom-APT ushers in a new era of penetration testing, where automation, efficiency, and precision converge to yield unparalleled results. With its advanced features and user-friendly interface, Kaboom-APT is your ally in fortifying digital landscapes against potential threats. Experience the power of Kaboom-APT and elevate your penetration testing game today.
 
-
-
-
-
-
-#KABOOM_PATH='' # THE PATH COULD BE SET HERE INSTEAD OF IN BASHRC FILE
-
-if [[ "$KABOOM_PATH" == '' ]]; then
-KABOOM_PATH='.'
-fi
-
 ```bash
 #KABOOM_PATH=''		# THE PATH COULD BE SET HERE INSTEAD OF IN BASHRC FILE
 
