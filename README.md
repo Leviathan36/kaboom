@@ -214,33 +214,72 @@ In an era where cybersecurity is paramount, Kaboom-APT emerges as a pivotal play
 
 ## Kaboom-APT's New Features: Enhancing Cybersecurity Arsenal
 
-### Customization: Tailoring to Precision
+## Customization: Tailoring to Precision
 
-Kaboom-APT recognizes that each engagement requires a unique approach. With its customization feature, security professionals can calibrate the tool according to their specific requirements. The ability to adjust variables at the outset empowers users to tailor Hydra and Dirb wordlists, specify alternative Metasploit scan scripts, and personalize output file names. This level of precision ensures a bespoke experience, aligning the tool with the tester's distinct objectives.
+Kaboom-APT recognizes that each engagement requires a unique approach. Customize the tool to your specific needs:
 
-### Multifaceted Exploration: Multi-Target Specification
+- Adjust variables for tailored wordlists and output filenames.
 
-In the realm of penetration testing, efficiency is paramount. Kaboom-APT understands this need and answers with its multi-target specification feature. Testers can now efficiently assess a multitude of targets by defining up to 254 hosts within a C-class network. This expansion of scope enhances the tool's versatility, allowing testers to comprehensively analyze a broader attack surface.
+# Example customizations
+		HYDRA_WORDLIST="custom_hydra_wordlist.txt"
+		DIRB_WORDLIST="custom_dirb_wordlist.txt"
+		
+  		OUTPUT_FILENAME="custom_report.txt"
 
-### Elevating Interaction: The New CLI Interface
+    
 
-A revamped Command Line Interface (CLI) redefines how users interact with Kaboom-APT. The CLI's intuitive design simplifies command entry and navigation, ensuring a seamless experience. This enhancement serves as a testament to Kaboom-APT's commitment to user-centric design, making it more accessible to both seasoned professionals and newcomers alike.
+Multifaceted Exploration: Multi-Target Specification
 
-### Precision in Discovery: Enhanced Nmap Scans
+Efficiency matters in penetration testing. Kaboom-APT answers this need with multi-target specification:
 
-Kaboom-APT's Nmap scan functionality has undergone a transformation, delivering results that are more comprehensive and precise than ever before. Testers can now glean detailed insights into open ports and services, facilitating the identification of vulnerabilities. This feature enhances the efficiency of vulnerability assessment, a cornerstone of penetration testing.
+Efficiently assess multiple targets by defining up to 254 hosts within a C-class network.
 
-### Structured Clarity: Streamlined Directory Hierarchy
+    		kaboom -t <target_ip> -f <report_path> -p one_or_more_phases
 
-Managing collected data across multiple targets is often a formidable task. Kaboom-APT has mitigated this challenge by introducing an optimized directory hierarchy. This structure not only simplifies data organization but also expedites the analysis process. The enhanced directory hierarchy underscores Kaboom-APT's commitment to efficient information management.
+Elevating Interaction: The New CLI Interface
 
-### Automating Insights: Automatic Metasploit Research
+Interacting with Kaboom-APT is more intuitive than ever:
 
-Kaboom-APT simplifies the often intricate process of associating Metasploit modules with CVE codes. By automating this task, the tool expedites exploit identification during vulnerability assessments. This feature enhances the efficiency of the assessment phase, saving valuable time while ensuring thorough results.
+A revamped Command Line Interface (CLI) simplifies command entry and navigation.
 
-### Widening the Scope: Non-Canonical Port Recognition
+	kaboom -t <target_ip> -f <report_path> -p one_or_more_phases
 
-Modern networks often harbor services on non-canonical ports, deviating from traditional assignments. Kaboom-APT's non-canonical port recognition feature empowers testers to detect and assess services on such ports. This extension of coverage underscores the tool's adaptability, allowing testers to identify vulnerabilities irrespective of port assignment.
+Precision in Discovery: Enhanced Nmap Scans
+
+Kaboom-APT's Nmap scan functionality has transformed:
+
+Detailed insights into open ports and services facilitate vulnerability identification.
+
+		kaboom -t <target_ip> -f <report_path> -p nmap
+
+
+Structured Clarity: Streamlined Directory Hierarchy
+
+Managing data across multiple targets made easy:
+
+An optimized directory hierarchy simplifies data organization and analysis.
+
+
+		# Directory hierarchy
+		/home/user1/Documents/kaboom/target1
+		/home/user1/Documents/kaboom/target2
+
+
+Automating Insights: Automatic Metasploit Research
+
+Simplify association of Metasploit modules with CVE codes:
+
+Automate exploit identification during vulnerability assessments.
+
+ 	 kaboom -t <target_ip> -f <report_path> -p metasploit
+
+Widening the Scope: Non-Canonical Port Recognition
+
+Modern networks harbor services on non-canonical ports:
+
+Kaboom-APT's feature detects and assesses services on non-standard ports.
+
+		kaboom -t <target_ip> -f <report_path> -p non_canonical_ports
 
 ### Harnessing Credentials: Efficient Credentials Management
 
