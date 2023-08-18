@@ -71,12 +71,12 @@ Kaboom simplifies usage with both interactive and non-interactive modes:
 If you need assistance, run `kaboom -h` (or `kaboom --help`) to access the help menu and explore available options.
 
 			
-			./kaboom.sh --help
+			kaboom --help
 	
 	----
 	
 			┌──(root㉿test-station)-[/home/user1/kaboom/kaboom]
-			└─# ./kaboom.sh --help
+			└─# kaboom --help
 			Usage:
 			  Interactive mode:
 			      kaboom [ENTER]  ...and the script does the rest
@@ -121,7 +121,7 @@ If you need assistance, run `kaboom -h` (or `kaboom --help`) to access the help 
 
 
 		┌──(root㉿test-station)-[/home/user1/kaboom/kaboom]
-		└─# ./kaboom.sh
+		└─# kaboom
 		Insert hosts (example 192.168.1.1-5):
 		>> 10.10.10.222
 		Insert path where to save results (without final /):
