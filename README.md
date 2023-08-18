@@ -221,10 +221,10 @@ Kaboom-APT recognizes that each engagement requires a unique approach. Customize
 - Adjust variables for tailored wordlists and output filenames.
 
 # Example customizations
-		HYDRA_WORDLIST="custom_hydra_wordlist.txt"
-		DIRB_WORDLIST="custom_dirb_wordlist.txt"
-		
-  		OUTPUT_FILENAME="custom_report.txt"
+	HYDRA_WORDLIST="custom_hydra_wordlist.txt"
+	DIRB_WORDLIST="custom_dirb_wordlist.txt"
+	
+  	OUTPUT_FILENAME="custom_report.txt"
 
     
 
@@ -234,7 +234,7 @@ Efficiency matters in penetration testing. Kaboom-APT answers this need with mul
 
 Efficiently assess multiple targets by defining up to 254 hosts within a C-class network.
 
-    		kaboom -t <target_ip> -f <report_path> -p one_or_more_phases
+    	kaboom -t <target_ip> -f <report_path> -p one_or_more_phases
 
 Elevating Interaction: The New CLI Interface
 
@@ -250,7 +250,7 @@ Kaboom-APT's Nmap scan functionality has transformed:
 
 Detailed insights into open ports and services facilitate vulnerability identification.
 
-		kaboom -t <target_ip> -f <report_path> -p nmap
+	kaboom -t <target_ip> -f <report_path> -p nmap
 
 
 Structured Clarity: Streamlined Directory Hierarchy
@@ -260,9 +260,9 @@ Managing data across multiple targets made easy:
 An optimized directory hierarchy simplifies data organization and analysis.
 
 
-		# Directory hierarchy
-		/home/user1/Documents/kaboom/target1
-		/home/user1/Documents/kaboom/target2
+	# Directory hierarchy
+	/home/user1/Documents/kaboom/target1
+	/home/user1/Documents/kaboom/target2
 
 
 Automating Insights: Automatic Metasploit Research
@@ -279,7 +279,7 @@ Modern networks harbor services on non-canonical ports:
 
 Kaboom-APT's feature detects and assesses services on non-standard ports.
 
-		kaboom -t <target_ip> -f <report_path> -p non_canonical_ports
+	kaboom -t <target_ip> -f <report_path> -p non_canonical_ports
 
 ### Harnessing Credentials: Efficient Credentials Management
 
