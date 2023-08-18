@@ -285,45 +285,7 @@ for i in $(seq $LOWER_HOST 1 $UPPER_HOST); do
 
     # Start information gathering (IG)
     if [[ "$PHASE" =~ 'i' || "$PHASE" == '' ]]; then 
-        print_phase 'Digital Reconnaissance Initiated. . .     #####################################
-        
-                      .........
-
-            .'------.' |       Plug & Play
-
-           | .-----. | |
-
-           | |     | | |
-
-         __| |     | | |;. _______________
-
-        /  |*`-----'.|.' `;              //
-
-       /   `---------' .;'              //
-
- /|   /  .''''////////;'               //
-
-|=|  .../ ######### /;/               //|
-
-|/  /  / ######### //                //||
-
-   /   `-----------'                // ||
-
-  /________________________________//| ||
-
-  `--------------------------------' | ||
-
-   : | ||      | || |__LL__|| ||     | ||
-
-   : | ||      | ||         | ||     `""'
-
-   n | ||      `""'         | ||
-
-   M | ||                   | ||
-
-     | ||                   | ||''
-        
-    
+        print_phase 'Digital Reconnaissance Initiated. . .'
         sleep 2
         
         # Create new directories for IG results
