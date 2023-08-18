@@ -11,11 +11,9 @@
 <div style="text-align:center;"><h1><i>𝐤𝐚𝐛𝐨𝐨𝐦-̷𝐀̷ℙ𝚃: 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞𝐜𝐡𝐧𝐨𝐥𝐨𝐠𝐲</i></h1></div>
 
 ### 𝐔𝐧𝐥𝐞𝐚𝐬𝐡𝐢𝐧𝐠 𝐭𝐡𝐞 𝐏𝐨𝐰𝐞𝐫 𝐨𝐟 𝐊𝐚𝐛𝐨𝐨𝐦-𝐀𝐏𝐓
-
 Short for <b><big>"𝙰𝚍𝚟𝚊𝚗𝚌𝚎𝚍 𝙿𝚎𝚗𝚎𝚝𝚛𝚊𝚝𝚒𝚘𝚗 𝚃𝚎𝚌𝚑𝚗𝚘𝚕𝚘𝚐𝚢"</b></big>, <b>𝙺𝚊𝚋𝚘𝚘𝚖</b> is an intelligent and automated solution meticulously crafted to simplify the complexities of penetration testing. Its purpose is clear: to equip security professionals with an advanced tool that seamlessly integrates into their workflow, enhancing their capabilities and efficiency. At its core, Kaboom is a multi-faceted tool that excels in two fundamental phases of penetration testing: information gathering and vulnerability assessment. This automated powerhouse streamlines the process, allowing testers to focus on analyzing results rather than grappling with manual tasks.
 
-**𝐄𝐱𝐚𝐦𝐩𝐥𝐞𝐬 𝐨𝐟 𝐊𝐚𝐛𝐨𝐨𝐦 𝐢𝐧 𝐀𝐜𝐭𝐢𝐨𝐧**
-		
+**𝐄𝐱𝐚𝐦𝐩𝐥𝐞𝐬 𝐨𝐟 𝐊𝐚𝐛𝐨𝐨𝐦 𝐢𝐧 𝐀𝐜𝐭𝐢𝐨𝐧**	
 1. *Information Gathering:* Consider a security professional tasked with assessing a company's external network security. Leveraging Kaboom, they can effortlessly gather domain information, identify subdomains, and map out the network's architecture using automated tools like **Sublist3r** and **Nmap**. This comprehensive overview drastically reduces the time and effort required compared to manual information gathering.
 
 2. *Vulnerability Assessment:* In a scenario where a web application's security is under scrutiny, Kaboom shines. It automates the process of scanning for common vulnerabilities like SQL injection, cross-site scripting (XSS), and insecure authentication mechanisms. By integrating tools like **Nessus** and **Metasploit**, Kaboom accelerates vulnerability discovery. This means that testers can focus on interpreting vulnerability reports and recommending remediation steps rather than spending hours manually probing for weaknesses.
@@ -23,12 +21,10 @@ Short for <b><big>"𝙰𝚍𝚟𝚊𝚗𝚌𝚎𝚍 𝙿𝚎𝚗𝚎𝚝𝚛𝚊
 3. *Integration and Efficiency:* A security team is conducting a comprehensive assessment of a client's infrastructure. Kaboom seamlessly integrates tools like **Hydra** for password cracking, **Dirbuster** for web resource enumeration, and **Metasploit** for exploiting vulnerabilities. This integration allows testers to launch coordinated attacks and scans without the hassle of navigating between different tools. The result is a cohesive testing process that maximizes efficiency and reduces the risk of oversight.
 
 **𝐂𝐨𝐧𝐜𝐥𝐮𝐬𝐢𝐨𝐧**
-
 Kaboom emerges as a game-changing solution in the world of penetration testing. By intelligently automating routine tasks and integrating powerful tools like Nmap, Metasploit, and Nessus, it empowers security professionals to work smarter and focus on high-value tasks that demand human expertise. As the cybersecurity landscape evolves, Kaboom stands as a beacon of innovation, empowering defenders to proactively safeguard digital assets against the relentless tide of cyber threats.
 
 
 ## <b>𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚝𝚒𝚘𝚗 𝙶𝚊𝚝𝚑𝚎𝚛𝚒𝚗𝚐</b>
-
 Kaboom efficiently conducts comprehensive information gathering through the following methods:
 
 - Port Scanning: Leveraging the power of Nmap, Kaboom scans ports to identify potential entry points, offering insights into the network's structure.
@@ -36,7 +32,6 @@ Kaboom efficiently conducts comprehensive information gathering through the foll
 - Web Resources Enumeration: Through Dirb, Kaboom identifies and catalogs web resources, providing a thorough understanding of the target's online presence.
 
 ## 𝚅𝚞𝚕𝚗𝚎𝚛𝚊𝚋𝚒𝚕𝚒𝚝𝚢 𝙰𝚜𝚜𝚎𝚜𝚜𝚖𝚎𝚗𝚝
-
 Kaboom empowers testers to perform thorough vulnerability assessments, enabling them to uncover potential weaknesses:
 
 - Web Vulnerability Assessment: By utilizing tools such as Nikto and Dirb, Kaboom-APT identifies vulnerabilities in web applications, ensuring they meet the highest security standards.
@@ -49,11 +44,9 @@ Kaboom empowers testers to perform thorough vulnerability assessments, enabling 
 Kaboom's significance extends beyond its individual capabilities; it offers a holistic approach that streamlines the entire penetration testing process. Its integration of various tools and techniques into a cohesive framework minimizes the complexities often associated with cybersecurity assessments. This streamlined workflow empowers security professionals to focus on analysis and action, rather than grappling with disparate tools and fragmented processes. In an era where cybersecurity is paramount, Kaboom emerges as a pivotal player in the ongoing battle to secure digital assets. Its comprehensive suite of capabilities, meticulous engineering, and holistic approach set it apart as a tool that empowers security professionals to proactively safeguard against cyber threats. As the digital landscape continues to evolve, Kaboom stands as a beacon of innovation, helping to fortify the digital world against the ever-persistent forces of cybercrime.
 
 ### 𝐒𝐢𝐦𝐩𝐥𝐢𝐟𝐢𝐞𝐝 𝐔𝐬𝐚𝐠𝐞
-
 Kaboom simplifies usage with both interactive and non-interactive modes:
 
 - ## 𝐈𝐧𝐭𝐞𝐫𝐚𝐜𝐭𝐢𝐯𝐞 𝐦𝐨𝐝𝐞:
-- 
 Just type `kaboom` and hit [ENTER], and the script handles the rest
 
 
@@ -69,7 +62,6 @@ Just type `kaboom` and hit [ENTER], and the script handles the rest
 					>> NO
 
 - ## 𝐍𝐨𝐧-𝐢𝐧𝐭𝐞𝐫𝐚𝐜𝐭𝐢𝐯𝐞 𝐦𝐨𝐝𝐞:
-
 Use the command `kaboom -t <target_ip> -f <report_path> [-p one_or_more_phases]` for specific targeting and reporting.
 
 
@@ -78,7 +70,6 @@ Use the command `kaboom -t <target_ip> -f <report_path> [-p one_or_more_phases]`
 			
 
 ## 𝙵𝚘𝚛 𝙷𝚎𝚕𝚙
-
 If you need assistance, run `kaboom -h` (or `kaboom --help`) to access the help menu and explore available options.
 
 
