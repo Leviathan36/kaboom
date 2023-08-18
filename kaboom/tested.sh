@@ -7,7 +7,7 @@
 ## !! TEST/PASSED !!##
 
 
-# Kaboom - Automatic Pentest
+# Kaboom - Automatic Pentest Technology
 # Copyright © 2019 Leviathan36
 
 # This program is free software: you can redistribute it and/or modify
