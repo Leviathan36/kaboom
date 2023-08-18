@@ -13,8 +13,8 @@
 # 𝐤𝐚𝐛𝐨𝐨𝐦-̷𝐀̷ℙ𝚃: 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐏𝐞𝐧𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞𝐜𝐡𝐧𝐨𝐥𝐨𝐠𝐲 '<i>𝚙𝚎𝚗/𝚝𝚎𝚌𝚑</i>'
 
 In the ever-evolving landscape of cybersecurity, the need for robust penetration testing tools is paramount. Introducing Kaboom-APT, a powerful and versatile automaton designed to revolutionize the way penetration testing is conducted. With a comprehensive set of features focused on information gathering and vulnerability assessment, Kaboom-APT stands as a testament to efficient and effective testing methodologies.
+Embrace Kaboom-APT's features to enhance your penetration testing journey. Whether you're customizing, exploring, or automating, Kaboom-APT is your partner in fortifying cybersecurity.
 
-.. code-block:: bash
 
     kaboom --help
 
