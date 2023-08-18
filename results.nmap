@@ -1,0 +1,65 @@
+[*******************************************************]
+[***]START SCRIPT AT Thu Aug 17 06:55:51 PM MDT 2023[***]
+[*******************************************************]
+
+----------------------------------
+ITAREATION:   1
+TARGET:   10.10.10.222
+PROGRESS: [===================>]
+----------------------------------
+
+[PHASE:]starting IG...
+
+        [+]nmap is scanning...
+        [*]start syn-scan with syn-probe...
+Starting Nmap 7.94 ( https://nmap.org ) at 2023-08-17 18:55 MDT
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Illegal character(s) in hostname -- replacing with '*'
+Illegal character(s) in hostname -- replacing with '*'
+Nmap scan report for http:**delivery.htb (10.10.10.222)
+Host is up (0.12s latency).
+
+PORT   STATE SERVICE
+22/tcp open  ssh
+| ssh-hostkey: 
+|   2048 9c:40:fa:85:9b:01:ac:ac:0e:bc:0c:19:51:8a:ee:27 (RSA)
+|   256 5a:0c:c0:3b:9b:76:55:2e:6e:c4:f4:b9:5d:76:17:09 (ECDSA)
+|_  256 b7:9d:f7:48:9d:a2:f2:76:30:fd:42:d3:35:3a:80:8c (ED25519)
+| ssh-publickey-acceptance: 
+|_  Accepted Public Keys: No public keys accepted
+| ssh-auth-methods: 
+|   Supported authentication methods: 
+|     publickey
+|_    password
+80/tcp open  http
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+| http-vuln-cve2011-3192: 
+|   VULNERABLE:
+|   Apache byterange filter DoS
+|     State: VULNERABLE
+|     IDs:  BID:49303  CVE:CVE-2011-3192
+|       The Apache web server is vulnerable to a denial of service attack when numerous
+|       overlapping byte ranges are requested.
+|     Disclosure date: 2011-08-19
+|     References:
+|       https://www.tenable.com/plugins/nessus/55976
+|       https://seclists.org/fulldisclosure/2011/Aug/175
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3192
+|_      https://www.securityfocus.com/bid/49303
+|_http-title: Welcome
+|_http-config-backup: ERROR: Script execution failed (use -d to debug)
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-enum: 
+|_  /error/: Potentially interesting folder
+
+Nmap done: 1 IP address (1 host up) scanned in 332.95 seconds
+
+[PHASE:]starting VA...
+
+        [-]no exploits found!
