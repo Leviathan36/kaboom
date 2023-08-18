@@ -103,36 +103,52 @@ SYN='syn'
 
  ... (rest of the customization variables)
 
-New Features
+# Kaboom-APT - Advanced Penetration Testing
 
-Customization (see above)
-Multi-target specification
-New CLI interface
-More powerful Nmap scan
-Better directory hierarchy
-Automatic research of Metasploit module associated with CVE code found
-Recognition of services exposed on non-canonical ports
-Print out and save credentials found
+## About
+Kaboom-APT is an advanced penetration testing tool designed to empower security professionals with a wide range of capabilities. The tool excels in information gathering and vulnerability assessment, streamlining the penetration testing process.
 
-Twin Brother - Trigmap
+## New Features
 
-During the development of Kaboom, a parallel project called trigmap (trigger Nmap) was born. This tool performs the same tasks as Kaboom but with a different philosophy; it uses only Nmap to execute its work.
-Generally, Kaboom isn't better than Trigmap and vice versa, but it's a good thing to use both scripts to gather more evidence.
-For more information about this tool, visit the trigmap repository.
-Disclaimer:
+Kaboom-APT introduces a suite of powerful new features, enhancing its effectiveness and versatility:
 
-The author assumes no liability and is not responsible for any misuse or damage caused by this program.
+### Customization
+Tailor Kaboom-APT to your specific needs by adjusting variables at the script's outset. Modify Hydra and Dirb wordlists, specify alternative Metasploit scan scripts, and personalize output file names for a tailored experience.
 
-Kaboom is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-License:
+### Multi-target Specification
+Efficiently test multiple targets with Kaboom-APT's multi-target specification. Define up to 254 hosts (C-class network) for thorough testing and analysis, expanding the tool's scope.
 
-Kaboom is released under the GPLv3 license. See LICENSE for more details.
+### New CLI Interface
+Experience a revamped Command Line Interface (CLI) for seamless interaction with Kaboom-APT. The intuitive interface simplifies command entry and navigation.
 
-kotlin
+### Enhanced Nmap Scans
+Kaboom-APT's Nmap scan functionality has been refined, delivering more comprehensive and accurate results. Obtain detailed insights into open ports and services, aiding vulnerability identification.
 
+### Streamlined Directory Hierarchy
+Benefit from an optimized directory hierarchy for effortless organization and analysis of collected data. The improved structure facilitates management across multiple targets.
 
-Feel free to use and customize this Markdown content as needed for your documentation.
+### Automatic Metasploit Research
+Kaboom-APT automates the association of Metasploit modules with CVE codes, accelerating exploit identification during vulnerability assessments.
 
+### Non-Canonical Port Recognition
+Detect and assess services on non-canonical ports, expanding Kaboom-APT's coverage to include services deviating from standard port assignments.
+
+### Credentials Management
+Retrieve, print, and save credentials uncovered during dictionary attacks. This feature ensures critical information is accessible for analysis and reporting.
+
+## Twin Brother - Trigmap
+
+As Kaboom-APT evolved, a parallel project named Trigmap (Trigger Nmap) emerged. Trigmap, while sharing similar objectives, relies solely on Nmap for its tasks. Combining both tools enriches penetration testing efforts.
+
+Learn more about Trigmap in the [Trigmap repository](https://github.com/Leviathan36/trigmap).
+
+## Disclaimer
+
+Kaboom-APT is provided with no warranty, and the author assumes no liability for misuse or damage. Users must practice ethical and responsible use during penetration testing activities.
+
+## License
+
+Kaboom-APT is released under the GPLv3 license. Refer to the [LICENSE](LICENSE) file for detailed terms and conditions.
 
 
 
