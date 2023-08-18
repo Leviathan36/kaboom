@@ -19,19 +19,16 @@ In the ever-evolving landscape of cybersecurity, the need for robust penetration
 -----------------------------------
 
 Kaboom-APT, short for "Advanced Penetration Testing," is an intelligent and automated solution meticulously crafted to simplify the complexities of penetration testing. Its purpose is clear: to equip security professionals with an advanced tool that seamlessly integrates into their workflow, enhancing their capabilities and efficiency.
-
-### 𝐄𝐥𝐞𝐯𝐚𝐭𝐢𝐧𝐠 𝐘𝐨𝐮𝐫 𝐓𝐞𝐬𝐭𝐢𝐧𝐠 𝐏𝐡𝐚𝐬𝐞𝐬
-------------------------------
-
 At its core, Kaboom is a multi-faceted tool that excels in two fundamental phases of penetration testing: information gathering and vulnerability assessment. This automated powerhouse streamlines the process, allowing testers to focus on analyzing results rather than grappling with manual tasks.
 
 ### 𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚝𝚒𝚘𝚗 𝙶𝚊𝚝𝚑𝚎𝚛𝚒𝚗𝚐
 
 Kaboom efficiently conducts comprehensive information gathering through the following methods:
 
-- Port Scanning: Leveraging the power of Nmap, Kaboom-APT scans ports to identify potential entry points, offering insights into the network's structure.
+- Port Scanning: Leveraging the power of Nmap, Kaboom scans ports to identify potential entry points, offering insights into the network's structure.
 
-- Web Resources Enumeration: Through Dirb, Kaboom-APT identifies and catalogs web resources, providing a thorough understanding of the target's online presence.
+- Web Resources Enumeration: Through Dirb, Kaboom identifies and catalogs web resources, providing a thorough understanding of the target's online presence.
+- 
 
 ### 𝐕𝐮𝐥𝐧𝐞𝐫𝐚𝐛𝐢𝐥𝐢𝐭𝐲 𝐀𝐬𝐬𝐞𝐬𝐬𝐦𝐞𝐧𝐭
 
@@ -40,13 +37,13 @@ Kaboom empowers testers to perform thorough vulnerability assessments, enabling 
 
 - Web Vulnerability Assessment: By utilizing tools such as Nikto and Dirb, Kaboom-APT identifies vulnerabilities in web applications, ensuring they meet the highest security standards.
 
-- Automatic Vulnerabilities Research: Kaboom-APT automatically integrates with Searchsploit and Metasploit, streamlining the process of identifying and mitigating vulnerabilities.
+- Automatic Vulnerabilities Research: Kaboom automatically integrates with Searchsploit and Metasploit, streamlining the process of identifying and mitigating vulnerabilities.
 
-- Dictionary Attacks: Employing Hydra, Kaboom-APT conducts dictionary attacks against open services, targeting common protocols such as SSH, POP3, IMAP, and RDP.
+- Dictionary Attacks: Employing Hydra, Kaboom conducts dictionary attacks against open services, targeting common protocols such as SSH, POP3, IMAP, and RDP.
 
 ### 𝐒𝐢𝐦𝐩𝐥𝐢𝐟𝐢𝐞𝐝 𝐔𝐬𝐚𝐠𝐞
 
-Kaboom-APT simplifies usage with both interactive and non-interactive modes:
+Kaboom simplifies usage with both interactive and non-interactive modes:
 
 - Interactive mode: Just type `kaboom` and hit [ENTER], and the script handles the rest.
 
@@ -62,7 +59,7 @@ If you need assistance, run `kaboom -h` (or `kaboom --help`) to access the help 
 
 To further tailor Kaboom to your needs, you can provide additional arguments and customize its behavior:
 
-- Configuration Files: Kaboom-APT supports configuration files for fine-tuning its operation.
+- Configuration Files: Kaboom supports configuration files for fine-tuning its operation.
 
 - Wordlists: Customize wordlists for dictionary attacks using Hydra and Dirb, enhancing attack efficiency.
 
@@ -129,11 +126,8 @@ Kaboom is more than just a tool; it's a comprehensive suite of capabilities desi
 		[*******************************************************]
 		                                                              
 ## 𝐄𝐦𝐩𝐨𝐰𝐞𝐫𝐢𝐧𝐠 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧
-Kaboom empowers you to customize its behavior by adjusting variables at the script's outset. This allows you to tailor the tool to your specific requirements, whether it's selecting wordlists for Hydra and Dirb, specifying a Metasploit scan script, or refining output file names.
-
-## 𝐄𝐦𝐛𝐫𝐚𝐜𝐞 𝐭𝐡𝐞 𝐅𝐮𝐭𝐮𝐫𝐞 𝐨𝐟 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞𝐬𝐭𝐢𝐧𝐠
-
-Kaboom ushers in a new era of penetration testing, where automation, efficiency, and precision converge to yield unparalleled results. With its advanced features and user-friendly interface, Kaboom-APT is your ally in fortifying digital landscapes against potential threats. Experience the power of Kaboom and elevate your penetration testing game today.
+### 𝐄𝐦𝐛𝐫𝐚𝐜𝐞 𝐭𝐡𝐞 𝐅𝐮𝐭𝐮𝐫𝐞 𝐨𝐟 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞𝐬𝐭𝐢𝐧𝐠
+Kaboom empowers you to customize its behavior by adjusting variables at the script's outset. This allows you to tailor the tool to your specific requirements, whether it's selecting wordlists for Hydra and Dirb, specifying a Metasploit scan script, or refining output file names. Kaboom ushers in a new era of penetration testing, where automation, efficiency, and precision converge to yield unparalleled results. With its advanced features and user-friendly interface, Kaboomis your ally in fortifying digital landscapes against potential threats. Experience the power of Kaboom and elevate your penetration testing game today.
 
 ```bash
 #KABOOM_PATH=''		# THE PATH COULD BE SET HERE INSTEAD OF IN BASHRC FILE
@@ -175,9 +169,6 @@ SYN='syn'
 ## 𝐒𝐭𝐫𝐞𝐚𝐦𝐥𝐢𝐧𝐢𝐧𝐠 𝐭𝐡𝐞 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞𝐬𝐭𝐢𝐧𝐠 𝐏𝐫𝐨𝐜𝐞𝐬𝐬
 Kaboom's significance extends beyond its individual capabilities; it offers a holistic approach that streamlines the entire penetration testing process. Its integration of various tools and techniques into a cohesive framework minimizes the complexities often associated with cybersecurity assessments. This streamlined workflow empowers security professionals to focus on analysis and action, rather than grappling with disparate tools and fragmented processes. In an era where cybersecurity is paramount, Kaboom emerges as a pivotal player in the ongoing battle to secure digital assets. Its comprehensive suite of capabilities, meticulous engineering, and holistic approach set it apart as a tool that empowers security professionals to proactively safeguard against cyber threats. As the digital landscape continues to evolve, Kaboom-APT stands as a beacon of innovation, helping to fortify the digital world against the ever-persistent forces of cybercrime.
 
----
-
- # 𝐊𝐚𝐛𝐨𝐨𝐦 𝐄𝐧𝐡𝐚𝐧𝐜𝐢𝐧𝐠 𝐂𝐲𝐛𝐞𝐫𝐬𝐞𝐜𝐮𝐫𝐢𝐭𝐲 𝐀𝐫𝐬𝐞𝐧𝐚𝐥 
  ## 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧: 𝐓𝐚𝐢𝐥𝐨𝐫𝐢𝐧𝐠 𝐭𝐨 𝐏𝐫𝐞𝐜𝐢𝐬𝐢𝐨𝐧
 
 Kaboom recognizes that each engagement requires a unique approach. Customize the tool to your specific needs:
@@ -191,12 +182,11 @@ Kaboom recognizes that each engagement requires a unique approach. Customize the
   	OUTPUT_FILENAME="custom_report.txt"
 
     
-
 Multifaceted Exploration: Multi-Target Specification
 
 Efficiency matters in penetration testing. Kaboom-APT answers this need with multi-target specification:
 
-Efficiently assess multiple targets by defining up to 254 hosts within a C-class network.
+#### Efficiently assess multiple targets by defining up to 254 hosts within a C-class network.
 
     	kaboom -t <target_ip> -f <report_path> -p one_or_more_phases
 
@@ -204,15 +194,15 @@ Elevating Interaction: The New CLI Interface
 
 Interacting with Kaboom-APT is more intuitive than ever:
 
-A revamped Command Line Interface (CLI) simplifies command entry and navigation.
+#### A revamped Command Line Interface (CLI) simplifies command entry and navigation.
 
 	kaboom -t <target_ip> -f <report_path> -p one_or_more_phases
 
 Precision in Discovery: Enhanced Nmap Scans
 
-Kaboom-APT's Nmap scan functionality has transformed:
+Kaboom's Nmap scan functionality has transformed:
 
-Detailed insights into open ports and services facilitate vulnerability identification.
+#### Detailed insights into open ports and services facilitate vulnerability identification.
 
 	kaboom -t <target_ip> -f <report_path> -p nmap
 
@@ -221,7 +211,7 @@ Structured Clarity: Streamlined Directory Hierarchy
 
 Managing data across multiple targets made easy:
 
-An optimized directory hierarchy simplifies data organization and analysis.
+#### An optimized directory hierarchy simplifies data organization and analysis.
 
 
 	# Directory hierarchy
@@ -233,7 +223,7 @@ Automating Insights: Automatic Metasploit Research
 
 Simplify association of Metasploit modules with CVE codes:
 
-Automate exploit identification during vulnerability assessments.
+#### Automate exploit identification during vulnerability assessments.
 
  	 kaboom -t <target_ip> -f <report_path> -p metasploit
 
@@ -241,7 +231,7 @@ Widening the Scope: Non-Canonical Port Recognition
 
 Modern networks harbor services on non-canonical ports:
 
-Kaboom-APT's feature detects and assesses services on non-standard ports.
+#### Kaboom'S feature detects and assesses services on non-standard ports.
 
 	kaboom -t <target_ip> -f <report_path> -p non_canonical_ports
 
