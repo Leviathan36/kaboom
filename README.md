@@ -60,7 +60,11 @@ Kaboom-APT ushers in a new era of penetration testing, where automation, efficie
 
 
 
+#KABOOM_PATH='' # THE PATH COULD BE SET HERE INSTEAD OF IN BASHRC FILE
 
+if [[ "$KABOOM_PATH" == '' ]]; then
+KABOOM_PATH='.'
+fi
 
 ```bash
 #KABOOM_PATH=''		# THE PATH COULD BE SET HERE INSTEAD OF IN BASHRC FILE
@@ -69,18 +73,46 @@ if [[ "$KABOOM_PATH" == '' ]]; then
 	KABOOM_PATH='.'
 fi
 
-# ... (rest of the customization variables)
+# USER WORDLISTS
+USERLIST_HYDRA_SSH="$KABOOM_PATH/user_wordlist_short.txt"
+USERLIST_HYDRA_POP3="$KABOOM_PATH/user_wordlist_short.txt"
+USERLIST_HYDRA_IMAP="$KABOOM_PATH/user_wordlist_short.txt"
+USERLIST_HYDRA_RDP="$KABOOM_PATH/user_wordlist_short.txt"
+USERLIST_HYDRA_SMB="$KABOOM_PATH/user_wordlist_short.txt"
+
+# PASSWORD WORDLISTS
+PASSLIST_HYDRA="$KABOOM_PATH/fasttrack.txt"
+PASSLIST_HYDRA_SSH="$PASSLIST_HYDRA"
+PASSLIST_HYDRA_POP3="$PASSLIST_HYDRA"
+PASSLIST_HYDRA_IMAP="$PASSLIST_HYDRA"
+PASSLIST_HYDRA_RDP="$PASSLIST_HYDRA"
+PASSLIST_HYDRA_SMB="$PASSLIST_HYDRA"
+
+# DIRB WORDLISTS
+HTTP_WORDLIST="$KABOOM_PATH/custom_url_wordlist.txt"
+HTTP_EXTENSIONS_FILE="$KABOOM_PATH/custom_extensions_common.txt"
+
+# METASPLOIT SCAN SCRIPT
+METASPLOIT_SCAN_SCRIPT='./metasploit_scan_script'
+
+# NMAP FILES
+SCRIPT_SYN='script-syn'
+UDP='udp'
+SYN='syn'
+```
+
+ ... (rest of the customization variables)
 
 New Features
 
-    Customization (see above)
-    Multi-target specification
-    New CLI interface
-    More powerful Nmap scan
-    Better directory hierarchy
-    Automatic research of Metasploit module associated with CVE code found
-    Recognition of services exposed on non-canonical ports
-    Print out and save credentials found
+Customization (see above)
+Multi-target specification
+New CLI interface
+More powerful Nmap scan
+Better directory hierarchy
+Automatic research of Metasploit module associated with CVE code found
+Recognition of services exposed on non-canonical ports
+Print out and save credentials found
 
 Twin Brother - Trigmap
 
