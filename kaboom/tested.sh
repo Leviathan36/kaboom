@@ -321,19 +321,9 @@ for i in $(seq $LOWER_HOST 1 $UPPER_HOST); do
 
    M | ||                   | ||
 
-     | ||                   | ||'
+     | ||                   | ||''
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        '
+    
         sleep 2
         
         # Create new directories for IG results
