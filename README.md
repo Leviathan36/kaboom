@@ -50,10 +50,12 @@ Kaboom's significance extends beyond its individual capabilities; it offers a ho
 
 Kaboom simplifies usage with both interactive and non-interactive modes:
 
-- ## <b>Interactive mode:</b> Just type `kaboom` and hit [ENTER], and the script handles the rest
+- ## <b>Interactive mode:</b>
+
+Just type `kaboom` and hit [ENTER], and the script handles the rest
 
 			┌──(root㉿test-station)-[/home/user1/kaboom/kaboom]
-					└─# ./kaboom.sh
+					└─# kaboom
 					Insert hosts (example 192.168.1.1-5):
 					>> 10.10.10.222
 					Insert path where to save results (without final /):
@@ -63,7 +65,9 @@ Kaboom simplifies usage with both interactive and non-interactive modes:
 					Shutdown pc at the end of script [YES/NO] (default NO):
 					>> NO
 
-- ## <b>Non-interactive mode:</b> Use the command `kaboom -t <target_ip> -f <report_path> [-p one_or_more_phases]` for specific targeting and reporting.
+- ## <b>Non-interactive mode:</b>
+
+Use the command `kaboom -t <target_ip> -f <report_path> [-p one_or_more_phases]` for specific targeting and reporting.
   
 
 ## 𝙵𝚘𝚛 𝙷𝚎𝚕𝚙
