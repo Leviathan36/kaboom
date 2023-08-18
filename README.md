@@ -95,8 +95,11 @@ If you need assistance, run `kaboom -h` (or `kaboom --help`) to access the help 
 			
  ## 𝐄𝐧𝐡𝐚𝐧𝐜𝐞 𝐘𝐨𝐮𝐫 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞𝐬𝐭𝐢𝐧𝐠 𝐒𝐭𝐫𝐚𝐭𝐞𝐠𝐲 𝐰𝐢𝐭𝐡 𝐊𝐚𝐛𝐨𝐨𝐦
 Revolutionize your penetration testing approach with Kaboom. This powerful tool redefines efficiency and precision in the cybersecurity landscape. Kaboom isn't just a collection of functions – it's a streamlined solution that enhances your capabilities.
+
 Gone are complex interfaces and scattered data. Kaboom-APT simplifies and streamlines your processes, allowing you to focus on analysis and action. It automates tasks, saving you time and guiding you towards impactful insights.
+
 Kaboom's strength lies in its ability to uncover vulnerabilities that were previously hidden. By integrating tools like Sublist3r and Nmap, it empowers you to navigate your digital landscape with clarity and precision.
+
 Embrace Kaboom as your essential companion in the realm of cybersecurity. By doing so, you're amplifying your skills and expertise, ensuring a successful and secure digital journey. Your path to efficiency and proficiency begins with Kaboom-APT – the ultimate tool for modern penetration testing.
 
 
