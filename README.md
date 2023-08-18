@@ -7,7 +7,7 @@
 <p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/master/kaboom_images/logo.png" width="80%" height="auto">
 <img src="https://static.dribbble.com/users/948184/screenshots/5611449/431_bob_omb_db.gif" width="80%"</p>
 
-# Kaboom-APT: Advanced Pentration Technology (pentech)
+# kaboom-APT: Advanced Pentration Technology (pentech)
 
 In the ever-evolving landscape of cybersecurity, the need for robust penetration testing tools is paramount. Introducing Kaboom-APT, a powerful and versatile automaton designed to revolutionize the way penetration testing is conducted. With a comprehensive set of features focused on information gathering and vulnerability assessment, Kaboom-APT stands as a testament to efficient and effective testing methodologies.
 
