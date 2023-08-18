@@ -33,7 +33,7 @@ Kaboom efficiently conducts comprehensive information gathering through the foll
 - Web Resources Enumeration: Through Dirb, Kaboom identifies and catalogs web resources, providing a thorough understanding of the target's online presence.
 - 
 
-### 𝐕𝐮𝐥𝐧𝐞𝐫𝐚𝐛𝐢𝐥𝐢𝐭𝐲 𝐀𝐬𝐬𝐞𝐬𝐬𝐦𝐞𝐧𝐭
+### 𝚅𝚞𝚕𝚗𝚎𝚛𝚊𝚋𝚒𝚕𝚒𝚝𝚢 𝙰𝚜𝚜𝚎𝚜𝚜𝚖𝚎𝚗𝚝
 
 
 Kaboom empowers testers to perform thorough vulnerability assessments, enabling them to uncover potential weaknesses:
@@ -57,15 +57,29 @@ For Help
 
 If you need assistance, run `kaboom -h` (or `kaboom --help`) to access the help menu and explore available options.
 
-## 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐢𝐧𝐠 𝐊𝐚𝐛𝐨𝐨𝐦-𝐀𝐏𝐓
 
-To further tailor Kaboom to your needs, you can provide additional arguments and customize its behavior:
+    ./kaboom.sh --help
 
-- Configuration Files: Kaboom supports configuration files for fine-tuning its operation.
+----
 
-- Wordlists: Customize wordlists for dictionary attacks using Hydra and Dirb, enhancing attack efficiency.
+		┌──(root㉿test-station)-[/home/user1/kaboom/kaboom]
+		└─# ./kaboom.sh --help
+		Usage:
+		  Interactive mode:
+		      kaboom [ENTER]  ...and the script does the rest
+		
+		  NON-interactive mode:
+		      kaboom -t <target_ip> -f <report_path> [-p one_or_more_phases]
+		
+		      phases:
+		          - i == information gathering
+		          - v == vulnerability assessment
+		          - d == dictionary attack against open services
+		
+		      example: iv == information gathering + vulnerability assessment
+		      dafult: ALL (ivb)
+		
 
-- Output Customization: Personalize output file names and locations to match your preferences.
 
 ### 𝐄𝐧𝐡𝐚𝐧𝐜𝐢𝐧𝐠 𝐖𝐨𝐫𝐤𝐟𝐥𝐨𝐰 𝐰𝐢𝐭𝐡 𝐊𝐚𝐛𝐨𝐨𝐦-𝐀𝐏𝐓
 
@@ -155,33 +169,59 @@ Kaboom is more than just a tool; it's a comprehensive suite of capabilities desi
 		[*******************************************************]
 		[***] END SCRIPT AT Thu Aug 17 06:54:39 PM MDT 2023 [***]
 		[*******************************************************]
+
+
+
+## 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐢𝐧𝐠 𝚔𝚊𝚋𝚘𝚘𝚖
+
+To further tailor Kaboom to your needs, you can provide additional arguments and customize its behavior:
+
+- Configuration Files: Kaboom supports configuration files for fine-tuning its operation.
+
+- Wordlists: Customize wordlists for dictionary attacks using Hydra and Dirb, enhancing attack efficiency.
+
+- Output Customization: Personalize output file names and locations to match your preferences.
+
 		                                                              
 ## 𝐄𝐦𝐩𝐨𝐰𝐞𝐫𝐢𝐧𝐠 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧
 ### 𝐄𝐦𝐛𝐫𝐚𝐜𝐞 𝐭𝐡𝐞 𝐅𝐮𝐭𝐮𝐫𝐞 𝐨𝐟 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞𝐬𝐭𝐢𝐧𝐠
 Kaboom empowers you to customize its behavior by adjusting variables at the script's outset. This allows you to tailor the tool to your specific requirements, whether it's selecting wordlists for Hydra and Dirb, specifying a Metasploit scan script, or refining output file names. Kaboom ushers in a new era of penetration testing, where automation, efficiency, and precision converge to yield unparalleled results. With its advanced features and user-friendly interface, Kaboomis your ally in fortifying digital landscapes against potential threats. Experience the power of Kaboom and elevate your penetration testing game today.
 
-    kaboom --help
 
-----
-
-		┌──(root㉿test-station)-[/home/user1/kaboom/kaboom]
-		└─# ./kaboom.sh --help
-		Usage:
-		  Interactive mode:
-		      kaboom [ENTER]  ...and the script does the rest
+		```bash
+		#KABOOM_PATH=''		# THE PATH COULD BE SET HERE INSTEAD OF IN BASHRC FILE
 		
-		  NON-interactive mode:
-		      kaboom -t <target_ip> -f <report_path> [-p one_or_more_phases]
+		if [[ "$KABOOM_PATH" == '' ]]; then
+			KABOOM_PATH='.'
+		fi
 		
-		      phases:
-		          - i == information gathering
-		          - v == vulnerability assessment
-		          - d == dictionary attack against open services
+		# USER WORDLISTS
+		USERLIST_HYDRA_SSH="$KABOOM_PATH/user_wordlist_short.txt"
+		USERLIST_HYDRA_POP3="$KABOOM_PATH/user_wordlist_short.txt"
+		USERLIST_HYDRA_IMAP="$KABOOM_PATH/user_wordlist_short.txt"
+		USERLIST_HYDRA_RDP="$KABOOM_PATH/user_wordlist_short.txt"
+		USERLIST_HYDRA_SMB="$KABOOM_PATH/user_wordlist_short.txt"
 		
-		      example: iv == information gathering + vulnerability assessment
-		      dafult: ALL (ivb)
+		# PASSWORD WORDLISTS
+		PASSLIST_HYDRA="$KABOOM_PATH/fasttrack.txt"
+		PASSLIST_HYDRA_SSH="$PASSLIST_HYDRA"
+		PASSLIST_HYDRA_POP3="$PASSLIST_HYDRA"
+		PASSLIST_HYDRA_IMAP="$PASSLIST_HYDRA"
+		PASSLIST_HYDRA_RDP="$PASSLIST_HYDRA"
+		PASSLIST_HYDRA_SMB="$PASSLIST_HYDRA"
 		
+		# DIRB WORDLISTS
+		HTTP_WORDLIST="$KABOOM_PATH/custom_url_wordlist.txt"
+		HTTP_EXTENSIONS_FILE="$KABOOM_PATH/custom_extensions_common.txt"
 		
+		# METASPLOIT SCAN SCRIPT
+		METASPLOIT_SCAN_SCRIPT='./metasploit_scan_script'
+		
+		# NMAP FILES
+		SCRIPT_SYN='script-syn'
+		UDP='udp'
+		SYN='syn'
+		```
 		
 Here's a brief breakdown of what the script does:
 
@@ -208,40 +248,6 @@ In summary, this script aims to enhance the customization and flexibility of Kab
 
 
 
-```bash
-#KABOOM_PATH=''		# THE PATH COULD BE SET HERE INSTEAD OF IN BASHRC FILE
-
-if [[ "$KABOOM_PATH" == '' ]]; then
-	KABOOM_PATH='.'
-fi
-
-# USER WORDLISTS
-USERLIST_HYDRA_SSH="$KABOOM_PATH/user_wordlist_short.txt"
-USERLIST_HYDRA_POP3="$KABOOM_PATH/user_wordlist_short.txt"
-USERLIST_HYDRA_IMAP="$KABOOM_PATH/user_wordlist_short.txt"
-USERLIST_HYDRA_RDP="$KABOOM_PATH/user_wordlist_short.txt"
-USERLIST_HYDRA_SMB="$KABOOM_PATH/user_wordlist_short.txt"
-
-# PASSWORD WORDLISTS
-PASSLIST_HYDRA="$KABOOM_PATH/fasttrack.txt"
-PASSLIST_HYDRA_SSH="$PASSLIST_HYDRA"
-PASSLIST_HYDRA_POP3="$PASSLIST_HYDRA"
-PASSLIST_HYDRA_IMAP="$PASSLIST_HYDRA"
-PASSLIST_HYDRA_RDP="$PASSLIST_HYDRA"
-PASSLIST_HYDRA_SMB="$PASSLIST_HYDRA"
-
-# DIRB WORDLISTS
-HTTP_WORDLIST="$KABOOM_PATH/custom_url_wordlist.txt"
-HTTP_EXTENSIONS_FILE="$KABOOM_PATH/custom_extensions_common.txt"
-
-# METASPLOIT SCAN SCRIPT
-METASPLOIT_SCAN_SCRIPT='./metasploit_scan_script'
-
-# NMAP FILES
-SCRIPT_SYN='script-syn'
-UDP='udp'
-SYN='syn'
-```
 
 # 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝚃𝚎𝚌𝚑𝚗𝚘𝚕𝚘𝚐𝚢
 
