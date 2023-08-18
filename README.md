@@ -346,7 +346,7 @@ Modern networks harbor services on non-canonical ports:
 ### 𝐓𝐰𝐢𝐧 𝐁𝐫𝐨𝐭𝐡𝐞𝐫 - 𝐓𝐫𝐢𝐠𝐦𝐚𝐩: 𝐀 𝐏𝐚𝐫𝐚𝐥𝐥𝐞𝐥 𝐄𝐧𝐝𝐞𝐚𝐯𝐨𝐫
 As Kaboom evolved, a parallel project named Trigmap (Trigger Nmap) emerged. Trigmap shares similar objectives with Kaboom but adopts a distinct approach. This sibling tool relies exclusively on Nmap to execute its tasks. The synergy between Kaboom and Trigmap enriches penetration testing endeavors, offering a comprehensive toolkit for varying scenarios.
 
-To delve deeper into Trigmap's capabilities, visit the Trigmap repository. https://github.com/Leviathan36/trigmap
+To delve deeper into Trigmap's capabilities, visit the [Trigma](https://github.com/Leviathan36/trigmap) repository
 
 ### 𝑬𝒕𝒉𝒊𝒄𝒂𝒍 𝑹𝒆𝒔𝒑𝒐𝒏𝒔𝒊𝒃𝒊𝒍𝒊𝒕𝒚: 𝑻𝒉𝒆 𝑲𝒂𝒃𝒐𝒐𝒎-𝑨𝑷𝑻 𝑫𝒊𝒔𝒄𝒍𝒂𝒊𝒎𝒆𝒓
 
