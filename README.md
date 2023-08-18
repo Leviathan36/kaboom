@@ -39,7 +39,7 @@ Kaboom's significance extends beyond its individual capabilities; it offers a ho
 
 Kaboom simplifies usage with both interactive and non-interactive modes:
 
-- ## <𝐛>𝐈𝐧𝐭𝐞𝐫𝐚𝐜𝐭𝐢𝐯𝐞 𝐦𝐨𝐝𝐞:</𝐛>
+- ## 𝐈𝐧𝐭𝐞𝐫𝐚𝐜𝐭𝐢𝐯𝐞 𝐦𝐨𝐝𝐞:
 - 
 Just type `kaboom` and hit [ENTER], and the script handles the rest
 
@@ -56,7 +56,7 @@ Just type `kaboom` and hit [ENTER], and the script handles the rest
 					Shutdown pc at the end of script [YES/NO] (default NO):
 					>> NO
 
-- ## <𝐛>𝐍𝐨𝐧-𝐢𝐧𝐭𝐞𝐫𝐚𝐜𝐭𝐢𝐯𝐞 𝐦𝐨𝐝𝐞:</𝐛>
+- ## 𝐍𝐨𝐧-𝐢𝐧𝐭𝐞𝐫𝐚𝐜𝐭𝐢𝐯𝐞 𝐦𝐨𝐝𝐞:
 
 Use the command `kaboom -t <target_ip> -f <report_path> [-p one_or_more_phases]` for specific targeting and reporting.
 
