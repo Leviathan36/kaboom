@@ -173,7 +173,17 @@ Embrace Kaboom as your essential companion in the realm of cybersecurity. By doi
 			
 			[PHASE:]starting VA...
 			
-			        [-]no exploits found!
+
+			=====================================================================
+			--------•?((¯°·..• Vulnerability Report •._.·°¯))؟• -----------------
+			=====================================================================
+					Critical: 0
+					High: 1
+					Medium: 14
+					Low: 1
+					Info: 17
+					Score: 65
+			======================================================================
 			
 			[*******************************************************]
 			[***] END SCRIPT AT Thu Aug 17 06:54:39 PM MDT 2023 [***]
