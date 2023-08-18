@@ -257,12 +257,12 @@ Here's a brief breakdown of what the script does:
 
 - **Defining Dirb Wordlists:** The script sets the `HTTP_WORDLIST` variable for custom URL wordlists and `HTTP_EXTENSIONS_FILE` for common file extensions. These are likely used in the Dirb tool to perform web resource enumeration.
 
-- **Setting Metasploit Scan Script:** The `METASPLOIT_SCAN_SCRIPT` variable is set to the path of a Metasploit scan script. This script might be used by Kaboom-APT to automate Metasploit scans.
+- **Setting Metasploit Scan Script:** The `METASPLOIT_SCAN_SCRIPT` variable is set to the path of a Metasploit scan script. This script might be used by Kaboom to automate Metasploit scans.
 
-- **Defining Nmap Files:** The `SCRIPT_SYN`, `UDP`, and `SYN` variables are set to specific Nmap file names. These could be used to customize the Nmap scan behavior within Kaboom-APT.
+- **Defining Nmap Files:** The `SCRIPT_SYN`, `UDP`, and `SYN` variables are set to specific Nmap file names. These could be used to customize the Nmap scan behavior within Kaboom.
 
 
-In summary, this script aims to enhance the customization and flexibility of Kaboom-APT by allowing users to specify different paths, wordlists, and scripts to be used during penetration testing. This level of customization helps security professionals adapt the tool to their specific testing scenarios and requirements.
+In summary, this script aims to enhance the customization and flexibility of Kaboom by allowing users to specify different paths, wordlists, and scripts to be used during penetration testing. This level of customization helps security professionals adapt the tool to their specific testing scenarios and requirements.
 
     
 ## 𝐌𝐮𝐥𝐭𝐢-𝐓𝐚𝐫𝐠𝐞𝐭 𝐒𝐩𝐞𝐜𝐢𝐟𝐢𝐜𝐚𝐭𝐢𝐨𝐧
@@ -275,7 +275,7 @@ Efficiency matters in penetration testing. Kaboom answers this need with multi-t
 
 Elevating Interaction: The New CLI Interface
 
-Interacting with Kaboom-APT is more intuitive than ever:
+Interacting with Kaboom is more intuitive than ever:
 
 #### A revamped Command Line Interface (CLI) simplifies command entry and navigation.
 
@@ -318,9 +318,7 @@ Modern networks harbor services on non-canonical ports:
 
 
 		
-					                       
-	
-			                     __,-~~/~    `---.
+	          			     __,-~~/~    `---.
 			
 			                   _/_,---(      ,    )
 			
@@ -341,9 +339,10 @@ Modern networks harbor services on non-canonical ports:
 			                         <|i::|i|`.
 			
 			                        (` ^'"`-' ")
-					 _____.,-#%&$@%#&#~,._____
-		
-			kaboom -t <target_ip> -f <report_path> -p non_canonical_ports
+					 _____.,-#%&$@%#&#~,._____				                       
+	
+			         
+		kaboom -t <target_ip> -f <report_path> -p non_canonical_ports
 
 
 
