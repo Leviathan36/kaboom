@@ -1,8 +1,6 @@
 
  𝚔𝚊𝚋𝚘𝚘𝚖 𝚟𝟷.0.0 𝚋𝚢 @𝚕𝚎𝚟𝚒𝚊𝚝𝚑𝚊𝚗𝟹𝟼
-
-
-      
+  
 ![Release](https://img.shields.io/badge/release-stable%201.0.0-green.svg)
 ![Language](https://img.shields.io/badge/made%20with-bash-brightgreen.svg)
 ![License](https://img.shields.io/badge/license-GPLv3-blue.svg)
@@ -10,17 +8,9 @@
 
 <p align="center"><img src="https://static.dribbble.com/users/948184/screenshots/5611449/431_bob_omb_db.gif" width="100%"</p>
 	
-<div style="text-align:center;">
-	<h1>
-		<i>𝐤𝐚𝐛𝐨𝐨𝐦-̷𝐀̷ℙ𝚃: 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞𝐜𝐡𝐧𝐨𝐥𝐨𝐠𝐲
-		</i>
-	</h1>
-</div>
-
-
+<div style="text-align:center;"><h1><i>𝐤𝐚𝐛𝐨𝐨𝐦-̷𝐀̷ℙ𝚃: 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞𝐜𝐡𝐧𝐨𝐥𝐨𝐠𝐲</i></h1></div>
 
 ### 𝐔𝐧𝐥𝐞𝐚𝐬𝐡𝐢𝐧𝐠 𝐭𝐡𝐞 𝐏𝐨𝐰𝐞𝐫 𝐨𝐟 𝐊𝐚𝐛𝐨𝐨𝐦-𝐀𝐏𝐓
------------------------------------
 
 Short for <b><big>"𝙰𝚍𝚟𝚊𝚗𝚌𝚎𝚍 𝙿𝚎𝚗𝚎𝚝𝚛𝚊𝚝𝚒𝚘𝚗 𝚃𝚎𝚌𝚑𝚗𝚘𝚕𝚘𝚐𝚢"</b></big>, <b>𝙺𝚊𝚋𝚘𝚘𝚖</b> is an intelligent and automated solution meticulously crafted to simplify the complexities of penetration testing. Its purpose is clear: to equip security professionals with an advanced tool that seamlessly integrates into their workflow, enhancing their capabilities and efficiency. At its core, Kaboom is a multi-faceted tool that excels in two fundamental phases of penetration testing: information gathering and vulnerability assessment. This automated powerhouse streamlines the process, allowing testers to focus on analyzing results rather than grappling with manual tasks.
 
@@ -31,7 +21,6 @@ Kaboom efficiently conducts comprehensive information gathering through the foll
 - Port Scanning: Leveraging the power of Nmap, Kaboom scans ports to identify potential entry points, offering insights into the network's structure.
 
 - Web Resources Enumeration: Through Dirb, Kaboom identifies and catalogs web resources, providing a thorough understanding of the target's online presence.
-
 
 ### 𝚅𝚞𝚕𝚗𝚎𝚛𝚊𝚋𝚒𝚕𝚒𝚝𝚢 𝙰𝚜𝚜𝚎𝚜𝚜𝚖𝚎𝚗𝚝
 
@@ -56,8 +45,6 @@ Just type `kaboom` and hit [ENTER], and the script handles the rest
 
 	Example;
 
-
-
 			┌──(root㉿test-station)-[/home/user1/kaboom/kaboom]
 					└─# kaboom
 					Insert hosts (example 192.168.1.1-5):
@@ -68,9 +55,6 @@ Just type `kaboom` and hit [ENTER], and the script handles the rest
 					>> iv
 					Shutdown pc at the end of script [YES/NO] (default NO):
 					>> NO
-
-
-
 
 - ## <b>Non-interactive mode:</b>
 
@@ -111,7 +95,7 @@ If you need assistance, run `kaboom -h` (or `kaboom --help`) to access the help 
 			
 
 
-# 𝐄𝐧𝐡𝐚𝐧𝐜𝐢𝐧𝐠 𝐖𝐨𝐫𝐤𝐟𝐥𝐨𝐰 𝐰𝐢𝐭𝐡 𝐊𝐚𝐛𝐨𝐨𝐦-𝐀𝐏𝐓
+## 𝐄𝐧𝐡𝐚𝐧𝐜𝐢𝐧𝐠 𝐖𝐨𝐫𝐤𝐟𝐥𝐨𝐰 𝐮𝐬𝐢𝐧𝐠 𝐊𝐚𝐛𝐨𝐨𝐦-𝐀𝐏𝐓!
 
 	
 				    _.-^^---....,,--       
