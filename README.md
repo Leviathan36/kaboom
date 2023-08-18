@@ -200,7 +200,7 @@ Kaboom recognizes that each engagement requires a unique approach. Customize the
                                                               
 ## 𝐀𝐝𝐣𝐮𝐬𝐭𝐢𝐧𝐠 𝚔𝚊𝚋𝚘𝚘𝚖'𝐬 𝐕𝐚𝐫𝐢𝐚𝐛𝐥𝐞𝐬
 
-Kaboom empowers you to customize its behavior by adjusting variables at the script's outset. This allows you to tailor the tool to your specific requirements, whether it's selecting wordlists for Hydra and Dirb, specifying a Metasploit scan script, or refining output file names. Kaboom ushers in a new era of penetration testing, where automation, efficiency, and precision converge to yield unparalleled results. With its advanced features and user-friendly interface, Kaboomis your ally in fortifying digital landscapes against potential threats. Experience the power of Kaboom and elevate your penetration testing game today.
+Kaboom empowers you to customize its behavior by adjusting variables at the script's outset. This allows you to tailor the tool to your specific requirements, whether it's selecting wordlists for Hydra and Dirb, specifying a Metasploit scan script, or refining output file names. Kaboom ushers in a new era of penetration testing, where automation, efficiency, and precision converge to yield unparalleled results. With its advanced features and user-friendly interface, Kaboom is your ally in fortifying digital landscapes against potential threats. Experience the power of Kaboom and elevate your penetration testing game today.
 
 	
 			```bash
