@@ -6,8 +6,6 @@
 ![License](https://img.shields.io/badge/license-GPLv3-blue.svg)
 ![TestedOn](https://img.shields.io/badge/tested%20on-Kali%20Linux-red.svg)
 
-
-
 <p align="center"><img src="https://static.dribbble.com/users/948184/screenshots/5611449/431_bob_omb_db.gif" width="100%"</p>
 
 # 𝐤𝐚𝐛𝐨𝐨𝐦-̷𝐀̷ℙ𝚃: 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐏𝐞𝐧𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞𝐜𝐡𝐧𝐨𝐥𝐨𝐠𝐲 '<i>𝚙𝚎𝚗/𝚝𝚎𝚌𝚑</i>'
