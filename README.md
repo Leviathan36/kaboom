@@ -212,7 +212,6 @@ and user-friendly interface, Kaboom is your ally in fortifying digital landscape
 testing game today.
 
 	
-			```bash
 			#KABOOM_PATH=''		# THE PATH COULD BE SET HERE INSTEAD OF IN BASHRC FILE
 			
 			if [[ "$KABOOM_PATH" == '' ]]; then
