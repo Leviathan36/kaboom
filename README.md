@@ -170,9 +170,6 @@ UDP='udp'
 SYN='syn'
 ```
 
- ... (rest of the customization variables)
-
-
 # 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝚃𝚎𝚌𝚑𝚗𝚘𝚕𝚘𝚐𝚢
 
 ## 𝐒𝐭𝐫𝐞𝐚𝐦𝐥𝐢𝐧𝐢𝐧𝐠 𝐭𝐡𝐞 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞𝐬𝐭𝐢𝐧𝐠 𝐏𝐫𝐨𝐜𝐞𝐬𝐬
@@ -188,9 +185,9 @@ Kaboom recognizes that each engagement requires a unique approach. Customize the
 - Adjust variables for tailored wordlists and output filenames.
 
 # 𝐄𝐱𝐚𝐦𝐩𝐥𝐞 𝐜𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧𝐬
+
 	HYDRA_WORDLIST="custom_hydra_wordlist.txt"
 	DIRB_WORDLIST="custom_dirb_wordlist.txt"
-	
   	OUTPUT_FILENAME="custom_report.txt"
 
     
@@ -259,8 +256,7 @@ To delve deeper into Trigmap's capabilities, visit the Trigmap repository.
 
 ### 𝑬𝒕𝒉𝒊𝒄𝒂𝒍 𝑹𝒆𝒔𝒑𝒐𝒏𝒔𝒊𝒃𝒊𝒍𝒊𝒕𝒚: 𝑻𝒉𝒆 𝑲𝒂𝒃𝒐𝒐𝒎-𝑨𝑷𝑻 𝑫𝒊𝒔𝒄𝒍𝒂𝒊𝒎𝒆𝒓
 
-Kaboom-APT is a tool designed to empower cybersecurity professionals. However, its potency must be wielded responsibly. The author underscores that Kaboom
-
+Kaboom-APT is a tool of empowerment, carefully crafted for cybersecurity professionals striving to enhance their capabilities. While the potential it holds is awe-inspiring, it comes hand in hand with a profound responsibility. As you embark on your journey with Kaboom-APT, we emphasize the need for ethical conduct, responsible use, and a steadfast commitment to upholding the principles of cybersecurity.
 
 <p align="center"><img src="https://github.com/Leviathan36/kaboom/blob/master/kaboom_images/logo.png" width="100%" height="auto">
 
