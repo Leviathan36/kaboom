@@ -196,15 +196,14 @@ Kaboom recognizes that each engagement requires a unique approach. Customize the
 
 - Adjust variables for tailored wordlists and output filenames.
 
-## 𝐄𝐱𝐚𝐦𝐩𝐥𝐞 𝐜𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧𝐬
+### 𝐄𝐱𝐚𝐦𝐩𝐥𝐞 𝐜𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧𝐬
 
 			HYDRA_WORDLIST="custom_hydra_wordlist.txt"
 			DIRB_WORDLIST="custom_dirb_wordlist.txt"
 		  	OUTPUT_FILENAME="custom_report.txt"
 
-   --------
-                                                              
-## 𝐀𝐝𝐣𝐮𝐬𝐭𝐢𝐧𝐠 𝚔𝚊𝚋𝚘𝚘𝚖'𝐬 𝐕𝐚𝐫𝐢𝐚𝐛𝐥𝐞𝐬
+                                    
+### 𝐀𝐝𝐣𝐮𝐬𝐭𝐢𝐧𝐠 𝙺𝚊𝚋𝚘𝚘𝚖'𝐬 𝐕𝐚𝐫𝐢𝐚𝐛𝐥𝐞𝐬
 
 Kaboom empowers you to customize its behavior by adjusting variables at the script's outset. This allows you to tailor the tool to your specific requirements, whether it's selecting wordlists for Hydra and Dirb, specifying a Metasploit scan script, or refining output file names. Kaboom ushers in a new era of penetration testing, where automation, efficiency, and precision converge to yield unparalleled results. With its advanced features and user-friendly interface, Kaboom is your ally in fortifying digital landscapes against potential threats. Experience the power of Kaboom and elevate your penetration testing game today.
 
