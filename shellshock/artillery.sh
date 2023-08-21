@@ -25,7 +25,7 @@ dirbuster -u "http://$target_ip" -l /usr/share/dirbuster/wordlists/directory-lis
 cho "Running DirBuster scan on $target_ip (HTTPS)..."
 dirbuster -u "https://$target_ip" -l /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -X php,txt,html
 
-# Sn1per Scan (Soft Stealthy Scan)
+# Sn1per Scan (Silencer Scan)
 echo "Running Sn1per soft scan on $target_ip..."
 sniper -t "$target_ip" -m all
 
@@ -36,4 +36,4 @@ sniper -t "$target_ip" -m all
 # Print completion message
 echo "Vulnerability Scan Complete. Results saved in $output_dir directory."
 
-# Everything works besides the msfconsole cmd. Will need to look into and set up a workflow.
+# Tested
