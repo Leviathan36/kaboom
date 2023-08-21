@@ -31,3 +31,6 @@ def generate_metasploit_file(vulnerabilities, output_file):
         for vuln in vulnerabilities:
             f.write(f'use {vuln["product"]}\n')
             f.write(f'set RHOSTS <target_ip>\n')
+
+
+.
