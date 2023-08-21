@@ -13,7 +13,7 @@ if sys.version_info.major < 3 or sys.version_info.minor < 9:
     sys.exit(1)
 
 # Define theHarvester command parameters
-domain = "https://enginueeur.com"
+domain = "Attack-URL"
 filename = "custom_results"
 sources = "bing,anubis,brave"
 limit = "2000"
