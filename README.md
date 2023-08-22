@@ -183,10 +183,10 @@ Embrace Kaboom as your essential companion in the realm of cybersecurity. By doi
 			==================================================================
 					   Critical: 0
 					   High: 1
-					   Medium: 14
+					   Medium: 3
 					   Low: 1
-					   Info: 17
-					   Score: 65
+					   Info: 5
+					   Score: 37
 			===================================================================
 			
 			[*****************************************************************]
