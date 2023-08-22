@@ -10,8 +10,8 @@ First things first, you need to have Git installed on your machine. If you don't
 
 Navigate to the directory where you want to set up Kaboom. Then, open your terminal and execute the following command:
 
-```bash
-git clone https://github.com/testcomputer/kaboom.git
+
+    git clone https://github.com/testcomputer/kaboom.git
 
 
 Congratulations, you've just cloned the Kaboom repository to your local machine! Feel the excitement building up as you're now just a step away from harnessing its powerful capabilities.
@@ -19,33 +19,29 @@ Step 3: Explore Kaboom's Arsenal
 
 Move into the cloned repository's directory using:
 
-bash
 
-cd kaboom
+    
+    cd kaboom
 
 Get ready to be amazed! Inside, you'll discover a treasure trove of folders that promise endless hacking possibilities. From 'enum' to 'exploit' and 'root,' each directory holds the tools and scripts you need for your pentesting journey.
 Step 4: Installation and Setup
 
 In your terminal, run the following command to make the setup script executable:
 
-bash
-
-chmod +x setup.sh
+    
+    chmod +x setup.sh
 
 And now, let the magic begin. Execute the setup script:
 
-bash
-
-./setup.sh
+    
+    ./setup.sh
 
 Watch as Kaboom swiftly sets up its dependencies and configurations, preparing you for a seamless pentesting experience.
 Step 5: Launch Kaboom!
 
 Are you ready for liftoff? It's time to launch Kaboom and explore its capabilities. Execute the following command:
-
-bash
-
-./kaboom.sh
+    
+    ./kaboom.sh
 
 Feel the rush as Kaboom springs to life, ready to carry out your commands and provide you with invaluable insights into your target's vulnerabilities.
 Step 6: Start Exploring
