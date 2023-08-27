@@ -1,4 +1,4 @@
-# Explosive Adventures Await: Installing Kaboom for Ultimate Pentesting Power
+# Adventures Await: Installing Kaboom for Ultimate Pentesting Power
 
 Are you ready to unleash the power of Kaboom? This dynamic GitHub repository is your gateway to a world of cybersecurity exploration and penetration testing mastery. From directory enumeration to vulnerability assessment, Kaboom has got you covered. Let's dive into the exhilarating process of installing this incredible tool!
 
