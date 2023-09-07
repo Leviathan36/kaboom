@@ -285,8 +285,8 @@ In summary, this script aims to enhance the customization and flexibility of Kab
 Efficiency matters in penetration testing. Kaboom answers this need with multi-target specification:
 
 #### Efficiently assess multiple targets by defining up to 254 hosts within a C-class network.
-
-    	kaboom -t <target_ip> -f <report_path> -p one_or_more_phases
+	
+	    	kaboom -t <target_ip> -f <report_path> -p one_or_more_phases
 
 Elevating Interaction: The New CLI Interface
 
@@ -294,7 +294,7 @@ Interacting with Kaboom is more intuitive than ever:
 
 #### A revamped Command Line Interface (CLI) simplifies command entry and navigation.
 
-	kaboom -t <target_ip> -f <report_path> -p one_or_more_phases
+		kaboom -t <target_ip> -f <report_path> -p one_or_more_phases
 
 Precision in Discovery: Enhanced Nmap Scans
 
@@ -302,7 +302,7 @@ Kaboom's Nmap scan functionality has transformed:
 
 #### Detailed insights into open ports and services facilitate vulnerability identification.
 
-	kaboom -t <target_ip> -f <report_path> -p nmap
+		kaboom -t <target_ip> -f <report_path> -p nmap
 
 
 Structured Clarity: Streamlined Directory Hierarchy
@@ -311,10 +311,10 @@ Managing data across multiple targets made easy:
 
 #### An optimized directory hierarchy simplifies data organization and analysis.
 
-
-	# Directory hierarchy
-	/home/user1/Documents/kaboom/target1
-	/home/user1/Documents/kaboom/target2
+	
+		# Directory hierarchy
+		/home/user1/Documents/kaboom/target1
+		/home/user1/Documents/kaboom/target2
 
 
 Automating Insights: Automatic Metasploit Research
@@ -322,8 +322,8 @@ Automating Insights: Automatic Metasploit Research
 Simplify association of Metasploit modules with CVE codes:
 
 #### Automate exploit identification during vulnerability assessments.
-
- 	 kaboom -t <target_ip> -f <report_path> -p metasploit
+	
+	 	 kaboom -t <target_ip> -f <report_path> -p metasploit
 
 Widening the Scope: Non-Canonical Port Recognition
 
