@@ -17,6 +17,7 @@
 ### 𝐔𝐧𝐥𝐞𝐚𝐬𝐡𝐢𝐧𝐠 𝐭𝐡𝐞 𝐏𝐨𝐰𝐞𝐫 𝐨𝐟 𝐊𝐚𝐛𝐨𝐨𝐦-𝐀𝐏𝐓
 Short for <b><big>"𝙰𝚍𝚟𝚊𝚗𝚌𝚎𝚍 𝙿𝚎𝚗𝚎𝚝𝚛𝚊𝚝𝚒𝚘𝚗 Testing"</b></big>, <b>𝙺𝚊𝚋𝚘𝚘𝚖-𝙰𝙿𝚃</b> is an intelligent and automated solution meticulously crafted to simplify the complexities of penetration testing. Its purpose is clear: to equip security professionals with an advanced tool that seamlessly integrates into their workflow, enhancing their capabilities and efficiency. At its core, Kaboom is a multi-faceted tool that excels in two fundamental phases of penetration testing: information gathering and vulnerability assessment. This automated powerhouse streamlines the process, allowing testers to focus on analyzing results rather than grappling with manual tasks.
 
+
 𝐅𝐨𝐫 𝐚𝐬𝐬𝐢𝐭𝐚𝐧𝐜𝐞 𝐨𝐧 𝐢𝐧𝐬𝐭𝐚𝐥𝐥𝐢𝐧𝐠 𝐜𝐡𝐞𝐜𝐤 𝐨𝐮𝐭 𝐨𝐮𝐫 <b>[Installation Walkthrough](https://github.com/testcomputer/kaboom/blob/master/docs/install.md)</b>
 
 **𝐄𝐱𝐚𝐦𝐩𝐥𝐞𝐬 𝐨𝐟 𝐊𝐚𝐛𝐨𝐨𝐦 𝐢𝐧 𝐀𝐜𝐭𝐢𝐨𝐧**	
