@@ -15,9 +15,9 @@ mech 𝚟𝟷.0.𝟷 𝚋𝚢 @𝚝𝚎𝚜𝚝𝚌𝚘𝚖𝚙𝚞𝚝𝚎𝚛
 	
 <div style="text-align:center;"><h1><i>mecha-̷ 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞sting</i></h1></div>
 
-### Unleashing the Power of Mecha
+### Unleashing the Power of Mech
 
-Mecha is an intelligent and automated solution meticulously crafted to simplify the complexities of penetration testing. Its purpose is clear: to equip security professionals with an advanced tool that seamlessly integrates into their workflow, enhancing their capabilities and efficiency. At its core, Kaboom is a multi-faceted tool that excels in two fundamental phases of penetration testing: information gathering and vulnerability assessment. This automated powerhouse streamlines the process, allowing testers to focus on analyzing results rather than grappling with manual tasks.
+Mech is an intelligent and automated solution meticulously crafted to simplify the complexities of penetration testing. Its purpose is clear: to equip security professionals with an advanced tool that seamlessly integrates into their workflow, enhancing their capabilities and efficiency. At its core, Kaboom is a multi-faceted tool that excels in two fundamental phases of penetration testing: information gathering and vulnerability assessment. This automated powerhouse streamlines the process, allowing testers to focus on analyzing results rather than grappling with manual tasks.
 
 For assistance on installing, check out our Installation Walkthrough.
 
@@ -25,7 +25,7 @@ For assistance on installing, check out our Installation Walkthrough.
 <!--
 
 
-### Examples of Mecha in Action
+### Examples of Mech in Action
 
  Information Gathering: Consider a security professional tasked with assessing a company's external network security. Leveraging Kaboom, they can effortlessly gather domain information, identify subdomains, and map out the network's architecture using automated tools like Sublist3r and Nmap. This comprehensive overview drastically reduces the time and effort required compared to manual information gathering.
 
