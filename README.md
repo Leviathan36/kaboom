@@ -62,8 +62,6 @@ Kaboom empowers testers to perform thorough vulnerability assessments, enabling 
 Mech with both interactive and non-interactive modes:
 
 
--->
-
 
 - ## 𝐈𝐧𝐭𝐞𝐫𝐚𝐜𝐭𝐢𝐯𝐞 𝐦𝐨𝐝𝐞:
 Just type `kaboom` and hit [ENTER], and the script handles the rest
@@ -239,7 +237,7 @@ testing game today.
 
 
 
-<b> Update to all Mech file path. </b>
+## <b> Update to all Mech file path. </b>
 	
 			#KABOOM_PATH=''		# THE PATH COULD BE SET HERE INSTEAD OF IN BASHRC FILE
 			
