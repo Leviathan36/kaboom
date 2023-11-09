@@ -13,7 +13,7 @@
 
 
 	
-<div style="text-align:center;"><h1><i>Mech-̷ 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞sting</i></h1></div>
+<div style="text-align:center;"><h1><i>Mech-̷ 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞sting</i></h1></div>
 
 ### the Power of Mech
 
