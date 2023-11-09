@@ -6,7 +6,6 @@ Fine-Tuned Information Gathering
 
 One of Kaboom-APT's crowning achievements lies in its proficiency in information gathering. In the reconnaissance phase of penetration testing, where understanding the target's infrastructure is paramount, Kaboom-APT shines. It employs sophisticated techniques to scan and map the target network, identifying potential entry points and weaknesses that adversaries might exploit. This comprehensive insight empowers security professionals to fortify weak points and bolster defenses.
 
-.. code-block:: bash
 
     kaboom -t <target_ip> -p info_gathering
 
@@ -15,7 +14,6 @@ Navigating the Vulnerability Landscape
 
 Vulnerability assessment is a cornerstone of effective penetration testing. Kaboom-APT excels in this area, offering a multifaceted approach to identifying vulnerabilities within the target system or network. By leveraging both automated and manual techniques, it meticulously inspects potential weak spots, exposing areas that require immediate attention. This process is critical in preventing cybercriminals from exploiting vulnerabilities that might lead to unauthorized access or data breaches.
 
-.. code-block:: bash
 
     kaboom -t <target_ip> -p vulnerability_assessment
 
@@ -31,7 +29,6 @@ Customization: Tailoring to Precision
 
 Kaboom-APT recognizes that each engagement requires a unique approach. With its customization feature, security professionals can calibrate the tool according to their specific requirements. The ability to adjust variables at the outset empowers users to tailor Hydra and Dirb wordlists, specify alternative Metasploit scan scripts, and personalize output file names. This level of precision ensures a bespoke experience, aligning the tool with the tester's distinct objectives.
 
-.. code-block:: bash
 
     kaboom -t <target_ip> -p customization
 
