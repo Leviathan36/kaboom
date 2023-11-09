@@ -109,7 +109,7 @@ If you need assistance, run `kaboom -h` (or `kaboom --help`) to access the help 
 			      example: iv == information gathering + vulnerability assessment
 			      dafault: ALL (ivb)
 			
- ## 𝐄𝐧𝐡𝐚𝐧𝐜𝐞 𝐘𝐨𝐮𝐫 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞𝐬𝐭𝐢𝐧𝐠 𝐒𝐭𝐫𝐚𝐭𝐞𝐠𝐲 𝐰𝐢𝐭𝐡 𝐊𝐚𝐛𝐨𝐨𝐦
+ ## 𝐄𝐧𝐡𝐚𝐧𝐜𝐞 𝐘𝐨𝐮𝐫 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞𝐬𝐭𝐢𝐧𝐠 𝐒𝐭𝐫𝐚𝐭𝐞𝐠𝐲 𝐰𝐢𝐭𝐡 𝙼𝚎𝚌𝚑
 Revolutionize your penetration testing approach with Kaboom. This powerful tool redefines efficiency and precision in the cybersecurity landscape. Kaboom isn't just a collection of functions – it's a streamlined solution that enhances your capabilities.
 
 Gone are complex interfaces and scattered data. Kaboom-APT simplifies and streamlines your processes, allowing you to focus on analysis and action. It automates tasks, saving you time and guiding you towards impactful insights.
