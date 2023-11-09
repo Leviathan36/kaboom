@@ -13,7 +13,7 @@ mech 𝚟𝟷.0.𝟷 𝚋𝚢 @𝚝𝚎𝚜𝚝𝚌𝚘𝚖𝚙𝚞𝚝𝚎𝚛
 
 
 	
-<div style="text-align:center;"><h1><i>mecha-̷ 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞sting</i></h1></div>
+<div style="text-align:center;"><h1><i>mech-̷ 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞sting</i></h1></div>
 
 ### Unleashing the Power of Mech
 
