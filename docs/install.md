@@ -11,7 +11,7 @@ First things first, you need to have Git installed on your machine. If you don't
 Navigate to the directory where you want to set up Kaboom. Then, open your terminal and execute the following command:
 
 
-    git clone https://github.com/testcomputer/kaboom.git
+    git clone https://github.com/testcomputer/mech.git
 
 
 Congratulations, you've just cloned the Kaboom repository to your local machine! Feel the excitement building up as you're now just a step away from harnessing its powerful capabilities.
