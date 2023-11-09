@@ -16,13 +16,13 @@ Navigate to the directory where you want to set up Kaboom. Then, open your termi
 
 Congratulations, you've just cloned the Kaboom repository to your local machine! Feel the excitement building up as you're now just a step away from harnessing its powerful capabilities.
 
-## Step 3: Explore Kaboom's Arsenal
+## Step 3: Explore Mech's Arsenal
 
 Move into the cloned repository's directory using:
 
 
     
-    cd kaboom
+    cd mech
 
 Get ready to be amazed! Inside, you'll discover a treasure trove of folders that promise endless hacking possibilities. From 'enum' to 'exploit' and 'root,' each directory holds the tools and scripts you need for your pentesting journey.
 
@@ -40,11 +40,11 @@ And now, let the magic begin. Execute the setup script:
 
 Watch as Kaboom swiftly sets up its dependencies and configurations, preparing you for a seamless pentesting experience.
 
-## Step 5: Launch Kaboom!
+## Step 5: Launch Mech!
 
 Are you ready for liftoff? It's time to launch Kaboom and explore its capabilities. Execute the following command:
     
-    ./kaboom.sh
+    ./mech.sh
 
 Feel the rush as Kaboom springs to life, ready to carry out your commands and provide you with invaluable insights into your target's vulnerabilities.
 
@@ -58,5 +58,5 @@ Remember, with great power comes great responsibility. Use Kaboom ethically and 
 
 Kaboom is an evolving masterpiece, with continuous updates and improvements. Stay connected with the Kaboom community on GitHub to receive the latest updates, contribute your findings, and make the most of this dynamic tool.
 
-Now, armed with Kaboom, you're equipped to dive into the exhilarating world of penetration testing. Let the sparks fly, and may your discoveries be illuminating and transformative. Happy pentesting!
+Now, armed with Mech, you're equipped to dive into the exhilarating world of penetration testing. Let the sparks fly, and may your discoveries be illuminating and transformative. Happy pentesting!
 
