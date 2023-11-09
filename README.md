@@ -1,4 +1,4 @@
-𝚔𝚊𝚋𝚘𝚘𝚖 𝚟𝟷.0.𝟷 𝚋𝚢 @𝚝𝚎𝚜𝚝𝚌𝚘𝚖𝚙𝚞𝚝𝚎𝚛
+mech 𝚟𝟷.0.𝟷 𝚋𝚢 @𝚝𝚎𝚜𝚝𝚌𝚘𝚖𝚙𝚞𝚝𝚎𝚛
 
 ![version](https://img.shields.io/badge/Version-1.0.1-brightgreen)
 ![Language](https://img.shields.io/badge/Built%20with-bash-brightgreen.svg)
@@ -13,7 +13,7 @@
 
 
 	
-<div style="text-align:center;"><h1><i>𝐤𝐚𝐛𝐨𝐨𝐦-̷ 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞sting</i></h1></div>
+<div style="text-align:center;"><h1><i>mecha-̷ 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐓𝐞sting</i></h1></div>
 
 ### Unleashing the Power of Mecha
 
