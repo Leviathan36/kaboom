@@ -1,4 +1,4 @@
-MECH 𝚟𝟷.0.5 𝚋𝚢 @𝚝𝚎𝚜𝚝𝚌𝚘𝚖p𝚞𝚝𝚎𝚛
+𝙼𝙴𝙲𝙷 𝚟𝟷.0.5 𝚋𝚢 @𝚝𝚎𝚜𝚝𝚌𝚘𝚖p𝚞𝚝𝚎𝚛
 
 ![version](https://img.shields.io/badge/Version-1.0.1-brightgreen)
 ![Language](https://img.shields.io/badge/Built%20with-bash-brightgreen.svg)
