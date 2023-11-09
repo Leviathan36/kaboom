@@ -236,6 +236,10 @@ Kaboom ushers in a new era of penetration testing, where automation, efficiency,
 and user-friendly interface, Kaboom is your ally in fortifying digital landscapes against potential threats. Experience the power of Kaboom and elevate your penetration 
 testing game today.
 
+
+
+
+Update to all Mech file path.
 	
 			#KABOOM_PATH=''		# THE PATH COULD BE SET HERE INSTEAD OF IN BASHRC FILE
 			
@@ -273,7 +277,7 @@ testing game today.
 ------		
 Here's a brief breakdown of what the script does:
 
-- **Setting Kaboom Path:** The script starts by checking whether the `KABOOM_PATH` variable is already set. If it's not set, the script assigns the current directory (`.`) to the `KABOOM_PATH` variable.
+- **Setting Mech Path:** The script starts by checking whether the `MECH_PATH` variable is already set. If it's not set, the script assigns the current directory (`.`) to the `MECH_PATH` variable.
 
 - **Defining User Wordlists:** The script defines various `USERLIST_HYDRA_*` variables that point to user wordlists for different protocols like SSH, POP3, IMAP, RDP, and SMB. These wordlists likely contain usernames or accounts for dictionary attacks.
 
@@ -338,7 +342,7 @@ Widening the Scope: Non-Canonical Port Recognition
 
 Modern networks harbor services on non-canonical ports:
 
-#### Kaboom's features detects and assesses services on non-standard ports.
+#### Mech's features detects and assesses services on non-standard ports.
 
 
 		
@@ -375,7 +379,7 @@ As Kaboom evolved, a parallel project named Trigmap (Trigger Nmap) emerged. Trig
 
 <i>To delve deeper into Trigmap's capabilities, visit the [Trigma](https://github.com/Leviathan36/trigmap) repository</i>
 
-### 𝑬𝒕𝒉𝒊𝒄𝒂𝒍 𝑹𝒆𝒔𝒑𝒐𝒏𝒔𝒊𝒃𝒊𝒍𝒊𝒕𝒚: 𝑻𝒉𝒆 𝑲𝒂𝒃𝒐𝒐𝒎-𝑨𝑷𝑻 𝑫𝒊𝒔𝒄𝒍𝒂𝒊𝒎𝒆𝒓
+### 𝑬𝒕𝒉𝒊𝒄𝒂𝒍 𝑹𝒆𝒔𝒑𝒐𝒏𝒔𝒊𝒃𝒊𝒍𝒊𝒕𝒚: 𝑻𝒉𝒆 𝑫𝒊𝒔𝒄𝒍𝒂𝒊𝒎𝒆𝒓
 
   <smaller><i>Kaboom-APT is a tool of empowerment, carefully crafted for cybersecurity professionals striving to enhance their capabilities. While the potential it holds is awe-inspiring, it comes hand in hand with a profound responsibility. As you embark on your journey with Kaboom-APT, we emphasize the need for ethical conduct, responsible use, and a steadfast commitment to upholding the principles of cybersecurity.Kaboom is a tool designed to empower cybersecurity professionals, but its power comes with an inherent responsibility. We stress the importance of ethical conduct and responsible use. The authors and contributors behind Kaboom underline several crucial principles:Responsible Usage: Kaboom is intended solely for legitimate and ethical penetration testing. It should never be employed for malicious or unlawful activities, aligning with the highest standards of professional conduct. Authorized Testing: Prior authorization is essential before using Kaboom for penetration testing. Unauthorized use can lead to unintended consequences and legal actions.Informed Consent: Always ensure that you have obtained informed consent from system or network owners before conducting tests. Transparent communication is key.Respect for Privacy: Uphold privacy and confidentiality during testing, refraining from accessing or sharing sensitive information without proper authorization. Limited Scope: Use Kaboom with discretion to avoid disruptions or harm to systems. Excessive scanning should be avoided.</i></smaller>
 
