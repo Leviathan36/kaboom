@@ -228,7 +228,7 @@ Kaboom recognizes that each engagement requires a unique approach. Customize the
 		  	OUTPUT_FILENAME="custom_report.txt"
 
                                     
-### 𝐀𝐝𝐣𝐮𝐬𝐭𝐢𝐧𝐠 𝙺𝚊𝚋𝚘𝚘𝚖'𝐬 𝐕𝐚𝐫𝐢𝐚𝐛𝐥𝐞𝐬
+### 𝐀𝐝𝐣𝐮𝐬𝐭𝐢𝐧𝐠 𝙼𝚎𝚌𝚑'𝐬 𝐕𝐚𝐫𝐢𝐚𝐛𝐥𝐞𝐬
 
 Kaboom empowers you to customize its behavior by adjusting variables at the script's outset. This allows you to tailor the tool to your specific requirements,
 whether it's selecting wordlists for Hydra and Dirb, specifying a Metasploit scan script, or refining output file names. 
