@@ -21,6 +21,10 @@ Short for "Advanced Penetration Testing", Kaboom-APT is an intelligent and autom
 
 For assistance on installing, check out our Installation Walkthrough.
 
+
+<!--
+
+
 ### Examples of Kaboom in Action
 
  Information Gathering: Consider a security professional tasked with assessing a company's external network security. Leveraging Kaboom, they can effortlessly gather domain information, identify subdomains, and map out the network's architecture using automated tools like Sublist3r and Nmap. This comprehensive overview drastically reduces the time and effort required compared to manual information gathering.
@@ -54,8 +58,12 @@ Kaboom empowers testers to perform thorough vulnerability assessments, enabling 
 
 <!-- Kaboom's significance extends beyond its individual capabilities; it offers a holistic approach that streamlines the entire penetration testing process. Its integration of various tools and techniques into a cohesive framework minimizes the complexities often associated with cybersecurity assessments. This streamlined workflow empowers security professionals to focus on analysis and action, rather than grappling with disparate tools and fragmented processes. In an era where cybersecurity is paramount, Kaboom emerges as a pivotal player in the ongoing battle to secure digital assets. Its comprehensive suite of capabilities, meticulous engineering, and holistic approach set it apart as a tool that empowers security professionals to proactively safeguard against cyber threats. As the digital landscape continues to evolve, Kaboom stands as a beacon of innovation, helping to fortify the digital world against the ever-persistent forces of cybercrime. -->
 
-### 𝐒𝐢𝐦𝐩𝐥𝐢𝐟𝐢𝐞𝐝 𝐔𝐬𝐚𝐠𝐞
-Kaboom simplifies usage with both interactive and non-interactive modes:
+### 𝐔𝐬𝐚𝐠𝐞
+Kaboom with both interactive and non-interactive modes:
+
+
+-->
+
 
 - ## 𝐈𝐧𝐭𝐞𝐫𝐚𝐜𝐭𝐢𝐯𝐞 𝐦𝐨𝐝𝐞:
 Just type `kaboom` and hit [ENTER], and the script handles the rest
