@@ -239,7 +239,7 @@ testing game today.
 
 
 
-Update to all Mech file path.
+<b> Update to all Mech file path. </b>
 	
 			#KABOOM_PATH=''		# THE PATH COULD BE SET HERE INSTEAD OF IN BASHRC FILE
 			
