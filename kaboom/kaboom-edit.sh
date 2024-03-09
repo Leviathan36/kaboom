@@ -494,3 +494,6 @@ if [[ "$shutdown" == 'YES' || "$shutdown" == 'yes'  ]]; then
     sleep 2
     shutdown now
 fi
+
+
+shit

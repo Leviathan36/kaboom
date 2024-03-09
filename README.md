@@ -11,7 +11,7 @@
   </a>
 </p>
 
-
+<!-- Edit config, simple layout. -->
 	
 <div style="text-align:center;"><h1><i>𝙼𝚎𝚌𝚑 𝐏𝐞𝐧𝐞𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝚃𝚎𝚜𝚝𝚒𝚗𝚐 </i></h1></div>
 
