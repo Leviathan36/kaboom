@@ -1,29 +1,29 @@
 #!/bin/bash
+#!/bin/bash
 
+# Kaboom-APT - Advanced Penetration Technology
+# Copyright © 2019 Leviathan36
 
-
-# kaboom    -    automatic pentest
-# Copyright © 2019 Leviathan36 
-
-# kaboom is free software: you can redistribute it and/or modify
+# Kaboom is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
 
-# kaboom is distributed in the hope that it will be useful,
+# Kaboom is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 # GNU General Public License for more details.
 
 # You should have received a copy of the GNU General Public License
-# along with kaboom.  If not, see <http://www.gnu.org/licenses/>.
-
+# along with kaboom. If not, see <http://www.gnu.org/licenses/>.
 
 ##############################################
 ###             VARIABLES BRUTEFORCE       ###  
 ##############################################
 
-#KABOOM_PATH=''     # THE KABOOM DIRECOTRY PATH COULD BE SET HERE INSTEAD OF IN THE BASHRC FILE
+# KABOOM_PATH=''     
+
+# THE KABOOM DIRECOTRY PATH COULD BE SET HERE INSTEAD OF IN THE BASHRC FILE
 
 if [[ "$KABOOM_PATH" == '/home/user1/kaboom/kaboom' ]]; then 
     KABOOM_PATH='.'
@@ -56,14 +56,10 @@ SCRIPT_SYN='script-syn'
 SYN='syn'
 
 ##############################################
-##############################################
-
-
 
 ########################################################
 ############            FUNCTIONS          #############
 ########################################################
-
 
 print_help () {
     echo 'Usage:'
@@ -246,10 +242,6 @@ print_portid () {
 ###                 ###
 
 ######################################
-######################################
-
-
-######################################
 ###             CODE               ###  
 ######################################
 
@@ -260,112 +252,87 @@ sanitize_input "$@"
 print_start_end "START SCRIPT AT `date`"
 
 # iteration variable
-ITERATION='0'
+#!/bin/bash
+
+ITERATION=0
 
 for i in $(seq $LOWER_HOST 1 $UPPER_HOST); do
-    
     # HOST
     HOST="$ROOT_HOST.$i"
     
-    # print status
+    # Print status
     ((ITERATION++))
-    TOTAL_ITERATION=$(((UPPER_HOST-LOWER_HOST)+1))
-    PROGRESS=$(((ITERATION*20)/TOTAL_ITERATION))
+    TOTAL_ITERATION=$((UPPER_HOST - LOWER_HOST + 1))
+    PROGRESS=$((ITERATION * 20 / TOTAL_ITERATION))
     print_status "$ITERATION" "$HOST" "$PROGRESS"
 
-    # create new directory
+    # Create new directory
     mkdir -p "$ROOT_PATH/$HOST"
     FILE_PATH="$ROOT_PATH/$HOST"
 
-    #** start information gathering (IG) **#
-
-    if [[ "$PHASE" =~ 'i' || "$PHASE" == '' ]]; then 
+    # Start information gathering (IG)
+    if [[ "$PHASE" =~ 'i' || -z "$PHASE" ]]; then
         print_phase 'starting IG...'
         sleep 2
         
-        # create new directories for IG results
+        # Create new directories for Information Gathering results
         mkdir -p "$FILE_PATH/IG"
         mkdir -p "$FILE_PATH/IG/NMAP"
         
         ### NMAP ###
         print_succ 'nmap is scanning...'
         
-        # syn-scan
+        # Edit this Nmap script to your needs
         print_std 'start syn-scan with syn-probe...'
-        nmap -p 80 "$HOST"   | grep 'Host seems down' > /dev/null && { print_failure 'Host down' ; rm -fR "$FILE_PATH"; continue; }     #|| failure "NMAP ERROR (SYN-SCAN); exit with code $?"
-        
-        # create syn report
-        if [[ -f "$FILE_PATH/IG/NMAP/$SCRIPT_SYN.nmap" ]]; then 
-            grep -v '|' "$FILE_PATH/IG/NMAP/$SCRIPT_SYN.nmap" > "$FILE_PATH/IG/NMAP/$SYN.nmap"
+        if nmap -p 80 "$HOST" | grep -q 'Host seems down'; then
+            print_failure 'Host down'
+            rm -fR "$FILE_PATH"
+            continue
         fi
         
-        # golismero report
-        #golismero report -i "$file_path/IG/NMAP/script.xml" -o "$file_path/IG/NMAP/nmap_report.html"
-        
-    #--------------------------------------------#  
-        #### UNICORNSCAN ###
-        #print_succ 'unicornscan is scanning...'
-        
-        ## unicornscan tcp scan
-        #print_std 'starting TCP scan...'
-        #unicornscan -E -L 10 -R 2 -l "$FILE_PATH/IG/unicorn-tcp.txt" -i "$NIC" -r 30 -vvvvv "$HOST":p > /dev/null
-            #### p=ports between [1,1024]
-            #### r X=max X packet per second
-            
-        ## unicornscan udp scan
-        #print_std 'starting UDP scan...'
-        #unicornscan -E -L 10 -R 2 -l "$FILE_PATH/IG/unicorn-udp.txt" -i "$NIC" -r 30 -mU -vvvvv "$HOST":p > /dev/null
-    #--------------------------------------------#  
-        
-        ### METASPLOIT ###
+        # Create syn report
+        if [[ -f "$FILE_PATH/IG/NMAP/$SCRIPT_SYN.nmap" ]]; then
+            grep -v '|' "$FILE_PATH/IG/NMAP/$SCRIPT_SYN.nmap" > "$FILE_PATH/IG/NMAP/$SYN.nmap"
+        fi
+    fi
+done
+
+
+        #!/bin/bash
+for i in $(seq $LOWER_HOST 1 $UPPER_HOST); do
+    # HOST
+    HOST="$ROOT_HOST.$i"
+    
+    ### METASPLOIT ###
+    if [[ "$PHASE" =~ 'i' || -z "$PHASE" ]]; then
         print_succ 'metasploit is scanning...'
         
-        # start postgresql server
+        # Start postgresql server
         service postgresql start
         
-        # 
+        # Run Metasploit
         msfconsole -q -o "$FILE_PATH/IG/metasploit_scan.txt" -x "setg rhosts $HOST ; resource $METASPLOIT_SCAN_SCRIPT ; exit -y"
-
         
+        # Stop postgresql server
+        service postgresql stop
     fi
 
-    #** start vulnerability assessment (VA) **#
+    ### Start vulnerability assessment (VA) ###
+    if [[ "$PHASE" =~ 'v' || -z "$PHASE" ]]; then 
+        # Rest of your code...
 
-    if [[ "$PHASE" =~ 'v' || "$PHASE" == '' ]]; then 
-        
-        #print_phase 'starting VA...'
-        
-        # create new directory for this phase
-        #mkdir -p "$FILE_PATH/VA"
-
-        # parse nmap output in search of CVE
-        #xmllint --xpath "//table[elem[text()='VULNERABLE' and @key='state']]/@key" "$FILE_PATH/IG/NMAP/$SCRIPT_SYN.xml" 2> /dev/null | tr " " "\n" | cut -f2 -s -d'"' | awk -F "CVE-" '{printf "search cve:" ; print $2}' > "$FILE_PATH/IG/NMAP/CVE.txt"
-        #xmllint --xpath "//table[elem[text()='VULNERABLE' and @key='state']]/@key" "$FILE_PATH/IG/NMAP/$UDP.xml" 2> /dev/null | tr " " "\n" | cut -f2 -s -d'"' | awk -F "CVE-" '{printf "search cve:" ; print $2}' >> "$FILE_PATH/IG/NMAP/CVE.txt"
-        
-        # create new dir for exploits
-        #mkdir -p "$FILE_PATH/VA/KNOWN_EXPLOITS"
-        # remove old file
-        #rm -f "$FILE_PATH/VA/KNOWN_EXPLOITS/NO_cve_found.txt"
-        
-        # if the file contains at least one CVE, the research will start
-        if #grep 'CVE-' "$FILE_PATH/IG/NMAP/CVE.txt"; then       
-            
-            #print_succ 'starting Metasploit research...'
-            
-            #msfconsole -q -o "$FILE_PATH/VA/KNOWN_EXPLOITS/meta_module.txt" -x "db_rebuild_cache ; resource $FILE_PATH/IG/NMAP/CVE.txt ; exit -y" 
-            
-            # searchsploit
-            #print_succ 'starting searchsploit...'
-            
-            #searchsploit --www --nmap "$FILE_PATH/IG/NMAP/$SCRIPT_SYN.xml" > "$FILE_PATH/VA/KNOWN_EXPLOITS/exploit-db.txt"
-            #searchsploit --www --nmap "$FILE_PATH/IG/NMAP/$UDP.xml" >> "$FILE_PATH/VA/KNOWN_EXPLOITS/exploit-db.txt"
-
+        # If the file contains at least one CVE, the research will start
+        if grep -q 'CVE-' "$FILE_PATH/IG/NMAP/CVE.txt"; then
+            # Rest of your code...
         else
             print_failure 'no exploits found!'
             touch "$FILE_PATH/VA/KNOWN_EXPLOITS/NO_cve_found.txt"
         fi
-        
-        
+    fi
+    
+    # Rest of your code...
+done
+
         ## WIFIBANG
         ## tail -n +15 "$file_path/VA/META_MODULE/$i" | awk -F"   " '{print $2}' | nl
 
@@ -384,10 +351,10 @@ for i in $(seq $LOWER_HOST 1 $UPPER_HOST); do
             done;
         }
             
-            #Dirb takes approximaly one hour to finish the wordlist with the following setting.
-            #It doesn't search recursively.
+            # Dirb takes approximaly one hour to finish the wordlist with the following setting.
+            # It doesn't search recursively.
 
-        #https
+        # HTTPS
         tcp_service_on 'open' 'https' '0' && {
             # execute nikto and dirb for https protocol
             print_succ 'starting nikto (https)...';
@@ -403,7 +370,7 @@ for i in $(seq $LOWER_HOST 1 $UPPER_HOST); do
             done;
         }
         
-        #ssl/http
+        # SSL/HTTP
         tcp_service_on 'open' 'http' '1' && {
             # execute nikto and dirb for ssl/http protocol
             print_succ 'starting nikto (ssl/http)...';
@@ -517,6 +484,7 @@ for i in $(seq $LOWER_HOST 1 $UPPER_HOST); do
     fi
     
 done
+
 ######## END EXPLOITATION ######
 
 print_start_end " END SCRIPT AT `date` "
@@ -526,3 +494,6 @@ if [[ "$shutdown" == 'YES' || "$shutdown" == 'yes'  ]]; then
     sleep 2
     shutdown now
 fi
+
+
+shit

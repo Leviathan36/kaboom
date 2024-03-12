@@ -1,0 +1,36 @@
+# Update Nmap script
+# NMAP FILES
+# SCRIPT_SYN="/path/to/script-syn.nse"
+# UDP="/path/to/udp.nse"
+# SYN="/path/to/syn.nse"
+
+SCRIPT_SYN="/usr/share/nmap/scripts/script-syn.nse"
+UDP="/usr/share/nmap/scripts/udp.nse"
+SYN="/usr/share/nmap/scripts/syn.nse"
+
+# Improve help print
+print_help () {
+    cat << EOF
+Usage:
+  Interactive mode:
+      kaboom [ENTER]  ...and the script does the rest
+
+  NON-interactive mode:
+      kaboom -t <target_ip> -f <report_path> [-p one_or_more_phases]
+      
+  Phases:
+      - i == information gathering
+      - v == vulnerability assessment
+      - d == dictionary attack against open services
+
+  Example: 
+      kaboom -t 192.168.1.10 -f /path/to/report -p iv
+      (Information gathering and vulnerability assessment)
+
+  Default: 
+      All phases (ivb)
+
+EOF
+}
+
+

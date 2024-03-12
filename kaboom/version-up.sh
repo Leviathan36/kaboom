@@ -1,42 +1,40 @@
-#!/bin/bash
+#/bin/bash
+# Kaboom - Automatic Pentest
+# Copyright © 2019 Leviathan36
 
+# Kaboom is free software released under the GNU General Public License.
+# You can redistribute it and/or modify it under the terms of the GPL,
+# version 3 or any later version, as published by the Free Software Foundation.
 
-
-# kaboom    -    automatic pentest
-# Copyright © 2019 Leviathan36 
-
-# kaboom is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-
-# kaboom is distributed in the hope that it will be useful,
+# Kaboom is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 # GNU General Public License for more details.
 
 # You should have received a copy of the GNU General Public License
-# along with kaboom.  If not, see <http://www.gnu.org/licenses/>.
+# along with Kaboom. If not, visit <http://www.gnu.org/licenses/>.
 
 
 ##############################################
 ###             VARIABLES BRUTEFORCE       ###  
 ##############################################
 
-#KABOOM_PATH=''     # THE KABOOM DIRECOTRY PATH COULD BE SET HERE INSTEAD OF IN THE BASHRC FILE
+#KABOOM_PATH=''     
+# THE KABOOM DIRECTORY PATH COULD BE SET HERE INSTEAD OF IN THE BASHRC FILE
 
-if [[ "$KABOOM_PATH" == '/home/user1/kaboom/kaboom' ]]; then 
-    KABOOM_PATH='.'
-fi
+# Set KABOOM_PATH if it's empty
+KABOOM_PATH="${KABOOM_PATH:-/home/user1/kaboom/kaboom}"
 
-# USER WORDLISTS
-USERLIST_HYDRA_SSH="$'/home/user1/kaboom/kaboom'/user_wordlist_short.txt"
+# Set KABOOM_PATH if it's empty
+KABOOM_PATH="${KABOOM_PATH:-/home/user1/kaboom/kaboom}"
+
+# Define paths using the KABOOM_PATH variable
+USERLIST_HYDRA_SSH="$KABOOM_PATH/user_wordlist_short.txt"
 USERLIST_HYDRA_POP3="$KABOOM_PATH/user_wordlist_short.txt"
 USERLIST_HYDRA_IMAP="$KABOOM_PATH/user_wordlist_short.txt"
 USERLIST_HYDRA_RDP="$KABOOM_PATH/user_wordlist_short.txt"
 USERLIST_HYDRA_SMB="$KABOOM_PATH/user_wordlist_short.txt"
 
-# PASSWORD WORDLISTS
 PASSLIST_HYDRA="$KABOOM_PATH/fasttrack.txt"
 PASSLIST_HYDRA_SSH="$PASSLIST_HYDRA"
 PASSLIST_HYDRA_POP3="$PASSLIST_HYDRA"
@@ -44,27 +42,22 @@ PASSLIST_HYDRA_IMAP="$PASSLIST_HYDRA"
 PASSLIST_HYDRA_RDP="$PASSLIST_HYDRA"
 PASSLIST_HYDRA_SMB="$PASSLIST_HYDRA"
 
-# DIRB WORDLISTS
 HTTP_WORDLIST="$KABOOM_PATH/custom_url_wordlist.txt"
 HTTP_EXTENSIONS_FILE="$KABOOM_PATH/custom_extensions_common.txt"
 
-# METASPLOIT SCAN SCRIPT
-METASPLOIT_SCAN_SCRIPT='./metasploit_scan_script'
+METASPLOIT_SCAN_SCRIPT="$KABOOM_PATH/metasploit_scan_script"
 
-# NMAP FILES
-SCRIPT_SYN='script-syn'
+SCRIPT_SYN="$KABOOM_PATH/script-syn.nse"
 SYN='syn'
 
-##############################################
-##############################################
 
+##############################################
+##############################################
 
 
 ########################################################
 ############            FUNCTIONS          #############
 ########################################################
-
-
 print_help () {
     echo 'Usage:'
     echo '  Interactive mode:'
@@ -79,13 +72,11 @@ print_help () {
     echo '          - d == dictionary attack against open services'
     echo
     echo '      example: iv == information gathering + vulnerability assessment'
-    echo '      dafult: ALL (ivb)'
+    echo '      default: ALL (ivb)'
     echo
 }
 
-##                   ## 
-### PRINT FUNCTIONS ###
-##                   ##
+## PRINT FUNCTIONS ##
 
 print_start_end () {
     printf "\n\033[37;41;1m[*******************************************************]\033[0m\n"
@@ -93,16 +84,11 @@ print_start_end () {
     printf "\033[37;41;1m[*******************************************************]\033[0m\n"
 }
 
-#
-#  name: print_status
-#  @param: iteration ; actual target ; progress
-#  @return
-#  
 print_status () {
     echo
     echo '----------------------------------'
     echo '----------------------------------'
-    echo "ITAREATION:   $1"
+    echo "ITERATION:   $1"
     echo "TARGET:   $2"
     printf 'PROGRESS: ['
     for i in {1..20}; do
@@ -118,8 +104,6 @@ print_status () {
     echo '----------------------------------'
     echo
 }
-    
-
 print_std () {
     printf "\t\033[34;1m[*]$1\033[0m\n"
 }
@@ -141,13 +125,10 @@ failure () {
     exit 1
 }
 
-###                 ###
-
+##   ##
 
 sanitize_input () {
-    
-    if [[ ! "$#" == 0 ]]; then      # NO-interactive
-    
+    if [[ ! "$#" == 0 ]]; then      # NON-interactive
         while [[ ! "$#" == 0 ]]; do
             case "$1" in
                 -h | --help ) print_help; exit 0;;
@@ -157,7 +138,6 @@ sanitize_input () {
                 * ) print_failure 'INVALID PARAMETER!'; exit 10;;
             esac
         done
-    
     else                            # interactive
         
         # HOST
@@ -215,90 +195,78 @@ tcp_service_on () {
     elif [[ "$3" == '1' ]]; then 
         xmllint --xpath "//port[state[@state='$1'] and service[@name='$2' and @tunnel='ssl']]" "$FILE_PATH/IG/NMAP/$SCRIPT_SYN.xml" &> /dev/null
     else 
-        return 1    #ERROR
+        return 1    # ERROR
     fi
 }
 
-#  
-#  name: udp_service_on 
-#  @param: port name={rpcbind, mdns, ...}
-#  @return: 0 = {port found} ; 10 {port not found}
-# 
 udp_service_on () {
     xmllint --xpath "//port[state[@state='open|filtered'] and service[@name='$1']]" "$FILE_PATH/IG/NMAP/$UDP.xml" &> /dev/null
 }
 
-#  
-#  name: print_portid
-#  @param: state of port={open, filtered} ; port name={http, ssh, ...} ; ssl={1 == YES, 0 == NO}
-#  @return: portid
-#
 print_portid () {
     if [[ "$3" == '0' ]]; then
         xmllint --xpath "//port[state[@state='$1'] and service[@name='$2']]/@portid" "$FILE_PATH/IG/NMAP/$SCRIPT_SYN.xml" | cut -c 2- | tr " " "\n" | cut -f2 -d'"'
     elif [[ "$3" == '1' ]]; then
         xmllint --xpath "//port[state[@state='$1'] and service[@name='$2' and @tunnel='ssl']]/@portid" "$FILE_PATH/IG/NMAP/$SCRIPT_SYN.xml" | cut -c 2- | tr " " "\n" | cut -f2 -d'"'
     else 
-        return 1    #ERROR
+        return 1    # ERROR
     fi
 }
-
-###                 ###
-
-######################################
-######################################
 
 
 ######################################
 ###             CODE               ###  
 ######################################
 
-# sanitize input
+#!/bin/bash
+
+# Sanitize input
 sanitize_input "$@"
 
-# start script
-print_start_end "START SCRIPT AT `date`"
+# Start script
+print_start_end "START SCRIPT AT $(date)"
 
-# iteration variable
+# Initialize iteration variable
 ITERATION='0'
 
+# Loop through hosts
 for i in $(seq $LOWER_HOST 1 $UPPER_HOST); do
-    
     # HOST
     HOST="$ROOT_HOST.$i"
     
-    # print status
+    # Print status
     ((ITERATION++))
-    TOTAL_ITERATION=$(((UPPER_HOST-LOWER_HOST)+1))
-    PROGRESS=$(((ITERATION*20)/TOTAL_ITERATION))
+    TOTAL_ITERATION=$((UPPER_HOST-LOWER_HOST+1))
+    PROGRESS=$((ITERATION*20/TOTAL_ITERATION))
     print_status "$ITERATION" "$HOST" "$PROGRESS"
 
-    # create new directory
+    # Create new directory
     mkdir -p "$ROOT_PATH/$HOST"
     FILE_PATH="$ROOT_PATH/$HOST"
 
-    #** start information gathering (IG) **#
-
+    # Start information gathering (IG)
     if [[ "$PHASE" =~ 'i' || "$PHASE" == '' ]]; then 
-        print_phase 'starting IG...'
+        print_phase 'Starting Information Gathering..Researching in Progress. . .'
         sleep 2
         
-        # create new directories for IG results
+        # Create new directories for IG results
         mkdir -p "$FILE_PATH/IG"
         mkdir -p "$FILE_PATH/IG/NMAP"
         
         ### NMAP ###
         print_succ 'nmap is scanning...'
         
-        # syn-scan
+        # Syn-scan
         print_std 'start syn-scan with syn-probe...'
-        nmap -p 80 "$HOST"   | grep 'Host seems down' > /dev/null && { print_failure 'Host down' ; rm -fR "$FILE_PATH"; continue; }     #|| failure "NMAP ERROR (SYN-SCAN); exit with code $?"
+        nmap -sS -sU -T5 -Pn -A --version-all --script=default,auth,vuln "$HOST" -oA output | grep 'Host seems down' > /dev/null && { print_failure 'Host down' ; rm -fR "$FILE_PATH"; continue; }
         
-        # create syn report
+        # Create syn report
         if [[ -f "$FILE_PATH/IG/NMAP/$SCRIPT_SYN.nmap" ]]; then 
             grep -v '|' "$FILE_PATH/IG/NMAP/$SCRIPT_SYN.nmap" > "$FILE_PATH/IG/NMAP/$SYN.nmap"
         fi
-        
+        # ...
+
+
         # golismero report
         #golismero report -i "$file_path/IG/NMAP/script.xml" -o "$file_path/IG/NMAP/nmap_report.html"
         
@@ -333,32 +301,32 @@ for i in $(seq $LOWER_HOST 1 $UPPER_HOST); do
 
     if [[ "$PHASE" =~ 'v' || "$PHASE" == '' ]]; then 
         
-        #print_phase 'starting VA...'
+        print_phase 'starting VA...'
         
         # create new directory for this phase
-        #mkdir -p "$FILE_PATH/VA"
+        mkdir -p "$FILE_PATH/VA"
 
         # parse nmap output in search of CVE
-        #xmllint --xpath "//table[elem[text()='VULNERABLE' and @key='state']]/@key" "$FILE_PATH/IG/NMAP/$SCRIPT_SYN.xml" 2> /dev/null | tr " " "\n" | cut -f2 -s -d'"' | awk -F "CVE-" '{printf "search cve:" ; print $2}' > "$FILE_PATH/IG/NMAP/CVE.txt"
-        #xmllint --xpath "//table[elem[text()='VULNERABLE' and @key='state']]/@key" "$FILE_PATH/IG/NMAP/$UDP.xml" 2> /dev/null | tr " " "\n" | cut -f2 -s -d'"' | awk -F "CVE-" '{printf "search cve:" ; print $2}' >> "$FILE_PATH/IG/NMAP/CVE.txt"
+        xmllint --xpath "//table[elem[text()='VULNERABLE' and @key='state']]/@key" "$FILE_PATH/IG/NMAP/$SCRIPT_SYN.xml" 2> /dev/null | tr " " "\n" | cut -f2 -s -d'"' | awk -F "CVE-" '{printf "search cve:" ; print $2}' > "$FILE_PATH/IG/NMAP/CVE.txt"
+        xmllint --xpath "//table[elem[text()='VULNERABLE' and @key='state']]/@key" "$FILE_PATH/IG/NMAP/$UDP.xml" 2> /dev/null | tr " " "\n" | cut -f2 -s -d'"' | awk -F "CVE-" '{printf "search cve:" ; print $2}' >> "$FILE_PATH/IG/NMAP/CVE.txt"
         
         # create new dir for exploits
-        #mkdir -p "$FILE_PATH/VA/KNOWN_EXPLOITS"
+        mkdir -p "$FILE_PATH/VA/KNOWN_EXPLOITS"
         # remove old file
-        #rm -f "$FILE_PATH/VA/KNOWN_EXPLOITS/NO_cve_found.txt"
+        rm -f "$FILE_PATH/VA/KNOWN_EXPLOITS/NO_cve_found.txt"
         
         # if the file contains at least one CVE, the research will start
-        if #grep 'CVE-' "$FILE_PATH/IG/NMAP/CVE.txt"; then       
+        if grep 'CVE-' "$FILE_PATH/IG/NMAP/CVE.txt"; then       
             
-            #print_succ 'starting Metasploit research...'
+            print_succ 'starting Metasploit research...'
             
-            #msfconsole -q -o "$FILE_PATH/VA/KNOWN_EXPLOITS/meta_module.txt" -x "db_rebuild_cache ; resource $FILE_PATH/IG/NMAP/CVE.txt ; exit -y" 
+            msfconsole -q -o "$FILE_PATH/VA/KNOWN_EXPLOITS/meta_module.txt" -x "db_rebuild_cache ; resource $FILE_PATH/IG/NMAP/CVE.txt ; exit -y" 
             
             # searchsploit
-            #print_succ 'starting searchsploit...'
+            print_succ 'starting searchsploit...'
             
-            #searchsploit --www --nmap "$FILE_PATH/IG/NMAP/$SCRIPT_SYN.xml" > "$FILE_PATH/VA/KNOWN_EXPLOITS/exploit-db.txt"
-            #searchsploit --www --nmap "$FILE_PATH/IG/NMAP/$UDP.xml" >> "$FILE_PATH/VA/KNOWN_EXPLOITS/exploit-db.txt"
+            searchsploit --www --nmap "$FILE_PATH/IG/NMAP/$SCRIPT_SYN.xml" > "$FILE_PATH/VA/KNOWN_EXPLOITS/exploit-db.txt"
+            searchsploit --www --nmap "$FILE_PATH/IG/NMAP/$UDP.xml" >> "$FILE_PATH/VA/KNOWN_EXPLOITS/exploit-db.txt"
 
         else
             print_failure 'no exploits found!'
